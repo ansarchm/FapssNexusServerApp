@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+.content-container {
+  background-color: #F2F7FA;
+  min-height: 100vh;
+  padding: 20px 8px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Heading Section */
+.table-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.table-heading h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 25px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #1C212D;
+  margin: 0;
+}
+
+
+/* Search + Buttons Section */
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 8px 12px;
+  border: 1px solid #DADCE6;
+  border-radius: 8px;
+  width: 350px;
+}
+
+.search-box img {
+  width: 16px;
+  margin-right: 10px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Button Container */
+.btn-border {
+  width: 16%;
+  height: 30%;
+  border: 1px solid #DADCE6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 8px;
+  opacity: 1;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 20px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn.add {
+  background: #0056ff;
+  color: white;
+}
+
+.btn.cancel {
+  background: #2f2f2f;
+  color: white;
+}
+
+/* ✅ Equal Width Columns */
+.table-header-row,
+.table-row {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 3fr 2fr; /* Balanced spacing */
+  margin:  20px;
+}
+
+/* Table Header */
+.table-header-row {
+  background-color: #f5f6f9;
+  font-weight: 600;
+  padding: 12px 16px;
+  border: 1px solid #DADCE6;
+  border-radius:16px;
+  margin-bottom: 10px;
+}
+
+/* Table Body */
+.table-body {
+  border: 1px solid #e6e6e6;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+  margin: 0 20px;
+  border-radius: 16px;
+}
+.table-body .table-cell {
+  display: flex;
+  align-items: center;   /* vertical center */
+  justify-content: center; /* horizontal center */
+  border-right: 1px solid #e0e0e0;
+  padding: 20px ;
+    font-family: 'Montserrat', sans-serif;
+
+  background-color: #fff;
+}
+
+
+.table-row {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row.highlight {
+  background-color: #fff7e6;
+}
+
+
+
+/* ✅ Header Text Styling */
+.table-header-row .table-cell {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: #3B4053;
+}
+
+/* ✅ Proper spacing for icon */
+.sort-icon {
+  margin-left: 6px;
+
+  cursor: pointer;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 15px;
+  gap: 5px;
+}
+
+.pagination button {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background: #ffcd00;
+  border-color: #ffcd00;
+}
+.table-body .table-row {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 3fr 3fr;
+  border-bottom: 1px solid #e6e6e6;
+  margin: 0;
+  padding: 0;
+}
+.table-body .table-cell:last-child {
+  border-right: none;
+}
+.table-body .table-row.highlight .table-cell {
+  background-color: #fff7e6;
+}
+.id-label {
+  margin-left: 40px; /* adjust as needed */
+}

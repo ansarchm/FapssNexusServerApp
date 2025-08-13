@@ -1,0 +1,199 @@
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\appsettings.json
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\fabsss.staticwebassets.endpoints.json
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\fabsss.exe
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\fabsss.deps.json
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\fabsss.runtimeconfig.json
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\fabsss.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\fabsss.pdb
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\IdentityServer4.AccessTokenValidation.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\IdentityModel.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\IdentityModel.AspNetCore.OAuth2Introspection.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\K4os.Compression.LZ4.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\K4os.Hash.xxHash.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\MySql.Data.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\fabsss.csproj.AssemblyReference.cache
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\fabsss.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\fabsss.AssemblyInfoInputs.cache
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\fabsss.AssemblyInfo.cs
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\fabsss.csproj.CoreCompileInputs.cache
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\fabsss.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\fabsss.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\scopedcss\bundle\fabsss.styles.css
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\staticwebassets\msbuild.fabsss.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\staticwebassets\msbuild.fabsss.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\staticwebassets\msbuild.build.fabsss.props
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.fabsss.props
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.fabsss.props
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\fabsss.csproj.Up2Date
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\fabsss.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\refint\fabsss.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\fabsss.pdb
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\fabsss.genruntimeconfig.cache
+C:\Users\farzi\source\repos\fabsss\fabsss\obj\Debug\net8.0\ref\fabsss.dll
+C:\Users\farzi\source\repos\fabsss\fabsss\bin\Debug\net8.0\Dapper.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\appsettings.json
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\fabsss.staticwebassets.endpoints.json
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\fabsss.exe
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\fabsss.deps.json
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\fabsss.runtimeconfig.json
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\fabsss.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\fabsss.pdb
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\IdentityServer4.AccessTokenValidation.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\Dapper.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\IdentityModel.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\IdentityModel.AspNetCore.OAuth2Introspection.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\K4os.Compression.LZ4.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\K4os.Hash.xxHash.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\MySql.Data.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\fabsss.csproj.AssemblyReference.cache
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\fabsss.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\fabsss.AssemblyInfoInputs.cache
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\fabsss.AssemblyInfo.cs
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\fabsss.csproj.CoreCompileInputs.cache
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\fabsss.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\fabsss.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\scopedcss\bundle\fabsss.styles.css
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\fabsss.csproj.Up2Date
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\fabsss.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\refint\fabsss.dll
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\fabsss.pdb
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\fabsss.genruntimeconfig.cache
+C:\Users\hp\Downloads\faps\faps\fabsss\obj\Debug\net8.0\ref\fabsss.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\appsettings.json
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\fabsss.exe
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\fabsss.deps.json
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\fabsss.runtimeconfig.json
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\fabsss.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\fabsss.pdb
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\IdentityServer4.AccessTokenValidation.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\Dapper.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\IdentityModel.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\IdentityModel.AspNetCore.OAuth2Introspection.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\K4os.Compression.LZ4.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\K4os.Hash.xxHash.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\MySql.Data.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\fabsss.csproj.AssemblyReference.cache
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\fabsss.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\fabsss.AssemblyInfoInputs.cache
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\fabsss.AssemblyInfo.cs
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\fabsss.csproj.CoreCompileInputs.cache
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\fabsss.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\fabsss.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\staticwebassets\msbuild.fabsss.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\staticwebassets\msbuild.build.fabsss.props
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.fabsss.props
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.fabsss.props
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\scopedcss\bundle\fabsss.styles.css
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\fabsss.csproj.Up2Date
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\fabsss.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\refint\fabsss.dll
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\fabsss.pdb
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\fabsss.genruntimeconfig.cache
+C:\Users\Alan T Jim\Downloads\faps (2)\faps\faps\fabsss\obj\Debug\net8.0\ref\fabsss.dll

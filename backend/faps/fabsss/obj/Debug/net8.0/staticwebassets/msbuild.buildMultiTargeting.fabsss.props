@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\fabsss.props" />
+</Project>

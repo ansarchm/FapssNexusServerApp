@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+.location-wrapper {
+  background-color: #f2f7fa;
+  padding: 40px;
+  font-family: 'Roboto', sans-serif;
+
+  display: flex;
+  justify-content: center;
+
+  /** ✅ Add these **/
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.location-card {
+  background-color: #fff;
+  padding: 25px;
+  width: 100%;
+ 
+  border-radius: 1%;
+  margin-right: 4%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.table-structure {
+  display: flex;
+  border: 1px solid #DADCE6;
+  align-items: stretch;
+  border-radius: 1%;
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  box-sizing: border-box;
+  border-right: 1px solid #DADCE6;
+}
+
+.column:last-child {
+  border-right: none;
+}
+
+.column-content {
+  padding: 20px;
+}
+
+.left-column h3, .right-column h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 25px;
+  line-height: 140%;
+  letter-spacing: 0;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 20px 10px 20px;
+  margin-bottom: 0;
+  background: #fff;
+  position: relative;
+}
+
+
+.left-column h3::after, .right-column h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
+  z-index: -1;
+}
+
+/* Form rows */
+.row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.cell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cell label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.cell input, .cell select {
+  padding: 8px;
+  border: 1px solid #DADCE6;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Operation Hours */
+.op-row.header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-bottom: none;
+}
+
+.op-row {
+  display: flex;
+  align-items: center;
+   gap: 10px; /* uniform gap */
+
+  margin-bottom: 12px;
+}
+
+.op-row label {
+  width: 70%;  /* ✅ fixed width for consistent alignment */
+
+  font-weight: 500;
+}
+
+/* Updated time input styling */
+.op-row input[type="time"] {
+  width: 120px;
+  padding: 8px 12px;
+  border: 1px solid #DADCE6;
+  border-radius: 4px;
+  margin-left: 4%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  
+  /* Ensure native controls are visible */
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+  
+  /* Custom styling to match your design */
+  background-image: none;
+  position: relative;
+}
+
+
+
+
+/* Remove default time picker appearance for Firefox */
+.op-row input[type="time"]::-moz-focus-inner {
+  border: 0;
+}
+
+/* Alternative approach - use number inputs for better control */
+.time-input-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 120px;
+  border: 1px solid #DADCE6;
+  border-radius: 4px;
+  padding: 4px 8px;
+  background: #fff;
+}
+
+.time-number {
+  width: 30px;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  background: transparent;
+}
+
+.time-separator {
+  font-weight: bold;
+  color: #666;
+}
+
+/* Buttons */
+.form-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+.cell input,
+.cell select,
+.time-picker {
+  background-color: #fff; /* clean white background */
+  border: 1px solid #DADCE6;
+  box-shadow: none;
+  color: #1C212D; /* actual text color */
+}
+
+.cell input::placeholder,
+.cell select::placeholder,
+.time-picker::placeholder {
+  color: #B0B0B8; /* lighter than #92929D */
+  opacity: 1;
+}
+
+
+.save-btn, .cancel-btn {
+  padding: 9px 27px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: #FCD730;
+  color: #1C212D;
+}
+
+.cancel-btn {
+  background-color: #3B4053;
+  color: #FFFFFF;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.time-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.cell label,
+.op-row label,
+.op-row.header span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; /* Regular */
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0;
+  font-style: normal;
+}
+
+
+/* Input & Select text styling */
+.cell input, .cell select {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14.22px;
+  line-height: 140%;
+  letter-spacing: 0;
+  color: #92929D;
+}
+
+.op-row.header span:first-child {
+  margin-left: 23%;
+}
+
+.op-row.header span:last-child {
+  margin-right: 10%;
+}
+.time-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+ 
+   width: 100%; /* fixed width for consistency */
+  margin-left: 0; /* remove uneven spacing */
+}
+.time-picker {
+  width: 100%;
+  padding: 6px 30px 6px 8px;
+  border: 1px solid #DADCE6;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+
+  letter-spacing: 0;
+  color: #92929D;
+  outline: none;
+  background-color: #fff;
+  text-align: center;
+
+  /* Optional - remove default styles */
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+
+.arrow-buttons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  bottom: 3px;
+  justify-content: center;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 9px;
+  line-height: 10px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.arrow:hover {
+  color: #007bff;
+}
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}

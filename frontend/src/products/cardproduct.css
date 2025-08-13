@@ -1,0 +1,386 @@
+/* Row layout for filters */
+.filters-row {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* space between each pair */
+  margin-bottom: 16px;
+  flex-wrap: wrap; /* allow wrap on smaller screens */
+}
+
+/* Label + input pair */
+.filter-pair {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between label and input */
+}
+
+/* Label styling */
+.filter-label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16.79px;
+  line-height: 140%;
+  color: #1C212D;
+  white-space: nowrap;
+}
+
+/* Smaller input/select boxes */
+.filter-input,
+.filter-select {
+  width: 240px; /* reduced width */
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+.search-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2D4CBA;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+.table-wrapper {
+  padding: 16px;
+  background: #F2F7FA;
+  border-radius: 8px;
+  min-height: 100vh;
+  border: 1px solid #DCE0EB;
+}
+
+.table-scroll {
+  max-height: 600px;
+  max-width: 1200px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.custom-table {
+
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+/* Header section */
+.custom-table thead {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* Header cells (no vertical borders) */
+.custom-table thead th {
+  padding: 12px 10px;
+  background: #fff;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 16.79px;
+  line-height: 29.85px;
+
+  color: #3B4053;
+  border-bottom: 20px solid #F2F7FA; /* separation from body */
+}
+
+/* Rounded top corners for header */
+.custom-table thead th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.custom-table thead th:last-child {
+  border-top-right-radius: 8px;
+}
+
+/* Table body */
+.custom-table tbody tr:nth-child(odd) {
+  background: #FFFFFF;
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background: #FFFAE2;
+}
+
+.custom-table td {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  line-height: 140%;
+  letter-spacing: 0;
+  color: #1C212D;
+  padding: 12px 8px;
+  border-bottom: 1px solid #DCE0EB;
+  border-right: 1px solid #DCE0EB;
+  white-space: nowrap;
+}
+
+/* Remove right border from last column */
+.custom-table td:last-child {
+  border-right: none;
+}
+
+/* Inputs and selects inside table */
+.custom-table select,
+.custom-table input[type="date"],
+.custom-table input[type="text"],
+.custom-table input[type="number"] {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0;
+  color: #1C212D;
+}
+
+.custom-table input[type="checkbox"] {
+  accent-color: #FCD730;
+  width: 16px;
+  height: 16px;
+}
+
+/* --- HEADER SORT ARROWS --- */
+.header-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  
+  padding-right: 15px;
+}
+
+.header-text {
+  margin-right: 2px;
+}
+
+
+
+.arrow {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.arrow.up {
+  border-bottom: 5px solid #3B4053;
+  margin-bottom: 2px;
+}
+
+.arrow.down {
+  border-top: 5px solid #3B4053;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  background-color: #F2F7FA;
+  padding: 12px 16px;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0;
+  gap: 12px; /* spacing between icon, title, and checkbox group */
+}
+
+.section-title-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.section-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 1.2; /* tighter so it visually matches the checkbox height */
+  color: #1C212D;
+  margin: 0;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+}
+
+.checkbox-label {
+   font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+
+
+
+.close-to-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 20px; /* tweak if needed */
+}
+
+/* Filter label styling */
+.filter-label {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 16.79px;
+  line-height: 29.85px;
+  letter-spacing: 0;
+  color: #1C212D;
+  margin-bottom: 4px;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  background-color: #F2F7FA; /* Background for the entire header row */
+  padding: 12px 16px;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0; /* Remove gap between header and filters */
+}
+
+
+
+.search-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2D4CBA;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon {
+  width: 16px; /* size of your icon */
+  height: 16px;
+  object-fit: contain;
+}
+
+
+.section-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  color: #1C212D;
+}
+
+
+
+.checkbox-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+.close-to-title {
+  margin-left: 20px;
+}
+
+/* Filters row now matches header background */
+.filters-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 16px;
+  background-color: #F2F7FA;
+  border-radius: 0 0 8px 8px; /* bottom rounded edges */
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.filter-pair {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16.79px;
+  line-height: 140%;
+  color: #1C212D;
+  white-space: nowrap;
+}
+
+.filter-input,
+.filter-select {
+  width: 240px;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+.search-button {
+  padding: 7px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2D4CBA;
+  color: white;
+  cursor: pointer;
+}
+
+.table-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  justify-content: flex-start;
+}
+
+.table-actions .btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Individual button colors */
+.btn-add {
+  background-color: #2258F8; /* Blue */
+    color: #fff;
+
+}
+
+.btn-save {
+  background-color: #FCD730; /* Yellow */
+   color: #000000;
+}
+
+.btn-refresh {
+  background-color: #42C700; /* Green */
+    color: #fff;
+
+}
+
+.btn-delete {
+  background-color: #FF0000; /* Red */
+    color: #fff;
+
+}
+
+.btn-close {
+  background-color: #3B4053; /* Dark gray */
+    color: #fff;
+
+}

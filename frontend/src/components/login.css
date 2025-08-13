@@ -1,0 +1,121 @@
+/* Full page background */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400&display=swap');
+
+.login-page {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Glass effect box */
+.login-box {
+  background: rgba(255, 255, 255, 0.15); /* Transparent background */
+  backdrop-filter: blur(15px); /* Glass blur effect */
+  -webkit-backdrop-filter: blur(15px);
+  padding: 4% 4%;
+  height: 55vh;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #FFFFFF;
+  margin-bottom: 5px;  /* ✅ Reduce space below heading */
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;        /* Regular text */
+  font-size: 17.56px;
+  line-height: 100%;
+  letter-spacing: 0;         /* No extra spacing */
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 5px;
+  margin-bottom: 10%;        /* Spacing before input fields */
+}
+
+
+
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.icon-img {
+  position: absolute;
+  left: 12px;
+  width: 20px;
+  height: 20px;
+}
+.input-box .icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: white;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px 1px 12px 30px;
+  border: 1.6px solid rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+  font-size: 1rem;
+}
+
+.input-box input:focus {
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+.login-btn {
+  width: 100%; /* Same as input fields */
+  padding: 12px;
+  margin-top: 7%;
+  border: 1.6px solid rgba(255, 255, 255, 0.6);
+  border-radius: 16px; /* Same as text boxes */
+  background: rgba(255, 255, 255, 0.15);
+  color: #000000;
+  background-color: #F7F7F7;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  backdrop-filter: blur(10px);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.login-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.logo-img {
+  width: 46%;       /* Adjust logo size */
+}
