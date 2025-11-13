@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "owdVpHR5Nis=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\selac\\OneDrive\\Documents\\GitHub\\FapssNexusServerApp\\NfcReaderApp\\NfcReaderApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\selac\\.nuget\\packages\\pcsc\\7.0.1\\pcsc.7.0.1.nupkg.sha512",
+    "C:\\Users\\selac\\.nuget\\packages\\pcsc.iso7816\\7.0.1\\pcsc.iso7816.7.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
