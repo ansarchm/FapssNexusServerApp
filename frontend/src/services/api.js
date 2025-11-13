@@ -1175,6 +1175,77 @@ export const gameCategoryService = {
 };
 
 
+export const usersservices={
+  GetAllUserRoles: async () => {
+    try {
+      if (!authAPI.isAuthenticated()) {
+        throw new Error('Not authenticated. Please login first.');
+      }
+
+      console.log('🔍 Fetching card products...');
+      const response = await api.post('/GetAllUserRoles', {});
+      console.log('📦 Card products response:', response.data);
+      
+      if (response.data.data) {
+        return response.data.data;
+      } else if (Array.isArray(response.data)) {
+        return response.data;
+      } else {
+        return [];
+      }
+    } catch (error) {
+      console.error('❌ Error fetching card products:', error);
+      
+      if (error.code === 'ERR_NETWORK' || error.message.includes('Network Error')) {
+        throw new Error('Cannot connect to API. Make sure your .NET API is running on https://localhost:7221');
+      } else if (error.response?.status === 401) {
+        throw new Error('Unauthorized. Please login again.');
+      } else if (error.response?.status === 404) {
+        throw new Error('API endpoint not found. Check if CardProductController exists.');
+      } else if (error.response?.status === 500) {
+        throw new Error(`Server error: ${error.response?.data?.detail || error.message}`);
+      }
+      
+      throw error;
+    }
+  },
+
+  GetAllUsers: async () => {
+    try {
+      if (!authAPI.isAuthenticated()) {
+        throw new Error('Not authenticated. Please login first.');
+      }
+
+      console.log('🔍 Fetching card products...');
+      const response = await api.post('/GetAllUsers', {});
+      console.log('📦 Card products response:', response.data);
+      
+      if (response.data.data) {
+        return response.data.data;
+      } else if (Array.isArray(response.data)) {
+        return response.data;
+      } else {
+        return [];
+      }
+    } catch (error) {
+      console.error('❌ Error fetching card products:', error);
+      
+      if (error.code === 'ERR_NETWORK' || error.message.includes('Network Error')) {
+        throw new Error('Cannot connect to API. Make sure your .NET API is running on https://localhost:7221');
+      } else if (error.response?.status === 401) {
+        throw new Error('Unauthorized. Please login again.');
+      } else if (error.response?.status === 404) {
+        throw new Error('API endpoint not found. Check if CardProductController exists.');
+      } else if (error.response?.status === 500) {
+        throw new Error(`Server error: ${error.response?.data?.detail || error.message}`);
+      }
+      
+      throw error;
+    }
+  },
+
+}
+
 
 
 // Export the main api instance for direct use if needed

@@ -213,5 +213,115 @@ namespace fabsss.Controllers
             }
         }
 
+
+
+        // Get all card products (Card category only)
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> GetAllUsers()
+        {
+            try
+            {
+                var userId = User.FindFirst("id")?.Value;
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return Unauthorized(new { error = "Token missing user ID" });
+                }
+
+                var connectionString = _configuration.GetConnectionString("Default");
+
+                using var connection = new MySqlConnection(connectionString);
+                await connection.OpenAsync();
+
+                string query = @"SELECT * FROM tbl_cash  
+                                ORDER BY id DESC";
+
+                using var cmd = new MySqlCommand(query, connection);
+                using var reader = await cmd.ExecuteReaderAsync();
+
+                var products = new List<Dictionary<string, object>>();
+                while (await reader.ReadAsync())
+                {
+                    var row = new Dictionary<string, object>();
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        row[reader.GetName(i)] = reader.IsDBNull(i) ? null : reader.GetValue(i);
+                    }
+                    products.Add(row);
+                }
+
+                Console.WriteLine($"✅ Found {products.Count} users products");
+
+                return Ok(products);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"❌ Error: {ex.Message}");
+                return StatusCode(500, new { error = "Database error", detail = ex.Message });
+            }
+        }
+
+
+        // Get all card products (Card category only)
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> GetAllUserRoles()
+        {
+            try
+            {
+                var userId = User.FindFirst("id")?.Value;
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return Unauthorized(new { error = "Token missing user ID" });
+                }
+
+                var connectionString = _configuration.GetConnectionString("Default");
+
+                using var connection = new MySqlConnection(connectionString);
+                await connection.OpenAsync();
+
+                string query = @"SELECT * FROM tbl_userrole  
+                                ORDER BY id DESC";
+
+                using var cmd = new MySqlCommand(query, connection);
+                using var reader = await cmd.ExecuteReaderAsync();
+
+                var products = new List<Dictionary<string, object>>();
+                while (await reader.ReadAsync())
+                {
+                    var row = new Dictionary<string, object>();
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        row[reader.GetName(i)] = reader.IsDBNull(i) ? null : reader.GetValue(i);
+                    }
+                    products.Add(row);
+                }
+
+                Console.WriteLine($"✅ Found {products.Count} users products");
+
+                return Ok(products);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"❌ Error: {ex.Message}");
+                return StatusCode(500, new { error = "Database error", detail = ex.Message });
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
