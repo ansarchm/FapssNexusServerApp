@@ -1,20 +1,15 @@
 [
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
-    "Method": "AddCashMode",
-    "RelativePath": "api/AddCashMode/add-cash-mode",
+    "ContainingType": "ProductApi.Controllers.CardProductController",
+    "Method": "AddCardProduct",
+    "RelativePath": "api/AddCardProduct",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "model",
-        "Type": "fabsss.Models.PaymentAddModel",
+        "Name": "request",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": true
       }
     ],
@@ -31,6 +26,22 @@
       {
         "Name": "request",
         "Type": "fabsss.Models.AddCategoryRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.ComboProductController",
+    "Method": "AddComboProduct",
+    "RelativePath": "api/AddComboProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "fabsss.Models.ComboProductRequest",
         "IsRequired": true
       }
     ],
@@ -58,7 +69,23 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.GameSettingsController",
+    "Method": "AddGameSetting",
+    "RelativePath": "api/AddGameSetting",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.GateController",
     "Method": "AddGate",
     "RelativePath": "api/AddGate",
     "HttpMethod": "POST",
@@ -74,7 +101,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.GateController",
     "Method": "AddGateGroup",
     "RelativePath": "api/AddGateGroup/addGateGroup",
     "HttpMethod": "POST",
@@ -84,6 +111,22 @@
       {
         "Name": "request",
         "Type": "fabsss.Models.GateGroupRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.LedProductController",
+    "Method": "AddLedProduct",
+    "RelativePath": "api/AddLedProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "fabsss.Models.LedProductRequest",
         "IsRequired": true
       }
     ],
@@ -122,16 +165,48 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
-    "Method": "AddRefundReason",
-    "RelativePath": "api/AddRefundReason/add",
+    "ContainingType": "fabsss.Controllers.StickerProductController",
+    "Method": "AddStickerProduct",
+    "RelativePath": "api/AddStickerProduct",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "fabsss.Models.AddRefundReasonRequest",
+        "Type": "fabsss.Models.StickerProductRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductApi.Controllers.TaxCategoryController",
+    "Method": "AddTaxCategory",
+    "RelativePath": "api/AddTaxCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taxCategory",
+        "Type": "fabsss.Models.TaxCategoryModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.TimeProductController",
+    "Method": "AddTimeProduct",
+    "RelativePath": "api/AddTimeProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "fabsss.Models.TimeProductRequest",
         "IsRequired": true
       }
     ],
@@ -170,19 +245,193 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
-    "Method": "GetCashModeById",
-    "RelativePath": "api/GetCashModeById/get-cash-mode-by-id",
+    "ContainingType": "fabsss.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "model",
-        "Type": "fabsss.Models.GetCashModeRequest",
+        "Name": "request",
+        "Type": "fabsss.Models.LoginRequest",
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductApi.Controllers.CardProductController",
+    "Method": "DeleteCardProduct",
+    "RelativePath": "api/DeleteCardProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.ComboProductController",
+    "Method": "DeleteComboProduct",
+    "RelativePath": "api/DeleteComboProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "fabsss.Models.ComboProductRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.GameSettingsController",
+    "Method": "DeleteGameSetting",
+    "RelativePath": "api/DeleteGameSetting",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.LedProductController",
+    "Method": "DeleteLedProduct",
+    "RelativePath": "api/DeleteLedProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "fabsss.Models.LedProductRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.ProductCategoryController",
+    "Method": "DeleteProductCat",
+    "RelativePath": "api/DeleteProductCat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "fabsss.Models.ProductCategory",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.StickerProductController",
+    "Method": "DeleteStickerProduct",
+    "RelativePath": "api/DeleteStickerProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "fabsss.Models.StickerProductRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductApi.Controllers.TaxCategoryController",
+    "Method": "DeleteTaxCategory",
+    "RelativePath": "api/DeleteTaxCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.TimeProductController",
+    "Method": "DeleteTimeProduct",
+    "RelativePath": "api/DeleteTimeProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "fabsss.Models.TimeProductRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.GameSettingsController",
+    "Method": "GetAllGameSettings",
+    "RelativePath": "api/GetAllGameSettings",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.ProductCategoryController",
+    "Method": "GetAllProductsGroupedByCategory",
+    "RelativePath": "api/GetAllProductsGroupedByCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductApi.Controllers.CardProductController",
+    "Method": "GetCardProductById",
+    "RelativePath": "api/GetCardProductById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductApi.Controllers.CardProductController",
+    "Method": "GetCardProducts",
+    "RelativePath": "api/GetCardProducts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -202,7 +451,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.ReportController",
     "Method": "GetCategorywiseReport",
     "RelativePath": "api/GetCategorywiseReport",
     "HttpMethod": "POST",
@@ -218,7 +467,33 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.ComboProductController",
+    "Method": "GetComboProductById",
+    "RelativePath": "api/GetComboProductById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "fabsss.Models.ComboProductRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.ComboProductController",
+    "Method": "GetComboProducts",
+    "RelativePath": "api/GetComboProducts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.ReportController",
     "Method": "GetDiscountReport",
     "RelativePath": "api/GetDiscountReport",
     "HttpMethod": "POST",
@@ -234,7 +509,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.ReportController",
     "Method": "GetFirstReport",
     "RelativePath": "api/GetFirstReport/getFirstReport",
     "HttpMethod": "POST",
@@ -250,7 +525,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.ReportController",
     "Method": "GetGameRevenueReport",
     "RelativePath": "api/GetGameRevenueReport",
     "HttpMethod": "POST",
@@ -266,7 +541,23 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.GameSettingsController",
+    "Method": "GetGameSettingById",
+    "RelativePath": "api/GetGameSettingById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.GateController",
     "Method": "GetGateById",
     "RelativePath": "api/GetGateById",
     "HttpMethod": "POST",
@@ -282,7 +573,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.GateController",
     "Method": "GetGateByLocation",
     "RelativePath": "api/GetGateByLocation",
     "HttpMethod": "GET",
@@ -298,7 +589,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.GateController",
     "Method": "GetGateGroupById",
     "RelativePath": "api/GetGateGroupById/getGateGroupById",
     "HttpMethod": "POST",
@@ -314,7 +605,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.GateController",
     "Method": "GetGateGroupByLocation",
     "RelativePath": "api/GetGateGroupByLocation",
     "HttpMethod": "GET",
@@ -330,35 +621,29 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
-    "Method": "GetLocationDetails",
-    "RelativePath": "api/GetLocationDetails/details/{locationId}",
-    "HttpMethod": "GET",
+    "ContainingType": "fabsss.Controllers.LedProductController",
+    "Method": "GetLedProductById",
+    "RelativePath": "api/GetLedProductById",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "locationId",
-        "Type": "System.Int32",
+        "Name": "request",
+        "Type": "fabsss.Models.LedProductRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
-    "Method": "GetPaymentModesByLocation",
-    "RelativePath": "api/GetPaymentModesByLocation",
-    "HttpMethod": "GET",
+    "ContainingType": "fabsss.Controllers.LedProductController",
+    "Method": "GetLedProducts",
+    "RelativePath": "api/GetLedProducts",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "locationId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -414,7 +699,23 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.ProductCategoryController",
+    "Method": "GetProductsByCategory",
+    "RelativePath": "api/GetProductsByCategory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.RefundReasonController",
     "Method": "GetRefundReasonById",
     "RelativePath": "api/GetRefundReasonById/get-reason-by-id",
     "HttpMethod": "POST",
@@ -435,7 +736,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.ReportController",
     "Method": "GetRevenueGroupReport",
     "RelativePath": "api/GetRevenueGroupReport",
     "HttpMethod": "POST",
@@ -451,7 +752,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.ReportController",
     "Method": "GetRevenueReport",
     "RelativePath": "api/GetRevenueReport/RevenueReport2",
     "HttpMethod": "POST",
@@ -467,23 +768,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
-    "Method": "GetRevenueReportByUser",
-    "RelativePath": "api/GetRevenueReportByUser/GetRevenueReportByUser",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "fabsss.Models.RevenueReportRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.ReportController",
     "Method": "GetSecondReport",
     "RelativePath": "api/GetSecondReport/GetSecondReport",
     "HttpMethod": "POST",
@@ -499,7 +784,59 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.StickerProductController",
+    "Method": "GetStickerProductById",
+    "RelativePath": "api/GetStickerProductById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "fabsss.Models.StickerProductRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.StickerProductController",
+    "Method": "GetStickerProducts",
+    "RelativePath": "api/GetStickerProducts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductApi.Controllers.TaxCategoryController",
+    "Method": "GetTaxCategories",
+    "RelativePath": "api/GetTaxCategories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductApi.Controllers.TaxCategoryController",
+    "Method": "GetTaxCategoryById",
+    "RelativePath": "api/GetTaxCategoryById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.ReportController",
     "Method": "GetThirdReport",
     "RelativePath": "api/GetThirdReport/get-third-report",
     "HttpMethod": "POST",
@@ -512,6 +849,32 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.TimeProductController",
+    "Method": "GetTimeProductById",
+    "RelativePath": "api/GetTimeProductById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "fabsss.Models.TimeProductRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.TimeProductController",
+    "Method": "GetTimeProducts",
+    "RelativePath": "api/GetTimeProducts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -567,7 +930,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.ReportController",
     "Method": "GetVoidSalesReport",
     "RelativePath": "api/GetVoidSalesReport",
     "HttpMethod": "POST",
@@ -615,23 +978,155 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
-    "Method": "Login",
-    "RelativePath": "api/Login",
-    "HttpMethod": "POST",
+    "ContainingType": "fabsss.Controllers.LocationController",
+    "Method": "GetAllLocations",
+    "RelativePath": "api/Location/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.LocationController",
+    "Method": "GetLocationDetails",
+    "RelativePath": "api/Location/details/{locationId}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "fabsss.Models.LoginRequest",
+        "Name": "locationId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.LocationController",
+    "Method": "UpdateLocationDetails",
+    "RelativePath": "api/Location/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "fabsss.Models.UpdateLocationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.PaymentModeController",
+    "Method": "GetPaymentModesByLocation",
+    "RelativePath": "api/PaymentMode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "locationId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.PaymentModeController",
+    "Method": "AddRefundReason",
+    "RelativePath": "api/PaymentMode/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "fabsss.Models.AddRefundReasonRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.PaymentModeController",
+    "Method": "AddCashMode",
+    "RelativePath": "api/PaymentMode/add-cash-mode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "fabsss.Models.PaymentAddModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.PaymentModeController",
+    "Method": "GetCashMode",
+    "RelativePath": "api/PaymentMode/get-cash-mode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "fabsss.Models.GetCashModeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.PaymentModeController",
+    "Method": "GetCashModeById",
+    "RelativePath": "api/PaymentMode/get-cash-mode-by-id",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "fabsss.Models.GetCashModeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.PaymentModeController",
+    "Method": "UpdateCashModeById",
+    "RelativePath": "api/PaymentMode/update-cash-mode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "fabsss.Models.PaymentUpdateModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.ReportController",
     "Method": "Post",
     "RelativePath": "api/Post",
     "HttpMethod": "POST",
@@ -647,21 +1142,16 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
-    "Method": "UpdateCashModeById",
-    "RelativePath": "api/UpdateCashModeById/update-cash-mode",
+    "ContainingType": "ProductApi.Controllers.CardProductController",
+    "Method": "UpdateCardProduct",
+    "RelativePath": "api/UpdateCardProduct",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "model",
-        "Type": "fabsss.Models.PaymentUpdateModel",
+        "Name": "product",
+        "Type": "fabsss.Models.CardProductModel",
         "IsRequired": true
       }
     ],
@@ -684,7 +1174,39 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.ComboProductController",
+    "Method": "UpdateComboProduct",
+    "RelativePath": "api/UpdateComboProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product",
+        "Type": "fabsss.Models.ComboProductModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.GameSettingsController",
+    "Method": "UpdateGameSetting",
+    "RelativePath": "api/UpdateGameSetting",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.GateController",
     "Method": "UpdateGateById",
     "RelativePath": "api/UpdateGateById",
     "HttpMethod": "PUT",
@@ -700,7 +1222,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.GateController",
     "Method": "UpdateGateGroupById",
     "RelativePath": "api/UpdateGateGroupById",
     "HttpMethod": "POST",
@@ -716,7 +1238,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.GateController",
     "Method": "UpdateGateGroupDetails",
     "RelativePath": "api/UpdateGateGroupDetails",
     "HttpMethod": "POST",
@@ -732,16 +1254,16 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
-    "Method": "UpdateLocationDetails",
-    "RelativePath": "api/UpdateLocationDetails/update",
-    "HttpMethod": "PUT",
+    "ContainingType": "fabsss.Controllers.LedProductController",
+    "Method": "UpdateLedProduct",
+    "RelativePath": "api/UpdateLedProduct",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "fabsss.Models.UpdateLocationRequest",
+        "Name": "product",
+        "Type": "fabsss.Models.LedProductModel",
         "IsRequired": true
       }
     ],
@@ -780,7 +1302,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.RefundReasonController",
     "Method": "UpdateReasonById",
     "RelativePath": "api/UpdateReasonById/update-reason-by-id",
     "HttpMethod": "POST",
@@ -801,7 +1323,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
+    "ContainingType": "fabsss.Controllers.RefundReasonController",
     "Method": "UpdateRefundReasonById",
     "RelativePath": "api/UpdateRefundReasonById",
     "HttpMethod": "POST",
@@ -817,16 +1339,48 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductApi.Controllers.ProductController",
-    "Method": "UpdateRefundReasonsById",
-    "RelativePath": "api/UpdateRefundReasonsById",
+    "ContainingType": "fabsss.Controllers.StickerProductController",
+    "Method": "UpdateStickerProduct",
+    "RelativePath": "api/UpdateStickerProduct",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "fabsss.Models.UpdateRefundReasonRequest",
+        "Name": "product",
+        "Type": "fabsss.Models.StickerProductModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductApi.Controllers.TaxCategoryController",
+    "Method": "UpdateTaxCategory",
+    "RelativePath": "api/UpdateTaxCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taxCategory",
+        "Type": "fabsss.Models.TaxCategoryModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.TimeProductController",
+    "Method": "UpdateTimeProduct",
+    "RelativePath": "api/UpdateTimeProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product",
+        "Type": "fabsss.Models.TimeProductModel",
         "IsRequired": true
       }
     ],

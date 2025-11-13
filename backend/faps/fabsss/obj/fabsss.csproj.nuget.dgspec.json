@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alan T Jim\\Downloads\\faps (2)\\faps\\faps\\fabsss\\fabsss.csproj": {}
+    "C:\\MyLocalProjects\\selacto_projects\\faps\\faps\\faps\\faps\\fabsss\\fabsss.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alan T Jim\\Downloads\\faps (2)\\faps\\faps\\fabsss\\fabsss.csproj": {
+    "C:\\MyLocalProjects\\selacto_projects\\faps\\faps\\faps\\faps\\fabsss\\fabsss.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alan T Jim\\Downloads\\faps (2)\\faps\\faps\\fabsss\\fabsss.csproj",
+        "projectUniqueName": "C:\\MyLocalProjects\\selacto_projects\\faps\\faps\\faps\\faps\\fabsss\\fabsss.csproj",
         "projectName": "fabsss",
-        "projectPath": "C:\\Users\\Alan T Jim\\Downloads\\faps (2)\\faps\\faps\\fabsss\\fabsss.csproj",
-        "packagesPath": "C:\\Users\\Alan T Jim\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alan T Jim\\Downloads\\faps (2)\\faps\\faps\\fabsss\\obj\\",
+        "projectPath": "C:\\MyLocalProjects\\selacto_projects\\faps\\faps\\faps\\faps\\fabsss\\fabsss.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\MyLocalProjects\\selacto_projects\\faps\\faps\\faps\\faps\\fabsss\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Alan T Jim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -46,7 +44,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -60,9 +59,17 @@
               "target": "Package",
               "version": "[2.1.66, )"
             },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.1.2, )"
+            },
             "MySql.Data": {
               "target": "Package",
               "version": "[9.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -88,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

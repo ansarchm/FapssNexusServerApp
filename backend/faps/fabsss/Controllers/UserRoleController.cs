@@ -112,7 +112,7 @@ namespace fabsss.Controllers
             }
         }
 
-        //[Authorize]
+        //[Authorize]f
 
         [HttpPost]
         public async Task<IActionResult> AddUserRole([FromBody] AddUserRoleRequest request)
@@ -135,7 +135,7 @@ namespace fabsss.Controllers
 
                 await command.ExecuteNonQueryAsync();
 
-                return Ok(new { message = "User Role added successfully" });
+                return Ok(new { message = "User Role Added successfully" });
             }
             catch (Exception ex)
             {

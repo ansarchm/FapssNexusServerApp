@@ -26,6 +26,169 @@ namespace fabsss.Models
 
     
     }
+    // Card Product Model - Complete database representation
+    public class CardProductModel
+    {
+        public int id { get; set; }
+        public string productname { get; set; }
+        public string category { get; set; }
+        public string ptype { get; set; }
+        public decimal rate { get; set; }
+        public decimal tax { get; set; }
+        public string status { get; set; }
+        public int sequence { get; set; }
+        public decimal bonus { get; set; }
+        public int duration { get; set; }
+        public decimal cashbalance { get; set; }
+        public string timebandtype { get; set; }
+        public string taxtype { get; set; }
+        public string gateip { get; set; }
+        public decimal depositamount { get; set; }
+        public int kot { get; set; }
+        public int favoriteflag { get; set; }
+        public int customercard { get; set; }
+        public int kiosk { get; set; }
+        public int regman { get; set; }
+        public string typegate { get; set; }
+        public string gatevalue { get; set; }
+        public int commonflag { get; set; }
+        public int expiry { get; set; }
+        public int enableled { get; set; }
+        public int green { get; set; }
+        public int blue { get; set; }
+        public int red { get; set; }
+        public int locationid { get; set; }
+
+        // Card Product specific fields
+        public string membership { get; set; }
+        public int? cardvalidity { get; set; }
+        public DateTime? cardexpirydate { get; set; }
+        public int vipcard { get; set; }
+        public string poscounter { get; set; }
+        public string taxcategory { get; set; }
+        public decimal? taxpercent { get; set; }
+        public decimal? pricenotax { get; set; }
+        public DateTime? lastupdateddate { get; set; }
+        public string lastupdateduser { get; set; }
+        public string displayinpos { get; set; }
+        public decimal? facevalue { get; set; }
+        public decimal? sellingprice { get; set; }
+        public int? cardquantity { get; set; }
+        public string accessprofile { get; set; }
+    }
+
+    // Card Product Request Model - For Add/Update operations
+    // FIXED: Removed [Required] attributes from optional fields
+    public class CardProductRequest
+    {
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Product name is required")]
+        [MaxLength(200)]
+        public string ProductName { get; set; }
+
+        public string PType { get; set; }
+
+        [Range(0, double.MaxValue, ErrorMessage = "Rate must be a positive number")]
+        public decimal Rate { get; set; }
+
+        [Range(0, 100, ErrorMessage = "Tax must be between 0 and 100")]
+        public decimal Tax { get; set; }
+
+        public string Status { get; set; }
+        public int Sequence { get; set; }
+
+        [Range(0, double.MaxValue, ErrorMessage = "Bonus must be a positive number")]
+        public decimal Bonus { get; set; }
+
+        [Range(0, int.MaxValue, ErrorMessage = "Duration must be a positive number")]
+        public int Duration { get; set; }
+
+        public decimal CashBalance { get; set; }
+        public string TimebandType { get; set; }
+        public string TaxType { get; set; }
+        public string GateIp { get; set; }
+        public decimal DepositAmount { get; set; }
+        public int Kot { get; set; }
+        public int FavoriteFlag { get; set; }
+        public int CustomerCard { get; set; }
+        public int Kiosk { get; set; }
+        public int RegMan { get; set; }
+        public string TypeGate { get; set; }
+        public string GateValue { get; set; }
+        public int CommonFlag { get; set; }
+        public int Expiry { get; set; }
+        public int EnableLed { get; set; }
+        public int Green { get; set; }
+        public int Blue { get; set; }
+        public int Red { get; set; }
+
+        // Card Product specific fields - ALL OPTIONAL (no [Required] attributes)
+        // These fields are not in the database yet
+        public string Membership { get; set; }
+        public int? CardValidity { get; set; }
+        public DateTime? CardExpiryDate { get; set; }
+        public int VipCard { get; set; }
+
+        [MaxLength(500)]
+        public string PosCounter { get; set; }
+
+        [MaxLength(100)]
+        public string TaxCategory { get; set; }
+
+        [Range(0, 100)]
+        public decimal? TaxPercent { get; set; }
+
+        public decimal? PriceNoTax { get; set; }
+        public string DisplayInPos { get; set; }
+        public decimal? FaceValue { get; set; }
+        public decimal? SellingPrice { get; set; }
+
+        [Range(0, int.MaxValue)]
+        public int? CardQuantity { get; set; }
+
+        // AccessProfile is optional - no [Required] attribute
+        public string AccessProfile { get; set; }
+    }
+    // Simple request model for Get/Delete operations
+    public class CardProductIdRequest
+    {
+        [Required]
+        public int Id { get; set; }
+    }
+
+    // Response model for API responses
+    public class CardProductResponse
+    {
+        public bool Success { get; set; }
+        public string Message { get; set; }
+        public object Data { get; set; }
+    }
+
+    // List response model
+    public class CardProductListResponse
+    {
+        public bool Success { get; set; }
+        public string Message { get; set; }
+        public List<CardProductModel> Data { get; set; }
+        public int TotalCount { get; set; }
+        public int ActiveCount { get; set; }
+        public int InactiveCount { get; set; }
+    }
+
+    // Filter/Search request model
+    public class CardProductFilterRequest
+    {
+        public string SearchTerm { get; set; }
+        public string ProductType { get; set; }
+        public string Status { get; set; }
+        public int? LocationId { get; set; }
+        public decimal? MinPrice { get; set; }
+        public decimal? MaxPrice { get; set; }
+        public int PageNumber { get; set; } = 1;
+        public int PageSize { get; set; } = 50;
+    }
+
     [Table("tbl_gate")]
     public class Gate
     {
@@ -424,4 +587,648 @@ namespace fabsss.Models
         public int Id { get; set; }
         public int LocationId { get; set; }
     }
+
+    // Time Product Model - Complete database representation
+    public class TimeProductModel
+    {
+        public int id { get; set; }
+        public string productname { get; set; }
+        public string category { get; set; }
+        public string ptype { get; set; }
+        public decimal rate { get; set; }
+        public decimal tax { get; set; }
+        public string status { get; set; }
+        public int sequence { get; set; }
+        public decimal bonus { get; set; }
+        public int duration { get; set; }
+        public decimal cashbalance { get; set; }
+        public string timebandtype { get; set; }
+        public string taxtype { get; set; }
+        public string gateip { get; set; }
+        public decimal depositamount { get; set; }
+        public int kot { get; set; }
+        public int favoriteflag { get; set; }
+        public int customercard { get; set; }
+        public int kiosk { get; set; }
+        public int regman { get; set; }
+        public string typegate { get; set; }
+        public string gatevalue { get; set; }
+        public int commonflag { get; set; }
+        public int expiry { get; set; }
+        public int enableled { get; set; }
+        public int green { get; set; }
+        public int blue { get; set; }
+        public int red { get; set; }
+        public int locationid { get; set; }
+
+        // Time Product specific fields
+        public string membership { get; set; }
+        public int? cardvalidity { get; set; }
+        public DateTime? cardexpirydate { get; set; }
+        public int vipcard { get; set; }
+        public string poscounter { get; set; }
+        public string taxcategory { get; set; }
+        public decimal? taxpercent { get; set; }
+        public decimal? pricenotax { get; set; }
+        public DateTime? lastupdateddate { get; set; }
+        public string lastupdateduser { get; set; }
+        public string displayinpos { get; set; }
+        public decimal? facevalue { get; set; }
+        public decimal? sellingprice { get; set; }
+        public int? cardquantity { get; set; }
+        public string accessprofile { get; set; }
+
+        // NEW: Time Balance field (in minutes)
+        public int? timebalance { get; set; }
+    }
+
+    // Time Product Request Model - For Add/Update operations
+    public class TimeProductRequest
+    {
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Product name is required")]
+        [MaxLength(200)]
+        public string ProductName { get; set; }
+
+        public string PType { get; set; }
+
+        [Range(0, double.MaxValue, ErrorMessage = "Rate must be a positive number")]
+        public decimal Rate { get; set; }
+
+        [Range(0, 100, ErrorMessage = "Tax must be between 0 and 100")]
+        public decimal Tax { get; set; }
+
+        public string Status { get; set; }
+
+        public int Sequence { get; set; }
+
+        [Range(0, double.MaxValue, ErrorMessage = "Bonus must be a positive number")]
+        public decimal Bonus { get; set; }
+
+        [Range(0, int.MaxValue, ErrorMessage = "Duration must be a positive number")]
+        public int Duration { get; set; }
+
+        public decimal CashBalance { get; set; }
+        public string TimebandType { get; set; }
+        public string TaxType { get; set; }
+        public string GateIp { get; set; }
+        public decimal DepositAmount { get; set; }
+        public int Kot { get; set; }
+        public int FavoriteFlag { get; set; }
+        public int CustomerCard { get; set; }
+        public int Kiosk { get; set; }
+        public int RegMan { get; set; }
+        public string TypeGate { get; set; }
+        public string GateValue { get; set; }
+        public int CommonFlag { get; set; }
+        public int Expiry { get; set; }
+        public int EnableLed { get; set; }
+        public int Green { get; set; }
+        public int Blue { get; set; }
+        public int Red { get; set; }
+
+        // Time Product specific fields
+        public string Membership { get; set; }
+        public int? CardValidity { get; set; }
+        public DateTime? CardExpiryDate { get; set; }
+        public int VipCard { get; set; }
+
+        [MaxLength(500)]
+        public string PosCounter { get; set; }
+
+        [MaxLength(100)]
+        public string TaxCategory { get; set; }
+
+        [Range(0, 100)]
+        public decimal? TaxPercent { get; set; }
+
+        public decimal? PriceNoTax { get; set; }
+        public string DisplayInPos { get; set; }
+        public decimal? FaceValue { get; set; }
+        public decimal? SellingPrice { get; set; }
+
+        [Range(0, int.MaxValue)]
+        public int? CardQuantity { get; set; }
+
+        public string AccessProfile { get; set; }
+
+        // NEW: Time Balance field (in minutes)
+        [Range(0, int.MaxValue, ErrorMessage = "Time balance must be a positive number")]
+        public int? TimeBalance { get; set; }
+    }
+    // LED Product Model - Complete database representation
+    public class LedProductModel
+    {
+        public int id { get; set; }
+        public string productname { get; set; }
+        public string category { get; set; }
+        public string ptype { get; set; }
+        public decimal rate { get; set; }
+        public decimal tax { get; set; }
+        public string status { get; set; }
+        public int sequence { get; set; }
+        public int? bonus { get; set; }
+        public int? duration { get; set; }
+        public decimal? cashbalance { get; set; }
+        public string timebandtype { get; set; }
+        public string taxtype { get; set; }
+        public string gateip { get; set; }
+        public decimal? depositamount { get; set; }
+        public int kot { get; set; }
+        public int? favoriteflag { get; set; }
+        public int customercard { get; set; }
+        public int? kiosk { get; set; }
+        public int? regman { get; set; }
+        public string typegate { get; set; }
+        public string gatevalue { get; set; }
+        public int? commonflag { get; set; }
+        public int? expiry { get; set; }
+        public int? enableled { get; set; }
+        public int? green { get; set; }
+        public int? blue { get; set; }
+        public int? red { get; set; }
+        public int locationid { get; set; }
+
+        // LED Product specific fields
+        public string membership { get; set; }
+        public int? cardvalidity { get; set; }
+        public DateTime? cardexpirydate { get; set; }
+        public int? vipcard { get; set; }
+        public string poscounter { get; set; }
+        public string taxcategory { get; set; }
+        public decimal? taxpercent { get; set; }
+        public decimal? pricenotax { get; set; }
+        public DateTime? lastupdateddate { get; set; }
+        public string lastupdateduser { get; set; }
+        public string displayinpos { get; set; }
+        public decimal? facevalue { get; set; }
+        public decimal? sellingprice { get; set; }
+        public int? cardquantity { get; set; }
+        public string accessprofile { get; set; }
+        public int? count { get; set; } // Bracelet Quantity field
+    }
+
+    // LED Product Request Model - For Add/Update operations
+    public class LedProductRequest
+    {
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Product name is required")]
+        [MaxLength(200)]
+        public string ProductName { get; set; }
+
+        public string PType { get; set; }
+
+        [Range(0, double.MaxValue, ErrorMessage = "Rate must be a positive number")]
+        public decimal Rate { get; set; }
+
+        [Range(0, 100, ErrorMessage = "Tax must be between 0 and 100")]
+        public decimal Tax { get; set; }
+
+        public string Status { get; set; }
+        public int Sequence { get; set; }
+
+        [Range(0, double.MaxValue, ErrorMessage = "Bonus must be a positive number")]
+        public int? Bonus { get; set; }
+
+        [Range(0, int.MaxValue, ErrorMessage = "Duration must be a positive number")]
+        public int? Duration { get; set; }
+
+        public decimal? CashBalance { get; set; }
+        public string TimebandType { get; set; }
+        public string TaxType { get; set; }
+        public string GateIp { get; set; }
+        public decimal? DepositAmount { get; set; }
+        public int Kot { get; set; }
+        public int? FavoriteFlag { get; set; }
+        public int CustomerCard { get; set; }
+        public int? Kiosk { get; set; }
+        public int? RegMan { get; set; }
+        public string TypeGate { get; set; }
+        public string GateValue { get; set; }
+        public int? CommonFlag { get; set; }
+        public int? Expiry { get; set; }
+        public int? EnableLed { get; set; }
+        public int? Green { get; set; }
+        public int? Blue { get; set; }
+        public int? Red { get; set; }
+
+        // LED Product specific fields
+        public string Membership { get; set; }
+        public int? CardValidity { get; set; }
+        public DateTime? CardExpiryDate { get; set; }
+        public int? VipCard { get; set; }
+
+        [MaxLength(500)]
+        public string PosCounter { get; set; }
+
+        [MaxLength(100)]
+        public string TaxCategory { get; set; }
+
+        [Range(0, 100)]
+        public decimal? TaxPercent { get; set; }
+
+        public decimal? PriceNoTax { get; set; }
+        public string DisplayInPos { get; set; }
+        public decimal? FaceValue { get; set; }
+        public decimal? SellingPrice { get; set; }
+
+        [Range(0, int.MaxValue)]
+        public int? CardQuantity { get; set; }
+
+        public string AccessProfile { get; set; }
+
+        [Range(0, int.MaxValue, ErrorMessage = "Count must be a positive number")]
+        public int? Count { get; set; } // Bracelet Quantity field
+    }
+    public class TaxCategoryModel
+    {
+        public int id { get; set; }
+        public string taxid { get; set; }
+        public string taxcategory { get; set; }
+        public decimal? taxpercent { get; set; }
+        public string? description { get; set; }  // Make nullable
+        public string status { get; set; }
+        public int? locationid { get; set; }
+        public DateTime? lastupdateddate { get; set; }
+        public string? lastupdateduser { get; set; }  // Make nullable with ?
+        public DateTime? createddate { get; set; }
+    }
+ // Combo Product Model - Complete database representation
+    public class ComboProductModel
+    {
+        public int id { get; set; }
+        public string productname { get; set; }
+        public string category { get; set; }
+        public string ptype { get; set; }
+        public decimal rate { get; set; }
+        public decimal tax { get; set; }
+        public string status { get; set; }
+        public int sequence { get; set; }
+        public decimal bonus { get; set; }
+        public int duration { get; set; }
+        public decimal cashbalance { get; set; }
+        public string timebandtype { get; set; }
+        public string taxtype { get; set; }
+        public string gateip { get; set; }
+        public decimal depositamount { get; set; }
+        public int kot { get; set; }
+        public int favoriteflag { get; set; }
+        public int customercard { get; set; }
+        public int kiosk { get; set; }
+        public int regman { get; set; }
+        public string typegate { get; set; }
+        public string gatevalue { get; set; }
+        public int commonflag { get; set; }
+        public int expiry { get; set; }
+        public int enableled { get; set; }
+        public int green { get; set; }
+        public int blue { get; set; }
+        public int red { get; set; }
+        public int locationid { get; set; }
+
+        // Combo Product specific fields
+        public string membership { get; set; }
+        public int? cardvalidity { get; set; }
+        public DateTime? cardexpirydate { get; set; }
+        public int vipcard { get; set; }
+        public string poscounter { get; set; }
+        public string taxcategory { get; set; }
+        public decimal? taxpercent { get; set; }
+        public decimal? pricenotax { get; set; }
+        public DateTime? lastupdateddate { get; set; }
+        public string lastupdateduser { get; set; }
+        public string displayinpos { get; set; }
+        public decimal? facevalue { get; set; }
+        public decimal? sellingprice { get; set; }
+        public int? cardquantity { get; set; }
+        public string accessprofile { get; set; }
+    }
+
+    // Combo Product Request Model - For Add/Update operations
+    public class ComboProductRequest
+    {
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Product name is required")]
+        [MaxLength(200)]
+        public string ProductName { get; set; }
+
+        public string PType { get; set; }
+
+        [Range(0, double.MaxValue, ErrorMessage = "Rate must be a positive number")]
+        public decimal Rate { get; set; }
+
+        [Range(0, 100, ErrorMessage = "Tax must be between 0 and 100")]
+        public decimal Tax { get; set; }
+
+        public string Status { get; set; }
+
+        public int Sequence { get; set; }
+
+        [Range(0, double.MaxValue, ErrorMessage = "Bonus must be a positive number")]
+        public decimal Bonus { get; set; }
+
+        [Range(0, int.MaxValue, ErrorMessage = "Duration must be a positive number")]
+        public int Duration { get; set; }
+
+        public decimal CashBalance { get; set; }
+        public string TimebandType { get; set; }
+        public string TaxType { get; set; }
+        public string GateIp { get; set; }
+        public decimal DepositAmount { get; set; }
+        public int Kot { get; set; }
+        public int FavoriteFlag { get; set; }
+        public int CustomerCard { get; set; }
+        public int Kiosk { get; set; }
+        public int RegMan { get; set; }
+        public string TypeGate { get; set; }
+        public string GateValue { get; set; }
+        public int CommonFlag { get; set; }
+        public int Expiry { get; set; }
+        public int EnableLed { get; set; }
+        public int Green { get; set; }
+        public int Blue { get; set; }
+        public int Red { get; set; }
+
+        // Combo Product specific fields
+        public string Membership { get; set; }
+        public int? CardValidity { get; set; }
+        public DateTime? CardExpiryDate { get; set; }
+        public int VipCard { get; set; }
+
+        [MaxLength(500)]
+        public string PosCounter { get; set; }
+
+        [MaxLength(100)]
+        public string TaxCategory { get; set; }
+
+        [Range(0, 100)]
+        public decimal? TaxPercent { get; set; }
+
+        public decimal? PriceNoTax { get; set; }
+        public string DisplayInPos { get; set; }
+        public decimal? FaceValue { get; set; }
+        public decimal? SellingPrice { get; set; }
+
+        [Range(0, int.MaxValue)]
+        public int? CardQuantity { get; set; }
+
+        public string AccessProfile { get; set; }
+    }
+
+    // Simple request model for Get/Delete operations
+    public class ComboProductIdRequest
+    {
+        [Required]
+        public int Id { get; set; }
+    }
+
+    // Response model for API responses
+    public class ComboProductResponse
+    {
+        public bool Success { get; set; }
+        public string Message { get; set; }
+        public object Data { get; set; }
+    }
+
+    // List response model
+    public class ComboProductListResponse
+    {
+        public bool Success { get; set; }
+        public string Message { get; set; }
+        public List<ComboProductModel> Data { get; set; }
+        public int TotalCount { get; set; }
+        public int ActiveCount { get; set; }
+        public int InactiveCount { get; set; }
+    }
+
+    // Filter/Search request model
+    public class ComboProductFilterRequest
+    {
+        public string SearchTerm { get; set; }
+        public string ProductType { get; set; }
+        public string Status { get; set; }
+        public int? LocationId { get; set; }
+        public decimal? MinPrice { get; set; }
+        public decimal? MaxPrice { get; set; }
+        public int PageNumber { get; set; } = 1;
+        public int PageSize { get; set; } = 50;
+    }
+
+
+    // Sticker Product Model - Complete database representation
+    public class StickerProductModel
+    {
+        public int id { get; set; }
+        public string productname { get; set; }
+        public string category { get; set; }
+        public string ptype { get; set; }
+        public decimal rate { get; set; }
+        public decimal tax { get; set; }
+        public string status { get; set; }
+        public int sequence { get; set; }
+        public decimal bonus { get; set; }
+        public int duration { get; set; }
+        public decimal cashbalance { get; set; }
+        public string timebandtype { get; set; }
+        public string taxtype { get; set; }
+        public string gateip { get; set; }
+        public decimal depositamount { get; set; }
+        public int kot { get; set; }
+        public int favoriteflag { get; set; }
+        public int customercard { get; set; }
+        public int kiosk { get; set; }
+        public int regman { get; set; }
+        public string typegate { get; set; }
+        public string gatevalue { get; set; }
+        public int commonflag { get; set; }
+        public int expiry { get; set; }
+        public int enableled { get; set; }
+        public int green { get; set; }
+        public int blue { get; set; }
+        public int red { get; set; }
+        public int locationid { get; set; }
+
+        // Sticker Product specific fields
+        public string membership { get; set; }
+        public int? cardvalidity { get; set; }
+        public DateTime? cardexpirydate { get; set; }
+        public int vipcard { get; set; }
+        public string poscounter { get; set; }
+        public string taxcategory { get; set; }
+        public decimal? taxpercent { get; set; }
+        public decimal? pricenotax { get; set; }
+        public DateTime? lastupdateddate { get; set; }
+        public string lastupdateduser { get; set; }
+        public string displayinpos { get; set; }
+        public decimal? facevalue { get; set; }
+        public decimal? sellingprice { get; set; }
+        public int? cardquantity { get; set; }
+        public string accessprofile { get; set; }
+        public int? gamed { get; set; } // Game time field
+    }
+
+    // Sticker Product Request Model - For Add/Update operations
+    public class StickerProductRequest
+    {
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Product name is required")]
+        [MaxLength(200)]
+        public string ProductName { get; set; }
+
+        public string PType { get; set; }
+
+        [Range(0, double.MaxValue, ErrorMessage = "Rate must be a positive number")]
+        public decimal Rate { get; set; }
+
+        [Range(0, 100, ErrorMessage = "Tax must be between 0 and 100")]
+        public decimal Tax { get; set; }
+
+        public string Status { get; set; }
+
+        public int Sequence { get; set; }
+
+        [Range(0, double.MaxValue, ErrorMessage = "Bonus must be a positive number")]
+        public decimal Bonus { get; set; }
+
+        [Range(0, int.MaxValue, ErrorMessage = "Duration must be a positive number")]
+        public int Duration { get; set; }
+
+        public decimal CashBalance { get; set; }
+        public string TimebandType { get; set; }
+        public string TaxType { get; set; }
+        public string GateIp { get; set; }
+        public decimal DepositAmount { get; set; }
+        public int Kot { get; set; }
+        public int FavoriteFlag { get; set; }
+        public int CustomerCard { get; set; }
+        public int Kiosk { get; set; }
+        public int RegMan { get; set; }
+        public string TypeGate { get; set; }
+        public string GateValue { get; set; }
+        public int CommonFlag { get; set; }
+        public int Expiry { get; set; }
+        public int EnableLed { get; set; }
+        public int Green { get; set; }
+        public int Blue { get; set; }
+        public int Red { get; set; }
+
+        // Sticker Product specific fields
+        public string Membership { get; set; }
+        public int? CardValidity { get; set; }
+        public DateTime? CardExpiryDate { get; set; }
+        public int VipCard { get; set; }
+
+        [MaxLength(500)]
+        public string PosCounter { get; set; }
+
+        [MaxLength(100)]
+        public string TaxCategory { get; set; }
+
+        [Range(0, 100)]
+        public decimal? TaxPercent { get; set; }
+
+        public decimal? PriceNoTax { get; set; }
+        public string DisplayInPos { get; set; }
+        public decimal? FaceValue { get; set; }
+        public decimal? SellingPrice { get; set; }
+
+        [Range(0, int.MaxValue)]
+        public int? CardQuantity { get; set; }
+
+        public string AccessProfile { get; set; }
+
+        [Range(0, int.MaxValue, ErrorMessage = "Game time must be a positive number")]
+        public int? GameTime { get; set; } // Game time in minutes
+    }
+
+    // Simple request model for Get/Delete operations
+    public class StickerProductIdRequest
+    {
+        [Required]
+        public int Id { get; set; }
+    }
+
+    // Response model for API responses
+    public class StickerProductResponse
+    {
+        public bool Success { get; set; }
+        public string Message { get; set; }
+        public object Data { get; set; }
+    }
+
+    // List response model
+    public class StickerProductListResponse
+    {
+        public bool Success { get; set; }
+        public string Message { get; set; }
+        public List<StickerProductModel> Data { get; set; }
+        public int TotalCount { get; set; }
+        public int ActiveCount { get; set; }
+        public int InactiveCount { get; set; }
+    }
+
+    // Filter/Search request model
+    public class StickerProductFilterRequest
+    {
+        public string SearchTerm { get; set; }
+        public string ProductType { get; set; }
+        public string Status { get; set; }
+        public int? LocationId { get; set; }
+        public decimal? MinPrice { get; set; }
+        public decimal? MaxPrice { get; set; }
+        public int PageNumber { get; set; } = 1;
+        public int PageSize { get; set; } = 50;
+    }
+
+
+
+
+
+    public class GameSettings
+    {
+        public int Id { get; set; }
+        public string Description { get; set; }
+        public string MacId { get; set; }
+        public string Category { get; set; }
+        public string SubCategory { get; set; }
+        public decimal CashPlayPrice { get; set; }
+        public decimal VipDiscountPrice { get; set; }
+        public decimal CoinPlayPrice { get; set; }
+        public string GameInterface { get; set; }
+        public int CurrencyDecimalPlace { get; set; }
+        public string DebitOrder { get; set; }
+        public int PulseWidth { get; set; }
+        public int PulsePauseWidth { get; set; }
+        public int PulseToActuate { get; set; }
+        public int RfidTapDelay { get; set; }
+        public string DisplayOrientation { get; set; }
+        public string LedPattern { get; set; }
+        public DateTime? LastUpdatedDate { get; set; }
+        public string LastUpdatedUser { get; set; }
+        public DateTime CreatedDate { get; set; }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+

@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "y8VodZJK1dOCuHDNYHjjMylcCgMK4IkU7ww4HsnX/38=",
-  "Source": "fabsss",
-  "BasePath": "_content/fabsss",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"wFYptZnrM53v0j40mLN0XZ01og5fC3wBEXBM1IpkkGk=","Source":"fabsss","BasePath":"_content/fabsss","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

@@ -184,7 +184,7 @@ namespace fabsss.Controllers
                     courtesycard = @courtesycard,
                     courtesytype = @courtesytype,
                     courtesycount = @courtesycount
-                WHERE id = @id AND locationid = @locationid";
+                WHERE id = @id ";
 
                 using var command = new MySqlCommand(query, connection);
 
