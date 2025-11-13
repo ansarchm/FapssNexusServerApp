@@ -1,0 +1,150 @@
+/* GameCategory.css */
+.game-category-container {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", sans-serif;
+  padding: 20px;
+}
+
+.game-category-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.game-category-header-icon {
+  font-size: 24px;
+  color: #6b7280;
+}
+
+.game-category-header-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.game-category-section {
+  margin-bottom: 40px;
+}
+
+.game-category-section-header {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 18px;
+  margin-bottom: 5px;
+}
+
+.game-category-section-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-category-section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.game-category-button-group {
+  display: flex;
+  gap: 12px;
+}
+
+.game-category-btn-add {
+  padding: 8px 25px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.game-category-btn-save {
+  padding: 8px 25px;
+  background-color: #FCD730;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.game-category-table-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.game-category-table-header {
+  display: grid;
+  grid-template-columns: 1.5fr 1.2fr 1.2fr 2fr 80px;
+  background-color: #2E2343;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.game-category-table-header-cell {
+  padding: 16px 20px;
+}
+
+.game-category-table-body {
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.game-category-table-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1.2fr 1.2fr 2fr 80px;
+}
+
+.game-category-table-row.even {
+  background-color: #FFFAE2;
+}
+
+.game-category-table-row.odd {
+  background-color: white;
+}
+
+.game-category-table-cell {
+  padding: 6px 12px;
+  color: #1C212D;
+  font-size: 14px;
+  font-weight: 400;
+  border-right: 1px solid #e5e7eb;
+}
+
+.game-category-table-cell.small-text {
+  font-size: 13px;
+}
+
+.game-category-table-cell.empty {
+  padding: 6px 12px;
+  border-right: 1px solid #e5e7eb;
+}
+
+.game-category-table-cell.action {
+  padding: 6px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-category-delete-button {
+  padding: 6px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 4px;
+}

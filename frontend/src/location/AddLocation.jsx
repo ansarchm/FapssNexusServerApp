@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import "./AddLocation.css";
-import locationIcon from '../components/assets/venue.png';
-import hoursIcon from '../components/assets/91 2.png';
-import openingIcon from '../components/assets/91 4.png';
-import closingIcon from '../components/assets/91 3.png';
+import locationIcon from "../components/assets/location1.png";
 
+// ✅ Time Picker Component
 const CustomTimeInput = () => {
   const [timeValue, setTimeValue] = useState("00:00:01");
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const formatTime = (h, m, s) =>
-    `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
 
   const increaseTime = () => {
     let [h, m, s] = timeValue.split(":").map(Number);
@@ -36,223 +34,166 @@ const CustomTimeInput = () => {
   };
 
   return (
-    <div className="time-group">
+    <div className="location-add-time-group">
       <input
         type="text"
         value={timeValue}
-        className="time-picker"
+        className="location-add-time-picker"
         onClick={handleSelect}
         onKeyUp={handleSelect}
         readOnly
       />
-      <div className="arrow-buttons">
-        <button type="button" className="arrow up" onClick={increaseTime}>▲</button>
-        <button type="button" className="arrow down" onClick={decreaseTime}>▼</button>
+      <div className="location-add-arrow-buttons3">
+        <button type="button" className="location-add-arrow-up3" onClick={increaseTime}>
+          ▲
+        </button>
+        <button type="button" className="location-add-arrow-down3" onClick={decreaseTime}>
+          ▼
+        </button>
       </div>
     </div>
   );
 };
 
-function LocationForm() {
-  const [formData, setFormData] = useState({
-    location: "Allbaron Rides",
-    email: "",
-    address: "",
-    postalCode: "",
-    contactName: "",
-    phone: "",
-    city: "",
-    state: ""
-  });
-
-  const [formErrors, setFormErrors] = useState({});
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-
-    // Clear error on input
-    if (value.trim() !== "") {
-      setFormErrors((prev) => ({ ...prev, [name]: "" }));
-    }
-  };
-
-  const validateForm = () => {
-    const errors = {};
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phoneRegex = /^[+]*[(]?\d{1,4}[)]?[-\s./0-9]*$/;
-
-    if (!formData.email || !emailRegex.test(formData.email)) {
-      errors.email = "Valid email is required";
-    }
-    if (!formData.address.trim()) errors.address = "Address is required";
-    if (!formData.postalCode.trim()) errors.postalCode = "Postal code is required";
-    if (!formData.contactName.trim()) errors.contactName = "Contact name is required";
-    if (!formData.phone || !phoneRegex.test(formData.phone)) {
-      errors.phone = "Valid phone number is required";
-    }
-    if (!formData.city.trim()) errors.city = "City is required";
-    if (!formData.state.trim()) errors.state = "State is required";
-
-    setFormErrors(errors);
-    return Object.keys(errors).length === 0;
-  };
-
+function LocationForm({ onClose }) {   // ✅ Accept onClose from parent
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      alert("Form submitted successfully!");
-      // Submit logic here
-    }
+    alert("Form submitted successfully!");
+    onClose(); // ✅ close popup after save
   };
 
   return (
-    <div className="location-wrapper">
-      <div className="location-card">
-        <div className="table-structure">
+    <div className="location-add-location-wrapper">
+      <div className="location-add-location-card">
+        {/* ✅ Header with Location Info and Close Button */}
+        <div className="location-add-form-header">
+          <div className="location-add-header-left">
+            <img src={locationIcon} alt="Location" className="location-header-icon" />
+            <h2 className="location-add-form-title">Location Info</h2>
+          </div>
+          <button 
+            className="location-add-close-btn"
+            onClick={onClose}  // ✅ use parent handler
+            type="button"
+          >
+            ✕
+          </button>
+        </div>
 
+        {/* ✅ Divider Line */}
+        <div className="location-add-divider"></div>
+
+        {/* ✅ Table Structure */}
+        <div className="location-add-table-structure">
           {/* Left Column */}
-          <div className="column left-column">
-            <h3>
-              <img src={locationIcon} alt="Location Icon" className="icon" />
-              Location Info
-            </h3>
-            <div className="column-content">
-              <div className="row">
-                <div className="cell">
-                  <label>Location</label>
-                  <select name="location" value={formData.location} onChange={handleInputChange}>
-                    <option>Allbaron Rides</option>
-                  </select>
+          <div className="location-add-column location-add-left-column">
+            <div className="location-add-column-header location-add-heading">Location Info</div>
+            <div className="location-add-column-content">
+              <div className="location-add-row">
+                <div className="location-add-cell">
+                  <label className="location-add-heading">Location</label>
+                  <input type="text" value="Spacecity" readOnly />
                 </div>
-                <div className="cell">
-                  <label>Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="mubin@test.in"
-                  />
-                  {formErrors.email && <span className="error">{formErrors.email}</span>}
+                <div className="location-add-cell">
+                  <label className="location-add-heading">Contact Name</label>
+                  <input type="text" value="Ishaq Assfour" readOnly />
                 </div>
               </div>
 
-              <div className="row">
-                <div className="cell">
-                  <label>Address</label>
-                  <input
-                    type="text"
-                    name="address"
-                    value={formData.address}
-                    onChange={handleInputChange}
-                  />
-                  {formErrors.address && <span className="error">{formErrors.address}</span>}
+              <div className="location-add-row">
+                <div className="location-add-cell">
+                  <label className="location-add-heading">Address 1</label>
+                  <input type="text" placeholder="Street 60" />
                 </div>
-                <div className="cell">
-                  <label>Postal Code</label>
-                  <input
-                    type="text"
-                    name="postalCode"
-                    value={formData.postalCode}
-                    onChange={handleInputChange}
-                  />
-                  {formErrors.postalCode && <span className="error">{formErrors.postalCode}</span>}
+                <div className="location-add-cell">
+                  <label className="location-add-heading">Address 2</label>
+                  <input type="text" placeholder="Sahab" />
                 </div>
               </div>
 
-              <div className="row">
-                <div className="cell">
-                  <label>Contact Name</label>
-                  <input
-                    type="text"
-                    name="contactName"
-                    value={formData.contactName}
-                    onChange={handleInputChange}
-                    placeholder="Muhammed Mubin"
-                  />
-                  {formErrors.contactName && <span className="error">{formErrors.contactName}</span>}
+              <div className="location-add-row">
+                <div className="location-add-cell">
+                  <label className="location-add-heading">City</label>
+                  <input type="text" placeholder="Amman" />
                 </div>
-                <div className="cell">
-                  <label>Phone</label>
-                  <input
-                    type="text"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    placeholder="+99 3456 8976"
-                  />
-                  {formErrors.phone && <span className="error">{formErrors.phone}</span>}
+                <div className="location-add-cell">
+                  <label className="location-add-heading">Country</label>
+                  <input type="text" placeholder="Jordan" />
                 </div>
               </div>
 
-              <div className="row">
-                <div className="cell">
-                  <label>City</label>
-                  <input
-                    type="text"
-                    name="city"
-                    value={formData.city}
-                    onChange={handleInputChange}
-                    placeholder="Amman"
-                  />
-                  {formErrors.city && <span className="error">{formErrors.city}</span>}
+              <div className="location-add-row">
+                <div className="location-add-cell">
+                  <label className="location-add-heading">Email</label>
+                  <input type="email" placeholder="info@spacecity.com" />
                 </div>
-                <div className="cell">
-                  <label>State</label>
-                  <input
-                    type="text"
-                    name="state"
-                    value={formData.state}
-                    onChange={handleInputChange}
-                  />
-                  {formErrors.state && <span className="error">{formErrors.state}</span>}
+                <div className="location-add-cell">
+                  <label className="location-add-heading">Phone</label>
+                  <input type="text" placeholder="+966 2345 67890" />
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column */}
-          <div className="column right-column">
-            <h3>
-              <img src={hoursIcon} alt="Hours Icon" className="icon" />
-              Operation Hours
-            </h3>
-            <div className="column-content">
-              <div className="op-row header">
-                <span>
-                  <img src={openingIcon} alt="Opening Icon" className="time-icon" />
-                  Opening Time
-                </span>
-                <span>
-                  <img src={closingIcon} alt="Closing Icon" className="time-icon" />
-                  Closing Time
-                </span>
+          {/* Right Column - FIXED LAYOUT */}
+          <div className="location-add-column location-add-right-column">
+            <div className="location-add-column-header location-add-heading">Operation Hours</div>
+            <div className="location-add-column-content">
+              <div className="location-add-op-header-row">
+                <div className="location-add-op-header-item">
+                  <span className="location-add-heading">Opening Time</span>
+                </div>
+                <div className="location-add-op-header-item">
+                  <span className="location-add-heading">Closing Time</span>
+                </div>
               </div>
 
-              {[
-                "Sunday",
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday",
-              ].map((day) => (
-                <div className="op-row" key={day}>
-                  <label>{day}</label>
-                  <CustomTimeInput />
-                  <CustomTimeInput />
+              {["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"].map((day) => (
+                <div className="location-add-op-row" key={day}>
+                  <label className="location-add-heading">{day}</label>
+                  <div className="location-add-time-container">
+                    <CustomTimeInput />
+                  </div>
+                  <div className="location-add-time-container">
+                    <CustomTimeInput />
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
+        {/* Others Section - FIXED LAYOUT */}
+        <div className="location-add-others-section">
+          <div className="location-add-column-header location-add-heading">Others</div>
+          <div className="location-add-others-content">
+            <div className="location-add-others-row">
+              <label className="location-add-others-label">Phone Number Digits</label>
+              <input 
+                type="number" 
+                value="10" 
+                className="location-add-others-input" 
+                readOnly 
+              />
+            </div>
+            <div className="location-add-others-row">
+              <label className="location-add-others-label">Week starts on</label>
+              <select className="location-add-others-select">
+                <option>Monday</option>
+                <option>Sunday</option>
+                <option>Saturday</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        {/* Divider Line before Buttons */}
+        <div className="location-add-divider"></div>
+
         {/* Action Buttons */}
-        <div className="form-actions">
-          <button className="save-btn" onClick={handleSubmit}>Save</button>
-          <button className="cancel-btn">Cancel</button>
+        <div className="location-add-form-actions">
+          <button className="location-add-save-btn" onClick={handleSubmit}>Save</button>
+          <button className="location-add-cancel-btn" onClick={onClose}>Cancel</button>
         </div>
       </div>
     </div>

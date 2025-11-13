@@ -1,0 +1,410 @@
+/* Popup Overlay */
+.gameSettings-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", sans-serif;
+}
+
+/* Main Popup Container */
+.gameSettings-popup-container {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 80%;
+  max-width: 1100px;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.gameSettings-popup-header {
+  background: white;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.gameSettings-header-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gameSettings-item-add {
+  width: 90%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.gameSettings-popup-header .gameSettings-item-add-folder-icon-item {
+  width: 30px;
+  height: 30px;
+}
+
+.gameSettings-popup-header .gameSettings-header-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1C212D !important;
+}
+
+.gameSettings-item-add-close-button-item {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.gameSettings-item-add-close-button-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.gameSettings-item-add-close-icon-item {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+
+/* Popup Body */
+.gameSettings-popup-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Settings Container */
+.gameSettings-settings-container {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Settings Header */
+.gameSettings-settings-header {
+  background: #2E2343;
+  color: white;
+  padding: 12px 10px;
+  border-radius: 13px 13px 0 0;
+}
+
+.gameSettings-settings-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Settings Content */
+.gameSettings-settings-content {
+  padding: 0px 15px;
+}
+
+/* Checkbox Section */
+.gameSettings-timeform-checkbox-section {
+  margin-bottom: 15px;
+  padding: 10px 0;
+}
+
+.gameSettings-timeform-checkbox-grid {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.gameSettings-timeform-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gameSettings-timeform-checkbox {
+  width: 16px;
+  height: 16px;
+}
+
+.gameSettings-timeform-checkbox-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+/* Form Rows */
+.gameSettings-form-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+  align-items: end;
+}
+
+.gameSettings-price-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0px;
+  margin-bottom: 15px;
+  align-items: end;
+}
+
+.gameSettings-led-row {
+  grid-template-columns: 1fr 3fr;
+}
+
+/* Form Groups */
+.gameSettings-form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+}
+
+.gameSettings-form-label {
+  font-size: 12px;
+  color: #000000;
+  margin: 0;
+  min-width: 40px;
+  text-align: left;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.gameSettings-form-select,
+.gameSettings-item-add-form-select-item {
+  background-color: #e0e0e0;
+  color: #333;
+  border: 1px solid #b0b0b0;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.gameSettings-form-select:focus,
+.gameSettings-item-add-form-select-item:focus {
+  border-color: #999;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.gameSettings-form-input,
+.gameSettings-form-select {
+  height: 25px;
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 10px;
+  background: white;
+  box-sizing: border-box;
+  flex: 1;
+  font-family: "Montserrat";
+}
+
+.gameSettings-form-group:has(.gameSettings-form-input[value="10.00"]) .gameSettings-form-input,
+.gameSettings-form-group:has(.gameSettings-form-input[value="9"]) .gameSettings-form-input,
+.gameSettings-form-group:has(.gameSettings-form-input[value="1"]) .gameSettings-form-input,
+.gameSettings-form-group:has(.gameSettings-form-input[value="100"]) .gameSettings-form-input {
+  max-width: 80px;
+  flex: 0 0 80px;
+}
+
+/* Medium inputs for text values */
+.gameSettings-form-group:has(.gameSettings-form-input[value*="Trampoline"]) .gameSettings-form-input {
+  max-width: 150px;
+  flex: 0 0 150px;
+}
+
+/* Longer inputs for MAC ID */
+.gameSettings-form-group:has(.gameSettings-form-input[value*="CC:45:AF"]) .gameSettings-form-input {
+  max-width: 180px;
+  flex: 0 0 180px;
+}
+
+/* Select dropdowns - adjust based on content */
+.gameSettings-form-select {
+  font-family: "Montserrat";
+  appearance: none;
+  background-image: url("../components/assets/drop_down.png");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 10px 10px;
+  padding-right: 28px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 10px;
+  box-sizing: border-box;
+  
+}
+
+/* Specific input size classes */
+.gameSettings-short-input {
+  max-width: 80px !important;
+  flex: 0 0 80px !important;
+}
+
+.gameSettings-medium-input {
+  max-width: 150px !important;
+  flex: 0 0 150px !important;
+}
+
+.gameSettings-long-input {
+  max-width: 180px !important;
+  flex: 0 0 180px !important;
+}
+
+.gameSettings-mac-input {
+  max-width: 200px !important;
+  flex: 0 0 200px !important;
+}
+
+/* Last Updated Row */
+.gameSettings-last-updated-row {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e2e8f0;
+  gap: 10px;
+}
+
+.gameSettings-last-updated-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gameSettings-last-updated-label {
+  font-size: 12px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.gameSettings-last-updated-value {
+  font-size: 12px;
+  color: #92929D;
+}
+
+/* Action Buttons */
+.gameSettings-action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.gameSettings-btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  color: white;
+  min-width: 80px;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.2s ease;
+}
+
+.gameSettings-btn-update {
+  background: #2258F8;
+  color: white;
+}
+
+.gameSettings-btn-save {
+  background: #FCD730;
+  color: white;
+}
+
+.gameSettings-btn-new {
+  background: #42C700;
+  color: white;
+}
+
+.gameSettings-btn-duplicate {
+  background: #BE20DD;
+  color: white;
+}
+
+.gameSettings-btn-close {
+  background: #3B4053;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gameSettings-popup-container {
+    width: 95%;
+    margin: 10px;
+  }
+  
+  .gameSettings-form-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .gameSettings-checkbox-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+  
+  .gameSettings-last-updated-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .gameSettings-action-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .gameSettings-form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .gameSettings-popup-body {
+    padding: 15px;
+  }
+
+  .timeform-checkbox-section {
+    margin-bottom: 15px;
+    padding: 10px 0;
+  }
+  .timeform-checkbox-grid {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .timeform-checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .timeform-checkbox {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .timeform-checkbox-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4a5568;
+  }
+}

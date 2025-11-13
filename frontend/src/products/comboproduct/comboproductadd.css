@@ -1,0 +1,779 @@
+/* Main Modal Styles */
+.combo-add-modal-overlay-combo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-family: "Roboto", sans-serif;
+}
+
+.combo-add-modal-container-combo {
+  background: white;
+  border-radius: 13.72px;
+  width: 1086px;
+  height: 653px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  border: 0.86px solid #e5e7eb;
+}
+
+/* Header */
+.combo-add-modal-header-combo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+  flex-shrink: 0;
+}
+
+.combo-add-header-title-combo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.combo-add-folder-icon-combo {
+  font-size: 20px;
+}
+
+.combo-add-title-text-combo {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #000000;
+  margin: 0;
+}
+.item-close-button {
+background-color: white;
+border: none;
+}
+.item-close {
+  width: 90%;
+  height: 80%;
+  object-fit: contain;
+  
+}
+/* Content Area */
+.combo-add-modal-content-combo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #f8f9fa;
+  overflow: hidden;
+}
+
+.combo-add-content-wrapper-combo {
+  padding: 16px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.combo-add-main-sections-combo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+
+/* First Row Layout */
+.combo-add-first-row-combo {
+  display: flex;
+  gap: 16px;
+  height: 218px;
+}
+
+/* Second Row Layout */
+.combo-add-second-row-combo {
+  display: flex;
+  gap: 16px;
+  height: 221px;
+}
+
+/* Section Styles */
+.combo-add-product-section-combo {
+  width: 863px;
+  background: white;
+  border-radius: 13.72px;
+  border: 0.86px solid #e5e7eb;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.combo-add-active-days-section-combo {
+  width: 160px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+.combo-add-price-section-combo {
+  width: 400px;
+  background: white;
+  border-radius: 13.72px;
+  border: 0.86px solid #e5e7eb;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Updated Entitlements Section - Figma Measurements */
+.combo-add-entitlements-section-combo {
+  width: 655px;
+  height: 221px;
+  background: white;
+  border-radius: 13.72px;
+  border: 0.86px solid #e5e7eb;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section Headers */
+.combo-add-section-header-combo {
+  background: #2e2343;
+  color: white;
+  padding: 12px 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* Product Section Content */
+.combo-add-product-content-combo {
+  padding: 16px;
+  background: white;
+  flex: 1;
+}
+
+.combo-add-form-row-combo {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 23px;
+  align-items: center;
+}
+
+.combo-add-form-group-combo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.combo-add-form-label-combo {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #000000;
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+.combo-add-form-input-combo,
+.combo-add-form-select-combo {
+  height: 28px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #6b7280;
+  background: white;
+}
+.combo-add-form-select-combo,
+.combo-add-child-product-select-combo,
+.combo-add-category-select,
+.combo-add-display-group-select,
+.combo-add-pos-counter-select,
+.combo-add-tax-category-select {
+  background-color: #fff;
+  background-image: url("../../components/assets/drop_down.png"); /* your path */
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  background-size: 12px;
+  padding-right: 20px; /* ensure text doesn’t overlap arrow */
+  appearance: none; /* hide default arrow */
+}
+
+
+/* Specific Input Widths */
+.combo-add-product-id-input {
+     width: 170px;
+    height: 18px;
+}
+
+.combo-add-product-name-input {
+  width: 200px;
+  height: 18px;
+}
+
+.combo-add-pos-counter-select {
+  width: 150px;
+}
+
+.combo-add-category-select {
+  width: 230px;
+}
+
+.combo-add-display-group-select {
+  width: 140px;
+}
+
+.combo-add-display-order-input {
+  width: 60px;
+  height: 18px;
+}
+
+/* Price Section Inputs */
+.combo-add-face-value-input,
+.combo-add-selling-price-input {
+  width: 80px;
+  height: 16px;
+}
+
+.combo-add-tax-category-select {
+  width: 90px;
+  height: 26px;
+}
+
+.combo-add-tax-percent-input {
+  width: 90px;
+  height: 16px;
+}
+.combo-add-separator-line{
+border-top: 1px solid #e5e7eb;
+  margin: 10px -20px;
+  width: calc(100% + 50px);
+}
+
+.combo-add-tax-input {
+  width: 60px;
+  height: 16px;
+}
+
+.combo-add-price-no-tax-input {
+  width: 146px;
+  height: 16px;
+}
+
+/* Checkbox Styles */
+.combo-add-checkbox-section-combo {
+  margin-top: 16px;
+}
+
+.combo-add-checkbox-grid-combo {
+  display: flex;
+  gap: 90px;
+  margin-top: 30px;
+}
+
+.combo-add-checkbox-item-combo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.combo-add-checkbox-combo,
+.combo-add-day-checkbox-combo {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 10px;
+}
+.combo-add-checkbox-combo:checked,
+.combo-add-day-checkbox-combo:checked {
+  
+  background-image: url("../../components/assets/Checklist.png");
+  background-size: 10px 10px;
+  background-color: #fcd730;
+  border: none;
+
+}
+
+
+.combo-add-checkbox-label-combo {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #000000;
+}
+
+/* Active Days Section */
+.combo-add-active-days-header-combo {
+  background: #2e2343;
+  color: white;
+  padding: 12px 16px;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+.combo-add-active-days-content-combo {
+  padding: 3px 6px;
+  background: white;
+  flex: 1;
+}
+
+.combo-add-day-row-combo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1px 1px
+}
+
+.combo-add-day-name-combo {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #000000;
+}
+
+/* Price Section Content */
+.combo-add-section-content-combo {
+  padding: 8px;
+  background: white;
+  flex: 1;
+}
+
+.combo-add-tax-inclusive-row-combo {
+  margin: 12px 0;
+  gap: 8px;
+}
+
+.combo-add-checkbox-label-tax-combo {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+}
+
+.combo-add-checkbox-tax-combo {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 10px;
+}
+.combo-add-checkbox-tax-combo:checked {
+  
+  background-image: url("../../components/assets/Checklist.png");
+  background-size: 10px 10px;
+  background-color: #fcd730;
+  border: none;
+
+}
+
+
+/* Updated Entitlements Section Content - Figma Measurements */
+.combo-add-entitlements-content-wrapper-combo {
+  display: flex;
+  padding: 12px 0px;
+  gap: 12px;
+  flex: 1;
+  height: calc(221px - 47px); /* Total height minus header */
+}
+
+/* Updated Table Container - Figma Measurements */
+.combo-add-entitlements-table-container-combo {
+  width: 484px;
+  height: 158px;
+  overflow-y: auto;
+border: none;
+  background: white;
+}
+
+.combo-add-entitlements-table-combo {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+}
+
+.combo-add-entitlements-table-combo th {
+  background-color: #ffff;
+
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  font-weight: 500;
+  font-size: 11px;
+  height: 18px;
+}
+
+.combo-add-entitlements-table-combo td {
+  padding:1px 1px;
+  border: 1px solid #e5e7eb;
+  border-left: none;
+  text-align: center;
+  vertical-align: middle;
+  height: 14px;
+}
+/* Plus icon */
+.combo-add-plus-box-button-combo {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.combo-add-plus-box-icon-combo {
+  width: 50%;
+    height: 50%;
+    padding: 6px;
+  display: block;
+}
+.combo-add-plus-icon-combo {
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* ensures click still hits button */
+}
+.combo-add-plus-icon-combo:hover {
+  transform: scale(1.2);
+}
+
+/* Delete icon */
+.combo-add-delete-icon-combo {
+  width: 12px;
+  height: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.combo-add-delete-icon-combo:hover {
+  transform: scale(1.2);
+}
+
+/* Dropdown icon */
+
+
+/* White tick checkbox */
+.combo-add-kot-checkbox-combo {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: white;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.combo-add-kot-checkbox-combo:checked {
+  background-image: url("../../components/assets/Checklist.png");
+  background-size: 10px 10px;
+  background-color: #fcd730;
+  border: none;
+}
+.combo-add-folder-icon-combo {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.combo-add-entitlements-table-combo tbody tr:nth-child(even) {
+  background-color: #fffae2;
+}
+
+.combo-add-entitlements-table-combo tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.combo-add-entitlements-table-combo tbody td {
+  color: #92929d;
+}
+
+.combo-add-child-product-select-combo,
+.combo-add-quantity-input-combo {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 11px;
+  color: #92929d;
+  text-align: center;
+  padding: 2px;
+  height: 18px;
+}
+
+.combo-add-child-product-select-combo {
+  text-align: left;
+}
+
+.combo-add-kot-checkbox-combo {
+  width: 14px;
+  height: 14px;
+  accent-color: #fcd730;
+}
+
+.combo-add-plus-icon-combo,
+.combo-add-delete-icon-combo {
+  cursor: pointer;
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.combo-add-plus-icon-combo:hover,
+.combo-add-delete-icon-combo:hover {
+  transform: scale(1.2);
+}
+
+/* Updated Column Widths for Figma Measurements */
+.combo-add-th-id-combo {
+  width: 50px;
+}
+
+.combo-add-th-child-product-combo {
+  width: 180px;
+}
+
+.combo-add-th-kot-combo {
+  width: 60px;
+}
+
+.combo-add-th-quantity-combo {
+  width: 80px;
+}
+
+.combo-add-th-actions-combo {
+  width: 50px;
+}
+
+/* Updated Product Image Section - Figma Measurements */
+.combo-add-entitlements-image-section-combo {
+  width: 139px;
+  height: 158px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 1px solid #e5e7eb;
+  padding: 12px;
+  background: white;
+}
+
+.combo-add-product-header-combo {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.combo-add-product-image-placeholder-combo {
+ width: 120px;
+  height: 80px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #f9fafb;
+  margin-bottom: 8px;
+}
+
+.combo-add-reset-button-combo {
+  padding: 4px 12px;
+  font-size: 11px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.combo-add-reset-button-combo:hover {
+  background: #f3f4f6;
+}
+
+/* Updated Scrollbar - Figma Measurements */
+.combo-add-entitlements-table-container-combo::-webkit-scrollbar {
+    width: 4px;
+  height: 3px;
+}
+
+.combo-add-entitlements-table-container-combo::-webkit-scrollbar-track {
+   background: transparent;
+  margin: 2.56px 0; /* spacing */
+}
+
+.combo-add-entitlements-table-container-combo::-webkit-scrollbar-thumb {
+  background-color: #2E2343;
+  border-radius: 2.82px;
+}
+
+.combo-add-entitlements-table-container-combo::-webkit-scrollbar-thumb:hover {
+  background-color: #3a2b55; 
+}
+
+/* Last Updated Section */
+.combo-add-last-updated-section-combo {
+  padding: 12px 24px;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.combo-add-last-updated-info-combo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.combo-add-last-updated-label-combo {
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.combo-add-last-updated-value-combo {
+  font-size: 12px;
+  color: #92929d;
+  font-weight: 400;
+}
+
+/* Footer */
+.combo-add-modal-footer-combo {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 12px 24px;
+  border-top: 1px solid #e5e7eb;
+  background: white;
+  flex-shrink: 0;
+}
+
+.combo-add-footer-button-combo {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  color: white;
+  min-width: 70px;
+  font-family: "Roboto", sans-serif;
+}
+
+.combo-add-footer-button-combo.combo-add-save-combo {
+  background: #fcd730;
+  color: #000;
+}
+
+.combo-add-footer-button-combo.combo-add-new-combo {
+  background: #2563eb;
+}
+
+.combo-add-footer-button-combo.combo-add-duplicate-combo {
+  background: #2563eb;
+}
+
+.combo-add-footer-button-combo.combo-add-cancel-combo {
+  background: #6b7280;
+}
+
+/* Demo Container */
+.combo-add-demo-container-combo {
+  padding: 40px;
+  background: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.combo-add-open-modal-button-combo {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  font-family: "Roboto", sans-serif;
+}
+
+.combo-add-footer-button-combo.combo-add-edit-combo {
+  background: #E76711;
+}
+.combo-add-open-modal-button-combo:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
+/* Focus states */
+.combo-add-form-input-combo:focus,
+.combo-add-form-select-combo:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb;
+}
+
+/* Read-only inputs */
+.combo-add-form-input-combo:read-only {
+  background-color: #f9fafb;
+  color: #6b7280;
+}
+
+/* Button hover effects */
+.combo-add-footer-button-combo:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .combo-add-modal-container-combo {
+    width: 95%;
+    height: 90%;
+  }
+}
+
+/* Input placeholder styles */
+.combo-add-form-input-combo::placeholder,
+.combo-add-form-select-combo::placeholder {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* Table header sticky */
+.combo-add-entitlements-table-combo thead th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}

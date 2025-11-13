@@ -1,0 +1,980 @@
+.coin-form-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-family: "Roboto", sans-serif;
+}
+
+.coin-form-modal-container {
+  background: white;
+  border-radius: 8px;
+  width: 1200px;
+  max-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.coin-form-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 13px;
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+  flex-shrink: 0;
+}
+
+.coin-form-header-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coin-form-folder-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  margin-left: 18px;
+}
+
+.coin-form-title-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 21.43px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin: 0;
+}
+
+.coin-form-close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.coin-form-close-icon {
+  width: 90%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.coin-form-close-button:hover {
+  color: #979798;
+}
+
+.coin-form-modal-content {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  background: transparent;
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.coin-form-main-content {
+  flex: 3;
+  margin-right: 0;
+  width: 100%;
+}
+
+.coin-form-content-wrapper {
+  padding: 12px;
+  width: 100%;
+}
+
+.coin-form-main-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Product Section - Adjusted Height */
+.coin-form-product-section {
+  height: 190px;
+  width: 100%;
+  background: white;
+  border-radius: 13.72px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 0.86px solid #d1d5db;
+  opacity: 1;
+}
+
+.coin-form-section-header {
+  background: #2e2343;
+  color: white;
+  padding: 8px 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17.15px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  margin: 0;
+  border: none;
+}
+
+.coin-form-price-header {
+  background: #2e2343;
+}
+
+/* ENTITLEMENTS SECTION CUSTOM LAYOUT */
+.coin-form-entitlements-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 8px;
+  align-items: start;
+  flex: 1;
+}
+
+.coin-form-right-column {
+  justify-self: start;
+}
+
+.coin-form-left-column,
+.coin-form-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Move VIP under Quantity inside second column */
+.coin-form-vip-card-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.coin-form-vip-card-container {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+/* Third column now only for Add Games button */
+.coin-form-third-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-left: 0;
+}
+
+/* Cash Balance Input */
+.coin-form-cash-balance-input {
+  width: 90px;
+  height: 26px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+}
+
+/* Card Expiry Group */
+.coin-form-card-expiry-group {
+  position: relative;
+}
+
+.coin-form-date-input-with-calendar {
+  position: relative;
+  display: inline-block;
+}
+
+.coin-form-card-expiry-input {
+  width: 137px;
+  height: 26px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+  padding-right: 30px;
+}
+
+.coin-form-calendar-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.coin-form-calendar-image {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Bonus Balance Input */
+.coin-form-bonus-balance-input {
+  width: 90px;
+  height: 25px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+}
+
+/* Card Valid Group - Horizontal Layout */
+.coin-form-card-valid-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coin-form-card-valid-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coin-form-card-valid-input {
+  width: 69px;
+  height: 25px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+}
+
+.coin-form-clear-button {
+  color: #ef4444;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
+
+.coin-form-clear-button:hover {
+  color: #dc2626;
+}
+
+/* Quantity Group - positioned under Card Valid */
+.coin-form-quantity-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coin-form-quantity-input {
+  width: 40px;
+  height: 25px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+}
+
+/* VIP Card Group - fix text wrapping */
+.coin-form-vip-card-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.coin-form-vip-card-label {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.coin-form-vip-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #fcd730;
+  flex-shrink: 0;
+}
+
+/* Add Games Button - under VIP Card in third column */
+.coin-form-third-column .coin-form-add-games-button {
+  width: 120px;
+  height: 32px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
+.coin-form-third-column .coin-form-add-games-button:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+/* Membership and Active Profile - narrower width */
+.coin-form-entitlements-section .coin-form-membership-group .coin-form-form-select,
+.coin-form-entitlements-section
+  .coin-form-active-profile-group
+  .coin-form-form-select {
+  flex: 0 0 220px;
+}
+
+.coin-form-bottom-entitlements-row {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25%;
+  gap: 15px;
+}
+
+.coin-form-add-games-button {
+  margin-top: 6px;
+}
+
+.coin-form-entitlements-header {
+  background: #2e2343;
+}
+
+.coin-form-product-content {
+  padding: 12px;
+  background: white;
+}
+
+/* UPDATED FORM ROW STYLES - REMOVE FLEX:1 TO PREVENT AUTO-EXPANSION */
+.coin-form-form-row {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 16px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.coin-form-form-row.coin-form-cols-3 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.coin-form-form-row.coin-form-cols-2 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* UPDATED FORM GROUP - REMOVE FLEX:1 FROM INPUTS */
+.coin-form-form-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.coin-form-form-label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin-bottom: 0;
+  min-width: 40px;
+  flex-shrink: 0;
+}
+
+/* UPDATED INPUT/SELECT STYLES - REMOVE FLEX:1 */
+.coin-form-form-input,
+.coin-form-form-select {
+  height: 34px;
+  padding: 4px 8px;
+  border-radius: 6.11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #92929d;
+  background: white;
+  height: 26px;
+  box-sizing: border-box;
+  border: 0.76px solid #d1d5db;
+  opacity: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.coin-form-form-input:focus,
+.coin-form-form-select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 1px #6366f1;
+}
+
+.coin-form-form-input:read-only {
+  background-color: #f9fafb;
+}
+
+/* SPECIFIC WIDTHS FOR PRODUCT SECTION - NOW INDEPENDENT */
+/* Row 1 - Product Id, Product Name, Category */
+.coin-form-product-section
+  .coin-form-form-row:nth-child(1)
+  .coin-form-form-group:nth-child(1)
+  .coin-form-form-input {
+  width: 160px;
+}
+
+.coin-form-product-section
+  .coin-form-form-row:nth-child(1)
+  .coin-form-form-group:nth-child(2)
+  .coin-form-form-input {
+  width: 270px !important;
+}
+
+.coin-form-product-section
+  .coin-form-form-row:nth-child(1)
+  .coin-form-form-group:nth-child(3)
+  .coin-form-form-select {
+  width: 160px;
+}
+
+/* Row 2 - Location, POS Counter, Display Group */
+.coin-form-product-section
+  .coin-form-form-row:nth-child(2)
+  .coin-form-form-group:nth-child(1)
+  .coin-form-form-select {
+  width: 160px;
+}
+
+.coin-form-product-section
+  .coin-form-form-row:nth-child(2)
+  .coin-form-form-group:nth-child(2)
+  .coin-form-form-select {
+  width: 160px;
+}
+
+.coin-form-product-section
+  .coin-form-form-row:nth-child(2)
+  .coin-form-form-group:nth-child(3)
+  .coin-form-form-select {
+  width: 180px;
+}
+
+/* Row 3 - Display Order, Active, Display in POS */
+.coin-form-product-section
+  .coin-form-form-row:nth-child(3)
+  .coin-form-form-group:nth-child(1)
+  .coin-form-form-input {
+  width: 80px;
+}
+
+/* SPECIFIC WIDTHS FOR PRICE SECTION - INDEPENDENT FROM PRODUCT SECTION */
+/* Face Value and Selling Price - KEEP ORIGINAL SIZES */
+.coin-form-price-section
+  .coin-form-form-row:nth-child(1)
+  .coin-form-form-group:nth-child(1)
+  .coin-form-form-input {
+  width: 100px !important;
+}
+
+.coin-form-price-section
+  .coin-form-form-row:nth-child(1)
+  .coin-form-form-group:nth-child(2)
+  .coin-form-form-input {
+  width: 110px !important;
+}
+
+/* Tax Category and Tax 1% - More specific targeting */
+.coin-form-price-section
+  .coin-form-section-content
+  > .coin-form-form-row:nth-child(3)
+  .coin-form-form-group:nth-child(1)
+  .coin-form-form-select {
+  width: 150px !important;
+}
+
+.coin-form-price-section
+  .coin-form-section-content
+  > .coin-form-form-row:nth-child(3)
+  .coin-form-form-group:nth-child(2)
+  .coin-form-form-input {
+  width: 140px !important;
+}
+
+/* Alternative targeting for Tax 1% field */
+.coin-form-price-section .coin-form-form-input[value="10.000000%"] {
+  width: 110px !important;
+  max-width: 110px !important;
+}
+
+/* Tax and Price No Tax */
+.coin-form-price-section
+  .coin-form-form-row:nth-child(5)
+  .coin-form-form-group:nth-child(1)
+  .coin-form-form-input {
+  width: 70px !important;
+}
+
+.coin-form-price-section
+  .coin-form-form-row:nth-child(5)
+  .coin-form-form-group:nth-child(2)
+  .coin-form-form-input {
+  width: 110px !important;
+}
+
+/* Checkbox Section */
+.coin-form-checkbox-section {
+  margin-top: 16px;
+}
+
+.coin-form-checkbox-grid {
+  display: flex;
+  gap: 12px;
+}
+
+.coin-form-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  white-space: nowrap;
+  color: #000000;
+}
+
+.coin-form-checkbox-label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+}
+
+.coin-form-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #fcd730;
+  margin-left: 4px;
+}
+
+.coin-form-checkbox-item-tax {
+  order: -1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  margin-left: 4px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: white;
+}
+
+/* Bottom Sections Container - FIXED */
+.coin-form-bottom-sections {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Remove border from the Tax Inclusive row */
+.coin-form-price-section .coin-form-tax-inclusive-row {
+  margin: 8px 0;
+  padding: 4px 0;
+  border: none;
+}
+
+/* Add a clean full-width line */
+.coin-form-separator-line {
+  border-top: 1px solid #e5e7eb;
+  margin: 20px -30px;
+  width: calc(100% + 50px);
+}
+
+/* Price Section - FIXED */
+.coin-form-price-section,
+.coin-form-entitlements-section {
+  background: white;
+  border-radius: 13.72px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 0.86px solid #d1d5db;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* PRICE SECTION FIELD OVERRIDES */
+.coin-form-price-section .coin-form-form-input,
+.coin-form-price-section .coin-form-form-select {
+  height: 26px;
+  border-radius: 6.11px;
+  border: 0.76px solid #d1d5db;
+  font-size: 12px;
+  padding: 4px 17px;
+}
+
+/* Tax Inclusive (label before checkbox fix) */
+.coin-form-price-section .coin-form-checkbox-item-tax {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  order: unset;
+  margin: 8px 0;
+}
+
+.coin-form-price-section .coin-form-checkbox-label-tax {
+  color: #000;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.coin-form-price-section .coin-form-checkbox-tax {
+  width: 16px;
+  height: 16px;
+  accent-color: #fcd730;
+}
+
+/* Section content - FIXED */
+.coin-form-section-content {
+  padding: 10px 20px 15px 10px;
+  background: white;
+  border: none;
+  border-radius: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* Date Input Group */
+.coin-form-date-input-group {
+  display: flex;
+  gap: 4px;
+  align-items: stretch;
+}
+
+.coin-form-date-input {
+  flex: 1;
+}
+
+.coin-form-date-button {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  font-size: 12px;
+  height: 36px;
+  box-sizing: border-box;
+}
+
+/* VIP Card checkbox positioning */
+.coin-form-vip-checkbox-container {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 8px;
+}
+
+/* Add Games Button */
+.coin-form-add-games-button {
+  width: 45%;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-left: 60%;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  font-family: "Roboto", sans-serif;
+}
+
+.coin-form-add-games-button:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+/* Sidebar (right side) - FIXED */
+.coin-form-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  padding-top: 12px;
+  height: calc(100% - 40px);
+}
+
+.coin-form-sidebar-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+
+/* Registration Section - FIXED */
+.coin-form-registration-section {
+  background: white;
+  border-radius: 13.72px;
+  border: 0.86px solid #d1d5db;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Bar */
+.coin-form-registration-header {
+  background: #2e2343;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 12px 20px;
+  line-height: 120%;
+  margin: 0;
+}
+
+/* Body - FIXED */
+.coin-form-registration-body {
+  padding: 1px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-top: none;
+  background: white;
+}
+
+/* Checkbox Rows */
+.coin-form-registration-checkbox-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.coin-form-registration-label {
+  font-family: "Roboto", sans-serif;
+  font-size: 13.72px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.coin-form-registration-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #fcd730;
+}
+
+.coin-form-lightning-icon {
+  color: #f59e0b;
+  font-size: 14px;
+  margin-left: 2px;
+}
+
+/* Registration Fields */
+.coin-form-registration-fields {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.coin-form-field-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.coin-form-field-row:last-child {
+  border-bottom: none;
+}
+
+.coin-form-field-name {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #374151;
+}
+
+/* Active Days Section - FIXED */
+.coin-form-active-days-section {
+  background: white;
+  border-radius: 13.72px;
+  border: 0.86px solid #d1d5db;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.coin-form-active-days-header {
+  background: #2e2343;
+  color: white;
+  padding: 12px 20px;
+  font-weight: 400;
+  font-size: 17.15px;
+  font-family: "Roboto", sans-serif;
+  line-height: 120%;
+  margin: 0;
+}
+
+.coin-form-active-days-content {
+  padding: 16px 20px;
+  background: white;
+  flex: 1;
+}
+
+.coin-form-day-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.coin-form-day-name {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+}
+
+/* Last Updated Section */
+.coin-form-last-updated-section {
+  padding: 12px 20px;
+  background: white;
+  flex-shrink: 0;
+}
+
+.coin-form-last-updated-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.coin-form-last-updated-label {
+  color: black;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+.coin-form-last-updated-value {
+  font-size: 12px;
+  margin-right: 20px;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400 !important;
+  color: #92929d;
+}
+
+/* Footer */
+.coin-form-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 10px 20px;
+  border-top: 1px solid #e5e7eb;
+  background: white;
+  flex-shrink: 0;
+}
+
+.coin-form-footer-button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  color: white;
+  min-width: 80px;
+  font-family: "Roboto", sans-serif;
+}
+
+.coin-form-footer-button.coin-form-save {
+  background: #fcd730;
+}
+
+.coin-form-footer-button.coin-form-new {
+  background: #2258f8;
+}
+
+.coin-form-footer-button.coin-form-duplicate {
+  background: #2258f8;
+}
+
+.coin-form-footer-button.coin-form-cancel {
+  background: #3b4053;
+}
+
+/* Demo Container */
+.coin-form-demo-container {
+  padding: 40px;
+  background: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coin-form-open-modal-button {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  font-family: "Roboto", sans-serif;
+}
+
+.coin-form-open-modal-button:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
+.coin-form-quantity-vip-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}

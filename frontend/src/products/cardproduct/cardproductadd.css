@@ -1,0 +1,979 @@
+.cardform-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-family: "Roboto", sans-serif;
+}
+
+.cardform-modal-container {
+  background: white;
+  border-radius: 8px;
+  width: 1200px;
+  max-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.cardform-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 13px;
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+  flex-shrink: 0;
+}
+
+.cardform-header-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cardform-folder-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  margin-left: 18px;
+}
+
+.cardform-title-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 21.43px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin: 0;
+}
+
+.cardform-close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.cardform-close-icon {
+  width: 90%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.cardform-close-button:hover {
+  color: #979798;
+}
+
+.cardform-modal-content {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  background: transparent;
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.cardform-main-content {
+  flex: 3;
+  margin-right: 0;
+  width: 100%;
+}
+
+.cardform-content-wrapper {
+  padding: 12px;
+  width: 100%;
+}
+
+.cardform-main-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Product Section - Adjusted Height */
+.cardform-product-section {
+  height: 190px;
+  width: 100%;
+  background: white;
+  border-radius: 13.72px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 0.86px solid #d1d5db;
+  opacity: 1;
+}
+
+.cardform-section-header {
+  background: #2e2343;
+  color: white;
+  padding: 8px 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17.15px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  margin: 0;
+  border: none;
+}
+
+.cardform-price-header {
+  background: #2e2343;
+}
+
+/* ENTITLEMENTS SECTION CUSTOM LAYOUT */
+.cardform-entitlements-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 8px;
+  align-items: start;
+  flex: 1;
+}
+
+.cardform-right-column {
+  justify-self: start;
+}
+
+.cardform-left-column,
+.cardform-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Move VIP under Quantity inside second column */
+.cardform-vip-card-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cardform-vip-card-container {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+/* Third column now only for Add Games button */
+.cardform-third-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-left: 0;
+}
+
+/* Cash Balance Input */
+.cardform-cash-balance-input {
+  width: 90px;
+  height: 26px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+}
+
+/* Card Expiry Group */
+.cardform-card-expiry-group {
+  position: relative;
+}
+
+.cardform-date-input-with-calendar {
+  position: relative;
+  display: inline-block;
+}
+
+.cardform-card-expiry-input {
+  width: 137px;
+  height: 26px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+  padding-right: 30px;
+}
+
+.cardform-calendar-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.cardform-calendar-image {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Bonus Balance Input */
+.cardform-bonus-balance-input {
+  width: 90px;
+  height: 25px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+}
+
+/* Card Valid Group - Horizontal Layout */
+.cardform-card-valid-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cardform-card-valid-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cardform-card-valid-input {
+  width: 69px;
+  height: 25px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+}
+
+.cardform-clear-button {
+  color: #ef4444;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
+
+.cardform-clear-button:hover {
+  color: #dc2626;
+}
+
+/* Quantity Group - positioned under Card Valid */
+.cardform-quantity-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cardform-quantity-input {
+  width: 40px;
+  height: 25px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+}
+
+/* VIP Card Group - fix text wrapping */
+.cardform-vip-card-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.cardform-vip-card-label {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.cardform-vip-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #fcd730;
+  flex-shrink: 0;
+}
+
+/* Add Games Button - under VIP Card in third column */
+.cardform-third-column .cardform-add-games-button {
+  width: 120px;
+  height: 32px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
+.cardform-third-column .cardform-add-games-button:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+/* Membership and Active Profile - narrower width */
+.cardform-entitlements-section .cardform-membership-group .cardform-form-select,
+.cardform-entitlements-section
+  .cardform-active-profile-group
+  .cardform-form-select {
+  flex: 0 0 220px;
+}
+
+.cardform-bottom-entitlements-row {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25%;
+  gap: 15px;
+}
+
+.cardform-add-games-button {
+  margin-top: 6px;
+}
+
+.cardform-entitlements-header {
+  background: #2e2343;
+}
+
+.cardform-product-content {
+  padding: 12px;
+  background: white;
+}
+
+/* UPDATED FORM ROW STYLES - REMOVE FLEX:1 TO PREVENT AUTO-EXPANSION */
+.cardform-form-row {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 16px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.cardform-form-row.cardform-cols-3 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cardform-form-row.cardform-cols-2 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* UPDATED FORM GROUP - REMOVE FLEX:1 FROM INPUTS */
+.cardform-form-group {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.cardform-form-label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin-bottom: 0;
+  min-width: 40px;
+  flex-shrink: 0;
+}
+
+/* UPDATED INPUT/SELECT STYLES - REMOVE FLEX:1 */
+.cardform-form-input,
+.cardform-form-select {
+  height: 34px;
+  padding: 4px 8px;
+  border-radius: 6.11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #92929d;
+  background: white;
+  height: 26px;
+  box-sizing: border-box;
+  border: 0.76px solid #d1d5db;
+  opacity: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardform-form-input:focus,
+.cardform-form-select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 1px #6366f1;
+}
+
+.cardform-form-input:read-only {
+  background-color: #f9fafb;
+}
+
+/* SPECIFIC WIDTHS FOR PRODUCT SECTION - NOW INDEPENDENT */
+/* Row 1 - Product Id, Product Name, Category */
+.cardform-product-section
+  .cardform-form-row:nth-child(1)
+  .cardform-form-group:nth-child(1)
+  .cardform-form-input {
+  width: 160px;
+}
+
+.cardform-product-section
+  .cardform-form-row:nth-child(1)
+  .cardform-form-group:nth-child(2)
+  .cardform-form-input {
+  width: 270px !important;
+}
+
+.cardform-product-section
+  .cardform-form-row:nth-child(1)
+  .cardform-form-group:nth-child(3)
+  .cardform-form-select {
+  width: 160px;
+}
+
+/* Row 2 - Location, POS Counter, Display Group */
+.cardform-product-section
+  .cardform-form-row:nth-child(2)
+  .cardform-form-group:nth-child(1)
+  .cardform-form-select {
+  width: 160px;
+}
+
+.cardform-product-section
+  .cardform-form-row:nth-child(2)
+  .cardform-form-group:nth-child(2)
+  .cardform-form-select {
+  width: 160px;
+}
+
+.cardform-product-section
+  .cardform-form-row:nth-child(2)
+  .cardform-form-group:nth-child(3)
+  .cardform-form-select {
+  width: 180px;
+}
+
+/* Row 3 - Display Order, Active, Display in POS */
+.cardform-product-section
+  .cardform-form-row:nth-child(3)
+  .cardform-form-group:nth-child(1)
+  .cardform-form-input {
+  width: 80px;
+}
+
+/* SPECIFIC WIDTHS FOR PRICE SECTION - INDEPENDENT FROM PRODUCT SECTION */
+/* Face Value and Selling Price - KEEP ORIGINAL SIZES */
+.cardform-price-section
+  .cardform-form-row:nth-child(1)
+  .cardform-form-group:nth-child(1)
+  .cardform-form-input {
+  width: 100px !important;
+}
+
+.cardform-price-section
+  .cardform-form-row:nth-child(1)
+  .cardform-form-group:nth-child(2)
+  .cardform-form-input {
+  width: 100px !important;
+}
+
+/* Tax Category and Tax 1% - More specific targeting */
+.cardform-price-section
+  .cardform-section-content
+  > .cardform-form-row:nth-child(3)
+  .cardform-form-group:nth-child(1)
+  .cardform-form-select {
+  width: 150px !important;
+}
+
+.cardform-price-section
+  .cardform-section-content
+  > .cardform-form-row:nth-child(3)
+  .cardform-form-group:nth-child(2)
+  .cardform-form-input {
+  width: 140px !important;
+}
+
+/* Alternative targeting for Tax 1% field */
+.cardform-price-section .cardform-form-input[value="10.000000%"] {
+  width: 140px !important;
+  max-width: 140px !important;
+}
+
+/* Tax and Price No Tax */
+.cardform-price-section
+  .cardform-form-row:nth-child(5)
+  .cardform-form-group:nth-child(1)
+  .cardform-form-input {
+  width: 70px !important;
+}
+
+.cardform-price-section
+  .cardform-form-row:nth-child(5)
+  .cardform-form-group:nth-child(2)
+  .cardform-form-input {
+  width: 160px !important;
+}
+
+/* Checkbox Section */
+.cardform-checkbox-section {
+  margin-top: 16px;
+}
+
+.cardform-checkbox-grid {
+  display: flex;
+  gap: 12px;
+}
+
+.cardform-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  white-space: nowrap;
+  color: #000000;
+}
+
+.cardform-checkbox-label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+}
+
+.cardform-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #fcd730;
+  margin-left: 4px;
+}
+
+.cardform-checkbox-item-tax {
+  order: -1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  margin-left: 4px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: white;
+}
+
+/* Bottom Sections Container - FIXED */
+.cardform-bottom-sections {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Remove border from the Tax Inclusive row */
+.cardform-price-section .cardform-tax-inclusive-row {
+  margin: 8px 0;
+  padding: 4px 0;
+  border: none;
+}
+
+/* Add a clean full-width line */
+.cardform-separator-line {
+  border-top: 1px solid #e5e7eb;
+  margin: 20px -30px;
+  width: calc(100% + 50px);
+}
+
+/* Price Section - FIXED */
+.cardform-price-section,
+.cardform-entitlements-section {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* PRICE SECTION FIELD OVERRIDES */
+.cardform-price-section .cardform-form-input,
+.cardform-price-section .cardform-form-select {
+  height: 26px;
+  border-radius: 6.11px;
+  border: 0.76px solid #d1d5db;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+/* Tax Inclusive (label before checkbox fix) */
+.cardform-price-section .cardform-checkbox-item-tax {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  order: unset;
+  margin: 8px 0;
+}
+
+.cardform-price-section .cardform-checkbox-label-tax {
+  color: #000;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.cardform-price-section .cardform-checkbox-tax {
+  width: 16px;
+  height: 16px;
+  accent-color: #fcd730;
+}
+
+/* Section content - FIXED */
+.cardform-section-content {
+  padding: 10px;
+  padding-right: 20px;
+  background: white;
+  border: 1px solid #dce0eb;
+  border-radius: 4px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Date Input Group */
+.cardform-date-input-group {
+  display: flex;
+  gap: 4px;
+  align-items: stretch;
+}
+
+.cardform-date-input {
+  flex: 1;
+}
+
+.cardform-date-button {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  font-size: 12px;
+  height: 36px;
+  box-sizing: border-box;
+}
+
+/* VIP Card checkbox positioning */
+.cardform-vip-checkbox-container {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 8px;
+}
+
+/* Add Games Button */
+.cardform-add-games-button {
+  width: 45%;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-left: 60%;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  font-family: "Roboto", sans-serif;
+}
+
+.cardform-add-games-button:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+/* Sidebar (right side) - FIXED */
+.cardform-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  padding-top: 12px;
+  height: calc(100% - 40px);
+}
+
+.cardform-sidebar-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+
+/* Registration Section - FIXED */
+.cardform-registration-section {
+  background: white;
+  border-radius: 13.72px;
+  border: 0.86px solid #d1d5db;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Bar */
+.cardform-registration-header {
+  background: #2e2343;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 12px 20px;
+  line-height: 120%;
+  margin: 0;
+}
+
+/* Body - FIXED */
+.cardform-registration-body {
+  padding: 1px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-top: none;
+  background: white;
+}
+
+/* Checkbox Rows */
+.cardform-registration-checkbox-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 0;
+}
+
+.cardform-registration-label {
+  font-family: "Roboto", sans-serif;
+  font-size: 13.72px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.cardform-registration-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #fcd730;
+}
+
+.cardform-lightning-icon {
+  color: #f59e0b;
+  font-size: 14px;
+  margin-left: 2px;
+}
+
+/* Registration Fields */
+.cardform-registration-fields {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.cardform-field-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.cardform-field-row:last-child {
+  border-bottom: none;
+}
+
+.cardform-field-name {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #374151;
+}
+
+/* Active Days Section - FIXED */
+.cardform-active-days-section {
+  background: white;
+  border-radius: 13.72px;
+  border: 0.86px solid #d1d5db;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardform-active-days-header {
+  background: #2e2343;
+  color: white;
+  padding: 12px 20px;
+  font-weight: 400;
+  font-size: 17.15px;
+  font-family: "Roboto", sans-serif;
+  line-height: 120%;
+  margin: 0;
+}
+
+.cardform-active-days-content {
+  padding: 16px 20px;
+  background: white;
+  flex: 1;
+}
+
+.cardform-day-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.cardform-day-name {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+}
+
+/* Last Updated Section */
+.cardform-last-updated-section {
+  padding: 12px 20px;
+  background: white;
+  flex-shrink: 0;
+}
+
+.cardform-last-updated-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.cardform-last-updated-label {
+  color: black;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+.cardform-last-updated-value {
+  font-size: 12px;
+  margin-right: 20px;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400 !important;
+  color: #92929d;
+}
+
+/* Footer */
+.cardform-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 10px 20px;
+  border-top: 1px solid #e5e7eb;
+  background: white;
+  flex-shrink: 0;
+}
+
+.cardform-footer-button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  color: white;
+  min-width: 80px;
+  font-family: "Roboto", sans-serif;
+}
+
+.cardform-footer-button.cardform-save {
+  background: #fcd730;
+}
+
+.cardform-footer-button.cardform-new {
+  background: #2258f8;
+}
+
+.cardform-footer-button.cardform-duplicate {
+  background: #2258f8;
+}
+
+.cardform-footer-button.cardform-cancel {
+  background: #3b4053;
+}
+
+/* Demo Container */
+.cardform-demo-container {
+  padding: 40px;
+  background: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardform-open-modal-button {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  font-family: "Roboto", sans-serif;
+}
+
+.cardform-open-modal-button:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
+.cardform-quantity-vip-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}

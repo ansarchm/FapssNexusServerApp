@@ -1,0 +1,240 @@
+/* Overlay */
+.editreportpop-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+/* Popup box */
+.editreportpop-form {
+  width: 620px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Header */
+.editreportpop-header {
+  background: #1f2041;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.schedule-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.editreportpop-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.editreportpop-close {
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+}
+
+/* Body */
+.editreportpop-body {
+  padding: 20px;
+}
+
+/* Bordered section */
+.form-container {
+  border: 1.5px solid #d9d9d9;
+  border-radius: 10px;
+  padding: 15px 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Row layout */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+/* Label + input block */
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Labels */
+.form-group label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1f2041;
+  white-space: nowrap;
+}
+
+/* Input, select and time uniform */
+.form-group input[type="text"],
+.form-group input[type="time"],
+.form-group select {
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+  height: 36px; /* same for all fields */
+  background-color:white;
+  color: #1f2041;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Widths */
+.id-box {
+  width: 70px;
+}
+
+.form-group select {
+  width: 130px;
+}
+
+.form-group input[type="text"]:not(.id-box) {
+  width: 130px;
+}
+
+.form-group input[type="time"] {
+  width: 110px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: "Roboto Mono", monospace;
+}
+
+/* Remove time picker clock icon */
+.no-clock::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* Checkbox */
+.white-tick {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background-color: #f1c40f;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+}
+
+.white-tick:checked::after {
+  content: "✓";
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: -1px;
+  left: 3px;
+  font-weight: bold;
+}
+
+/* Divider */
+.editreportpop-divider {
+  height: 1px;
+  background-color: #e6e6e6;
+  margin: 5px 20px 0 20px;
+}
+
+/* Footer */
+.editreportpop-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 20px 20px;
+  gap: 10px;
+}
+
+/* Buttons */
+.btn-save,
+.btn-close {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  height: 36px; /* same height as inputs */
+}
+
+.btn-save {
+  background-color: #f1c40f;
+  color: #1f2041;
+}
+
+.btn-close {
+  background-color: #1f2041;
+  color: white;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==============================
+   TIME INPUT WITH UP/DOWN ARROWS
+   ============================== */
+
+.time-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.time-input-container input[type="time"] {
+  padding-right: 25px; /* space for arrows */
+}
+
+/* Arrow buttons */
+.time-arrows {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  font-size: 10px;
+  color: #1f2041;
+  cursor: pointer;
+  user-select: none;
+}
+
+.time-arrows .arrow-up:hover,
+.time-arrows .arrow-down:hover {
+  color: #f1c40f;
+}

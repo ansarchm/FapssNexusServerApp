@@ -1,0 +1,994 @@
+.timeform-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-family: "Roboto", sans-serif;
+}
+
+.timeform-modal-container {
+  background: white;
+  border-radius: 8px;
+  width: 1200px;
+  max-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.timeform-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 13px;
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+  flex-shrink: 0;
+}
+
+.timeform-header-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeform-folder-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  margin-left: 18px;
+}
+
+.timeform-title-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 21.43px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin: 0;
+}
+
+.timeform-close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.timeform-close-icon {
+  width: 90%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.timeform-close-button:hover {
+  color: #979798;
+}
+
+.timeform-modal-content {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  background: transparent;
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.timeform-main-content {
+  flex: 3;
+  margin-right: 0;
+  width: 100%;
+}
+
+.timeform-content-wrapper {
+  padding: 12px;
+  width: 100%;
+}
+
+.timeform-main-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Product Section - Adjusted Height */
+.timeform-product-section {
+  height: 190px;
+  width: 100%;
+  background: white;
+  border-radius: 13.72px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 0.86px solid #d1d5db;
+  opacity: 1;
+}
+
+.timeform-section-header {
+  background: #2e2343;
+  color: white;
+  padding: 8px 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17.15px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  margin: 0;
+  border: none;
+}
+
+.timeform-price-header {
+  background: #2e2343;
+}
+
+/* ENTITLEMENTS SECTION CUSTOM LAYOUT */
+.timeform-entitlements-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 8px;
+  align-items: start;
+  flex: 1;
+}
+
+.timeform-right-column {
+  justify-self: start;
+}
+
+.timeform-left-column,
+.timeform-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Move VIP under Quantity inside second column */
+.timeform-vip-card-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.timeform-vip-card-container {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+/* Third column now only for Add Games button */
+.timeform-third-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-left: 0;
+}
+
+/* Cash Balance Input */
+.timeform-cash-balance-input {
+  width: 90px;
+  height: 26px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+}
+
+/* Card Expiry Group */
+.timeform-card-expiry-group {
+  position: relative;
+}
+
+.timeform-date-input-with-calendar {
+  position: relative;
+  display: inline-block;
+}
+
+.timeform-card-expiry-input {
+  width: 137px;
+  height: 26px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+  padding-right: 30px;
+}
+
+.timeform-calendar-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.timeform-calendar-image {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Bonus Balance Input */
+.timeform-bonus-balance-input {
+  width: 90px;
+  height: 25px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+}
+
+/* Card Valid Group - Horizontal Layout */
+.timeform-card-valid-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeform-card-valid-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeform-card-valid-input {
+  width: 69px;
+  height: 25px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+}
+
+.timeform-clear-button {
+  color: #ef4444;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
+
+.timeform-clear-button:hover {
+  color: #dc2626;
+}
+
+/* Quantity Group - positioned under Card Valid */
+.timeform-quantity-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeform-quantity-input {
+  width: 40px;
+  height: 25px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+}
+
+/* VIP Card Group - fix text wrapping */
+.timeform-vip-card-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.timeform-vip-card-label {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.timeform-vip-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #fcd730;
+  flex-shrink: 0;
+}
+
+/* Add Games Button - under VIP Card in third column */
+.timeform-third-column .timeform-add-games-button {
+  width: 120px;
+  height: 32px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
+.timeform-third-column .timeform-add-games-button:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+/* Membership and Active Profile - narrower width */
+.timeform-entitlements-section .timeform-membership-group .timeform-form-select,
+.timeform-entitlements-section
+  .timeform-active-profile-group
+  .timeform-form-select {
+  flex: 0 0 220px;
+}
+
+.timeform-bottom-entitlements-row {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25%;
+  gap: 15px;
+}
+
+.timeform-add-games-button {
+  margin-top: 6px;
+}
+
+.timeform-entitlements-header {
+  background: #2e2343;
+}
+
+.timeform-product-content {
+  padding: 12px;
+  background: white;
+}
+
+/* UPDATED FORM ROW STYLES - REMOVE FLEX:1 TO PREVENT AUTO-EXPANSION */
+.timeform-form-row {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 16px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.timeform-form-row.timeform-cols-3 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.timeform-form-row.timeform-cols-2 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* UPDATED FORM GROUP - REMOVE FLEX:1 FROM INPUTS */
+.timeform-form-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.timeform-form-label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin-bottom: 0;
+  min-width: 40px;
+  flex-shrink: 0;
+}
+
+/* UPDATED INPUT/SELECT STYLES - REMOVE FLEX:1 */
+.timeform-form-input,
+.timeform-form-select {
+  height: 34px;
+  padding: 4px 8px;
+  border-radius: 6.11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #92929d;
+  background: white;
+  height: 26px;
+  box-sizing: border-box;
+  border: 0.76px solid #d1d5db;
+  opacity: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.timeform-form-input:focus,
+.timeform-form-select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 1px #6366f1;
+}
+
+.timeform-form-input:read-only {
+  background-color: #f9fafb;
+}
+
+/* SPECIFIC WIDTHS FOR PRODUCT SECTION - NOW INDEPENDENT */
+/* Row 1 - Product Id, Product Name, Category */
+.timeform-product-section
+  .timeform-form-row:nth-child(1)
+  .timeform-form-group:nth-child(1)
+  .timeform-form-input {
+  width: 160px;
+}
+
+.timeform-product-section
+  .timeform-form-row:nth-child(1)
+  .timeform-form-group:nth-child(2)
+  .timeform-form-input {
+  width: 270px !important;
+}
+
+.timeform-product-section
+  .timeform-form-row:nth-child(1)
+  .timeform-form-group:nth-child(3)
+  .timeform-form-select {
+  width: 160px;
+}
+
+/* Row 2 - Location, POS Counter, Display Group */
+.timeform-product-section
+  .timeform-form-row:nth-child(2)
+  .timeform-form-group:nth-child(1)
+  .timeform-form-select {
+  width: 160px;
+}
+
+.timeform-product-section
+  .timeform-form-row:nth-child(2)
+  .timeform-form-group:nth-child(2)
+  .timeform-form-select {
+  width: 160px;
+}
+
+.timeform-product-section
+  .timeform-form-row:nth-child(2)
+  .timeform-form-group:nth-child(3)
+  .timeform-form-select {
+  width: 180px;
+}
+
+/* Row 3 - Display Order, Active, Display in POS */
+.timeform-product-section
+  .timeform-form-row:nth-child(3)
+  .timeform-form-group:nth-child(1)
+  .timeform-form-input {
+  width: 80px;
+}
+
+/* SPECIFIC WIDTHS FOR PRICE SECTION - INDEPENDENT FROM PRODUCT SECTION */
+/* Face Value and Selling Price - KEEP ORIGINAL SIZES */
+.timeform-price-section
+  .timeform-form-row:nth-child(1)
+  .timeform-form-group:nth-child(1)
+  .timeform-form-input {
+  width: 100px !important;
+}
+
+.timeform-price-section
+  .timeform-form-row:nth-child(1)
+  .timeform-form-group:nth-child(2)
+  .timeform-form-input {
+  width: 100px !important;
+}
+
+/* Tax Category and Tax 1% - More specific targeting */
+.timeform-price-section
+  .timeform-section-content
+  > .timeform-form-row:nth-child(3)
+  .timeform-form-group:nth-child(1)
+  .timeform-form-select {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+.timeform-price-section
+  .timeform-section-content
+  > .timeform-form-row:nth-child(3)
+  .timeform-form-group:nth-child(2)
+  .timeform-form-input {
+  width: 110px !important;
+  min-width: 110px !important;
+  max-width: 110px !important;
+}
+
+/* Alternative targeting for Tax 1% field */
+.timeform-price-section .timeform-form-input[value="10.000000%"] {
+  width: 110px !important;
+  max-width: 110px !important;
+}
+
+/* Additional selector for Tax Category */
+.timeform-price-section .timeform-form-select {
+  width: auto !important;
+}
+
+.timeform-price-section .timeform-form-row .timeform-form-group:first-child .timeform-form-select {
+  width: 100px !important;
+  min-width: 100px !important;
+}
+
+/* Tax and Price No Tax */
+.timeform-price-section
+  .timeform-form-row:nth-child(5)
+  .timeform-form-group:nth-child(1)
+  .timeform-form-input {
+  width: 70px !important;
+}
+
+.timeform-price-section
+  .timeform-form-row:nth-child(5)
+  .timeform-form-group:nth-child(2)
+  .timeform-form-input {
+  width: 130px !important;
+}
+
+/* Checkbox Section */
+.timeform-checkbox-section {
+  margin-top: 16px;
+}
+
+.timeform-checkbox-grid {
+  display: flex;
+  gap: 12px;
+}
+
+.timeform-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  white-space: nowrap;
+  color: #000000;
+}
+
+.timeform-checkbox-label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+}
+
+.timeform-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #fcd730;
+  margin-left: 4px;
+}
+
+.timeform-checkbox-item-tax {
+  order: -1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  margin-left: 4px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: white;
+}
+
+/* Bottom Sections Container - FIXED */
+.timeform-bottom-sections {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Remove border from the Tax Inclusive row */
+.timeform-price-section .timeform-tax-inclusive-row {
+  margin: 8px 0;
+  padding: 4px 0;
+  border: none;
+}
+
+/* Add a clean full-width line */
+.timeform-separator-line {
+  border-top: 1px solid #e5e7eb;
+  margin: 20px -30px;
+  width: calc(100% + 50px);
+}
+
+/* Price Section - FIXED */
+.timeform-price-section,
+.timeform-entitlements-section {
+  background: white;
+  border-radius: 13.72px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 0.86px solid #d1d5db;
+  min-height: 280px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* PRICE SECTION FIELD OVERRIDES */
+.timeform-price-section .timeform-form-input,
+.timeform-price-section .timeform-form-select {
+  height: 26px;
+  border-radius: 6.11px;
+  border: 0.76px solid #d1d5db;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+/* Tax Inclusive (label before checkbox fix) */
+.timeform-price-section .timeform-checkbox-item-tax {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  order: unset;
+  margin: 8px 0;
+}
+
+.timeform-price-section .timeform-checkbox-label-tax {
+  color: #000;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.timeform-price-section .timeform-checkbox-tax {
+  width: 16px;
+  height: 16px;
+  accent-color: #fcd730;
+}
+
+/* Section content - FIXED */
+.timeform-section-content {
+  padding: 15px 20px 20px 20px;
+  background: white;
+  border: none;
+  border-radius: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Date Input Group */
+.timeform-date-input-group {
+  display: flex;
+  gap: 4px;
+  align-items: stretch;
+}
+
+.timeform-date-input {
+  flex: 1;
+}
+
+.timeform-date-button {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  font-size: 12px;
+  height: 36px;
+  box-sizing: border-box;
+}
+
+/* VIP Card checkbox positioning */
+.timeform-vip-checkbox-container {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 8px;
+}
+
+/* Add Games Button */
+.timeform-add-games-button {
+  width: 45%;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-left: 60%;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  font-family: "Roboto", sans-serif;
+}
+
+.timeform-add-games-button:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+/* Sidebar (right side) - FIXED */
+.timeform-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  padding-top: 12px;
+  height: calc(100% - 40px);
+}
+
+.timeform-sidebar-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+
+/* Registration Section - FIXED */
+.timeform-registration-section {
+  background: white;
+  border-radius: 13.72px;
+  border: 0.86px solid #d1d5db;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Bar */
+.timeform-registration-header {
+  background: #2e2343;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 12px 20px;
+  line-height: 120%;
+  margin: 0;
+}
+
+/* Body - FIXED */
+.timeform-registration-body {
+  padding: 1px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-top: none;
+  background: white;
+}
+
+/* Checkbox Rows */
+.timeform-registration-checkbox-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.timeform-registration-label {
+  font-family: "Roboto", sans-serif;
+  font-size: 13.72px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.timeform-registration-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #fcd730;
+}
+
+.timeform-lightning-icon {
+  color: #f59e0b;
+  font-size: 14px;
+  margin-left: 2px;
+}
+
+/* Registration Fields */
+.timeform-registration-fields {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.timeform-field-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.timeform-field-row:last-child {
+  border-bottom: none;
+}
+
+.timeform-field-name {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #374151;
+}
+
+/* Active Days Section - FIXED */
+.timeform-active-days-section {
+  background: white;
+  border-radius: 13.72px;
+  border: 0.86px solid #d1d5db;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeform-active-days-header {
+  background: #2e2343;
+  color: white;
+  padding: 12px 20px;
+  font-weight: 400;
+  font-size: 17.15px;
+  font-family: "Roboto", sans-serif;
+  line-height: 120%;
+  margin: 0;
+}
+
+.timeform-active-days-content {
+  padding: 16px 20px;
+  background: white;
+  flex: 1;
+}
+
+.timeform-day-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.timeform-day-name {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+}
+
+/* Last Updated Section */
+.timeform-last-updated-section {
+  padding: 12px 20px;
+  background: white;
+  flex-shrink: 0;
+}
+
+.timeform-last-updated-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.timeform-last-updated-label {
+  color: black;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+.timeform-last-updated-value {
+  font-size: 12px;
+  margin-right: 20px;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400 !important;
+  color: #92929d;
+}
+
+/* Footer */
+.timeform-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 10px 20px;
+  border-top: 1px solid #e5e7eb;
+  background: white;
+  flex-shrink: 0;
+}
+
+.timeform-footer-button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  color: white;
+  min-width: 80px;
+  font-family: "Roboto", sans-serif;
+}
+
+.timeform-footer-button.timeform-save {
+  background: #fcd730;
+}
+
+.timeform-footer-button.timeform-new {
+  background: #2258f8;
+}
+
+.timeform-footer-button.timeform-duplicate {
+  background: #2258f8;
+}
+
+.timeform-footer-button.timeform-cancel {
+  background: #3b4053;
+}
+
+/* Demo Container */
+.timeform-demo-container {
+  padding: 40px;
+  background: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeform-open-modal-button {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  font-family: "Roboto", sans-serif;
+}
+
+.timeform-open-modal-button:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
+.timeform-quantity-vip-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}

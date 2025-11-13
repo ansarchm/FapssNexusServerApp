@@ -1,0 +1,548 @@
+.gamereport-header {
+  padding: 1px ;
+  background-color: #2e2343; 
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Top row: logo + filters */
+.header-top-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+}
+
+/* Logo */
+.logo {
+  height: 30px;
+  width: auto;
+}
+.header-left {
+ 
+  left: 20px;         
+  top: 50%;           
+  transform: translateY(-50%);
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+.header-filters {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #2e2148; 
+  padding: 12px 350px;
+  color: white;
+  
+}
+
+.date-filter {
+  display: flex;
+  gap: 25px;
+  margin-top: 1%;
+}
+
+.date-box {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  margin-top: 1%;
+}
+
+.label {
+  font-size: 14px;
+  color: white; 
+  white-space: nowrap; 
+}
+
+.date-display {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  color: black;
+  padding: 6px 10px;
+  border-radius: 6px;
+  min-width: 180px;
+  font-size: 13px;
+}
+
+.date-icon {
+  width: 16px;
+  height: 16px;
+}
+
+
+
+.header-filters label {
+  text-align: center;
+  font-weight: 500;
+  color: white;
+}
+
+.header-filters input {
+  margin-left: 5px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Divider line */
+.header-divider {
+  margin: 10px auto;
+  border: 0;
+  border-top: 1px solid #ccc;
+   width: 95%;   
+}
+.header-container {
+  display: flex;
+  align-items: center;  
+  justify-content: flex-start; 
+  padding: 1px 10px;
+  background: #2e2148;
+  height: 60px;
+ 
+}
+.header2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 6px; 
+  
+}
+
+.header-navigation img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  margin-left: 0; 
+  margin-left: 1%;
+}
+
+.header-actions .btn {
+  display: flex;
+  align-items: center;
+  gap: 4px; 
+  padding: 7px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header-actions img {
+  width: 16px;
+  height: 16px;
+
+}
+.header-actions .pdf {
+  display: inline-flex;     
+  align-items: center;        
+  justify-content: center;
+  gap: 12px;                  
+  background-color: #fff;     
+  color: #000;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 0px 7px;
+  height: 25px;
+  cursor: pointer;
+  
+}
+
+.header-actions .pdf img.pdf {
+  width: 16px;
+  height: 3px;
+  order: 1;  
+  margin-left: 55px;  
+                
+}
+
+
+/* Email button */
+.header-actions .email {
+  display: inline-flex;      
+  align-items: center;         
+  white-space: nowrap;                  
+  background-color: #ff9800;   
+  color: white;
+  font-size: 13px;             
+  padding: 5px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header-actions .email img.email {
+  width: 16px;
+  height: auto;
+}
+
+
+
+/* Assign bright colors */
+.header-actions .refresh { background-color: #42C700; } 
+.header-actions .print   { background-color: #FCD730; }
+.header-actions .pdf   { background-color: #FFFFFF; } 
+.header-actions .export  { background-color: #2258F8; } 
+.header-actions .email   { background-color: #E76711; } 
+.header-actions .close   { background-color: #FF0000; } 
+
+
+/* BODY CONTAINER */
+/* CONTAINER */
+/* Outer white card */
+.btn.pdf {
+  display: inline-flex;      
+  align-items: center;        
+  justify-content: center;    
+  padding: 8px 12px;        
+  background-color: #fff;     
+  border: 1px solid #ccc;     
+  border-radius: 4px;        
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;            
+}
+
+.btn.pdf img.pdf {
+  margin-right: 8px;           
+  width: 16px;                
+  height: auto;
+}
+/* White Card Container */
+.container-body-card {
+  margin: 20px; 
+  padding: 0 40px 7cq5 20px; 
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.container-title {
+  display: block;
+  margin: 0;
+  padding: 10px 30px; 
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  background: #2e2343;
+  border-radius: 8px 8px 0 0; 
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.report-period {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  margin-left: 1%;
+  font-weight: 400px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.report-meta {
+  margin-top: 6px;
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: #444;
+  margin-left: 1%;
+  font-weight: 400px;
+  font-family: 'Roboto', sans-serif;
+}
+/* ---------------- Table Header ---------------- */
+/* Flex for table header and table rows */
+.separated-table-header,
+.separated-table-row {
+  display: flex;
+  
+}
+
+/* Header cells */
+.separated-header-cell {
+  font-weight: 600;
+  font-size: 14px;
+  background: white;
+  padding: 13px 6px;
+ 
+}
+/* Align only the Product header text to the left */
+.separated-header-cell.header-product {
+    text-align: left;  
+    justify-content: flex-start; 
+    padding-left: 10px; 
+}
+
+/* Keep other headers centered or right as before */
+.separated-header-cell:not(.header-product) {
+    text-align: center; 
+}
+/* Align only the Product header text to the left */
+.separated-header-cell.header-quantity {
+    text-align: left;  
+    justify-content: flex-start; 
+    padding-left: 10px; 
+}
+
+/* Keep other headers centered or right as before */
+.separated-header-cell:not(.header-quantity) {
+    text-align: center; 
+}
+/* Align only the Product header text to the left */
+.separated-header-cell.header-revenue {
+    text-align: left;  
+    justify-content: flex-start; 
+    padding-left: 45px; 
+}
+
+/* Keep other headers centered or right as before */
+.separated-header-cell:not(.header-revenue) {
+    text-align: center; 
+}
+
+.separated-table-row .separated-cell {
+  font-size: 16px; /* adjust size as needed */
+}
+/* Align only the Product header text to the left */
+.separated-header-cell.header-tax{
+    text-align: left;  
+    justify-content: flex-start; 
+    padding-left: 55px; 
+}
+
+/* Keep other headers centered or right as before */
+.separated-header-cell:not(.header-tax) {
+    text-align: center; 
+}
+
+/* Table data cells */
+.separated-cell {
+  padding: 10px 6px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  font-weight: 400px;
+}
+
+/* Match header and data widths */
+.header-product, .data-product { flex: 1; text-align: left; }
+.header-quantity, .data-quantity { flex: 1; text-align: center; }
+.header-revenue, .data-revenue { flex: 1.2; text-align: right; }
+.header-averagecost, .data-averagecost { flex: 1.2; text-align: right; }
+.header-tax, .data-tax { flex: 0.8; text-align: center; }
+.header-percent-revenue, .data-percent-revenue { flex: 1.5; text-align: right; }
+.header-percent-quantity, .data-percent-quantity { flex: 1.5; text-align: right; }
+
+/* Alternate row color */
+.separated-row-yellow { background-color: #fffde7; }
+
+.bold-text {
+  font-weight: bold;
+}
+
+.department-total span:nth-child(n+2) {
+  margin-left: 12%;
+  display: inline-block; 
+}
+
+.department-total {
+  display: flex;
+  align-items: center;
+
+  margin-left: 48px;
+  margin-top: 7px;
+}
+
+.department-name {
+  margin-top: 4px;
+  margin-left: 2%;
+  margin-bottom: 15px;
+  margin-left: 48px;
+}
+.scrollbar{
+   height: 500px;       
+  overflow-y: scroll;  
+  
+   scrollbar-width: auto;
+  scrollbar-color: #2E2343 #e6e6e6;
+}/* enable vertical scrollbar */
+
+/* Custom Scrollbar (Chrome, Edge, Safari) */
+.scrollbar::-webkit-scrollbar {
+  width: 14px;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background: #e6e6e6;
+  border-radius: 8px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #2E2343;
+  border-radius: 8px;
+}
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #2E2343;
+}
+
+
+/* ================== RESPONSIVE ADJUSTMENTS ================== */
+
+/* Tablet / Medium screens */
+@media (max-width: 1024px) {
+  /* Top row wraps */
+  .header-top-row {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  /* Logo position resets */
+  .header-left {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    margin: 0;
+  }
+
+  /* Filters: less padding, wrap elements */
+  .header-filters {
+    padding: 10px 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .date-display {
+    min-width: 140px;
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+
+  /* Header actions wrap buttons */
+  .header-actions {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .header-actions .btn,
+  .header-actions .pdf,
+  .header-actions .email {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  /* Table: allow horizontal scroll */
+  .separated-table-header,
+  .separated-table-row {
+    min-width: 700px;
+    overflow-x: auto;
+  }
+}
+
+/* Mobile / Small screens */
+@media (max-width: 768px) {
+  .logo {
+    height: 25px;
+  }
+
+  .header-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .header-filters {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .date-display {
+    min-width: 120px;
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+
+  .header-actions .btn,
+  .header-actions .pdf,
+  .header-actions .email {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+
+  /* Table scroll */
+  .separated-table-header,
+  .separated-table-row {
+    min-width: 600px;
+    overflow-x: auto;
+  }
+
+  .container-body-card {
+    padding: 0 15px 15px 15px;
+    margin: 10px;
+  }
+}
+
+/* Extra small screens / Mobile Portrait */
+@media (max-width: 480px) {
+  /* Top row: stacked */
+  .header-top-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  /* Filters stacked */
+  .header-filters {
+    flex-direction: column;
+    padding: 6px;
+    gap: 4px;
+  }
+
+  .date-display {
+    min-width: 100px;
+    font-size: 10px;
+    padding: 3px 5px;
+  }
+
+  /* Buttons smaller */
+  .header-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  .header-actions .btn,
+  .header-actions .pdf,
+  .header-actions .email {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+
+  /* Card padding/margin */
+  .container-body-card {
+    margin: 10px;
+    padding: 0 10px 15px 10px;
+  }
+
+  /* Table: block + horizontal scroll */
+  .separated-table-header,
+  .separated-table-row {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    min-width: 300px; /* ensures scroll if needed */
+  }
+}
+

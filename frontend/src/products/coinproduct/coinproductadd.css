@@ -1,0 +1,354 @@
+/* Demo Container */
+.coin-add-demo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.coin-add-demo-button {
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.coin-add-demo-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Modal Overlay */
+.coin-add-modal-overlay {
+ position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1050; /* keep on top of everything */
+}
+
+/* Modal Container - Exact measurements: 492x450px */
+.coin-add-modal-container {
+  width: 492px;
+  max-height: 90vh; 
+  text-align: center;
+  height: 450px;
+  background-color: white;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+}
+
+/* Modal Header */
+.coin-add-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.coin-add-header-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Game Icon */
+.coin-add-game-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #4F46E5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.coin-add-game-icon-inner {
+  width: 16px;
+  height: 10px;
+  background-color: white;
+  border-radius: 2px;
+  position: relative;
+}
+
+.coin-add-game-dot-left {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 3px;
+  height: 3px;
+  background-color: #4F46E5;
+  border-radius: 50%;
+}
+
+.coin-add-game-dot-right {
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  width: 3px;
+  height: 3px;
+  background-color: #4F46E5;
+  border-radius: 50%;
+}
+
+.coin-add-modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.coin-add-close-button {
+  color: #9ca3af;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.coin-add-close-button:hover {
+  color: #4b5563;
+}
+
+.coin-add-close-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Table Container */
+.coin-add-table-container {
+  flex: 1;
+  padding: 20px 20px ;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/* Table Wrapper - width: 461px */
+.coin-add-table-wrapper {
+  width: 461px;
+  border-radius: 13.72px;
+  overflow: hidden;
+  border: 1px solid #DADCE6;
+}
+
+/* Games Table */
+.coin-add-games-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #DADCE6; /* outer border */
+  border-radius: 13.72px;
+  overflow: hidden;
+}
+
+/* Table Header - height: 43px */
+.coin-add-table-header {
+  height: 43px;
+  background-color: #2E2343;
+}
+
+.coin-add-table-header th {
+  height: 43px;
+  background-color: #2E2343;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  border-right: 1px solid #DADCE6; /* vertical lines */
+  padding: 0 16px;
+  border: none;
+}
+
+.coin-add-table-header th:last-child {
+  border-right: none;
+}
+
+.coin-add-header-cell-select {
+  width: 80px;
+}
+
+.coin-add-header-cell-game {
+  width: auto;
+}
+
+.coin-add-header-cell-count {
+  width: 100px;
+}
+
+/* Table Body */
+.coin-add-table-body {
+  background-color: white;
+}
+
+.coin-add-body-row {
+  height: 26.875px;
+  transition: background-color 0.2s ease;
+  /* 🚫 no border-bottom → removes horizontal lines */
+}
+
+.coin-add-body-row:hover {
+  background-color: #f9fafb !important;
+}
+
+.coin-add-row-yellow {
+  background-color: #FEF9E7;
+}
+
+.coin-add-row-white {
+  background-color: white;
+}
+
+.coin-add-table-cell {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 16px;
+  font-size: 14px;
+  color: #111827;
+  border-right: 1px solid #DADCE6; /* vertical separators only */
+  height: 26.875px;
+
+  /* ✅ Roboto styles */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 13.72px;
+  line-height: 140%;
+  font-style: normal;
+}
+
+.coin-add-table-cell:last-child {
+  border-right: none;
+}
+
+.coin-add-cell-select {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coin-add-cell-game {
+  width: auto;
+}
+
+.coin-add-cell-count {
+  width: 100px;
+}
+
+/* Checkbox Styles */
+.coin-add-checkbox-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coin-add-checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.coin-add-checkbox-label {
+  width: 16px;   /* consistent fixed size */
+  height: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.coin-add-checkbox-checked {
+  background-color: #F59E0B;
+  border: 2px solid #F59E0B;
+}
+
+.coin-add-checkbox-unchecked {
+  background-color: white;
+  border: 2px solid #d1d5db;
+}
+
+.coin-add-checkbox-label:hover {
+  border-color: #F59E0B;
+}
+
+.coin-add-checkmark {
+  width: 12px;
+  height: 12px;
+  color: white;
+}
+
+/* Modal Footer */
+.coin-add-modal-footer {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px 20px 20px;
+  border-top: 1px solid #e5e7eb;
+  justify-content: flex-end;
+}
+
+.coin-add-save-button,
+.coin-add-cancel-button {
+  width: 90.70px;
+  height: 34.82px;
+  font-weight: 500;
+  border-radius: 9.16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+}
+
+.coin-add-save-button {
+  background-color: #F59E0B;
+  color: #111827;
+}
+
+.coin-add-save-button:hover {
+  background-color: #D97706;
+}
+
+.coin-add-cancel-button {
+  background-color: #374151;
+  color: white;
+}
+
+.coin-add-cancel-button:hover {
+  background-color: #1F2937;
+}
+
+.coin-add-game-image {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}

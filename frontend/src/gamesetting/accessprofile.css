@@ -1,0 +1,188 @@
+.access-profile-wrapper {
+  background-color: #f5f5f5;
+  padding: 10px;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", sans-serif;
+  min-height: 100vh;
+  font-size: 11px;
+}
+
+.access-profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.access-profile-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.access-profile-icon-placeholder {
+  width: 20px;
+  height: 20px;
+  background-color: #4a5568;
+  border-radius: 3px;
+}
+
+.access-profile-icon {
+  padding: 0px 0px 0px 15px;
+}
+
+.access-profile-header-title {
+  font-size: 25px;
+  color: #1C212D;
+  margin: 0;
+  font-weight: normal;
+}
+
+.access-profile-header-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.access-profile-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 13px;
+}
+
+.access-profile-btn-save {
+  background-color: #FCD730;
+  color: #1C212D;
+}
+
+.access-profile-btn-add {
+  background-color: #2258F8;
+  color: white;
+}
+
+.access-profile-btn-delete {
+  background-color: #FF0000;
+  color: white;
+}
+
+.access-profile-table thead th {
+  border: none;
+}
+
+.access-profile-table thead tr {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Center align header text for Active column */
+.access-profile-table thead th.access-profile-active-column {
+  text-align: center;
+  vertical-align: middle;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.access-profile-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  max-height: 400px;
+  overflow-y: auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.access-profile-table thead {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.access-profile-active-column {
+  width: 80px; /* Adjust as per your requirement */
+  text-align: center; /* Optional: center the checkbox */
+}
+
+.access-profile-table tbody {
+  display: block;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.access-profile-table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.access-profile-th {
+  background-color: #2E2343;
+  color: #FFFFFF;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 15px;
+  border-right: none;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.access-profile-first-column {
+  border-left: none;
+}
+
+.access-profile-last-column {
+  border-right: none;
+}
+
+.access-profile-td {
+  padding: 10px 12px;
+  border-right: 1px solid #e2e8f0;
+  color: #333;
+  font-size: 15px;
+}
+
+.access-profile-even-row {
+  background-color: #FFFAE2;
+}
+
+.access-profile-odd-row {
+  background-color: white;
+}
+
+.access-profile-custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+  margin: 0;
+}
+
+.access-profile-custom-checkbox:checked {
+  background-color: #fcd730;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0ibTEwIDMtNiA2LTItMiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K');
+  background-size: 10px 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: #fcd730;
+}
+
+.access-profile-custom-checkbox:hover {
+  border-color: #fcd730;
+}
+
+.access-profile-custom-checkbox:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(252, 215, 48, 0.3);
+}

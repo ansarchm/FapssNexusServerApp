@@ -1,0 +1,341 @@
+/* Modal Overlay */
+.modal-overlay-displaygroupadd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Modal Container */
+.modal-container-displaygroupadd {
+  background-color: white;
+  border-radius: 16px;
+  width: 480px;
+  max-width: 90vw;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Modal Header */
+.modal-header-displaygroupadd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-title-section-displaygroupadd {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal-icon-displaygroupadd {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.modal-title-displaygroupadd {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.close-btn-displaygroupadd {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn-displaygroupadd:hover {
+  background-color: #f3f4f6;
+}
+
+.close-icon-displaygroupadd {
+  width: 20px;
+  height: 20px;
+  color: #6b7280;
+}
+
+/* Details Section */
+.details-section-displaygroupadd {
+  background-color: #2E2343;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 20px 20px 0px 0px;
+  margin: 24px;
+  margin-bottom: 0;
+}
+
+.details-title-displaygroupadd {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Details Container */
+.details-container-displaygroupadd {
+  border: 1px solid #e5e7eb;
+  border-radius: 0px 0px 12px 12px;
+  margin: 0 24px 24px 24px;
+  background-color: white;
+}
+
+/* Form Content */
+.form-content-displaygroupadd {
+  padding: 24px;
+}
+
+.form-group-displaygroupadd {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.form-group-displaygroupadd:last-child {
+  margin-bottom: 0;
+}
+
+.form-label-displaygroupadd {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.form-input-displaygroupadd {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #111827;
+  background-color: white;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+  height: 44px;
+}
+
+.form-input-displaygroupadd:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-input-displaygroupadd::placeholder {
+  color: #9ca3af;
+}
+
+/* Image Upload Section */
+.image-upload-section-displaygroupadd {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.file-input-container-displaygroupadd {
+  flex: 1;
+}
+
+.file-input-wrapper-displaygroupadd {
+  position: relative;
+}
+
+.file-input-displaygroupadd {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.file-input-label-displaygroupadd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  border: 1px solid #E2E2EA;
+  border-radius: 8px;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s, border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  height: 44px;
+}
+
+.file-input-left-section-displaygroupadd {
+  background: linear-gradient(to bottom, #E9ECEF, #F8F8F8);
+  padding: 12px 16px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.file-input-separator-displaygroupadd {
+  width: 1px;
+  height: 100%;
+  background-color: #44444F;
+  flex-shrink: 0;
+}
+
+.file-input-right-section-displaygroupadd {
+  background-color: #FFFFFF;
+  padding: 12px 16px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.file-input-label-displaygroupadd:hover {
+  border-color: #9ca3af;
+}
+
+.file-input-text-displaygroupadd {
+  color: #92929D;
+  margin-left: 20px;
+}
+
+.active-toggle-btn-displaygroupadd {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.checklist-icon1-displaygroupadd {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+}
+
+.file-preview-text-displaygroupadd {
+  color: #374151;
+  font-weight: 500;
+}
+
+/* Modal Actions */
+.modal-actions-displaygroupadd {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.action-button-displaygroupadd {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  border: none;
+  min-width: 80px;
+}
+
+.action-button-displaygroupadd:active {
+  transform: translateY(1px);
+}
+
+.save-btn-displaygroupadd {
+  background-color: #FCD730;
+  color: #1C212D;
+}
+
+.save-btn-displaygroupadd:hover {
+  background-color: #f59e0b;
+}
+
+.close-action-btn-displaygroupadd {
+  background-color: #3B4053;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .modal-container-displaygroupadd {
+    width: 90%;
+    margin: 0 16px;
+  }
+  
+  .form-group-displaygroupadd {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .form-label-displaygroupadd {
+    min-width: auto;
+  }
+  
+  .form-input-displaygroupadd,
+  .image-upload-section-displaygroupadd {
+    width: 100%;
+  }
+  
+  .modal-actions-displaygroupadd {
+    flex-direction: column;
+  }
+  
+  .action-button-displaygroupadd {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-header-displaygroupadd {
+    padding: 16px 20px;
+  }
+  
+  .modal-title-displaygroupadd {
+    font-size: 16px;
+  }
+  
+  .details-section-displaygroupadd,
+  .form-content-displaygroupadd,
+  .modal-actions-displaygroupadd {
+    padding: 16px 20px;
+  }
+  
+  .details-section-displaygroupadd {
+    margin: 20px;
+    margin-bottom: 0;
+  }
+  
+  .details-container-displaygroupadd {
+    margin: 0 20px 20px 20px;
+  }
+  
+  .file-input-text-displaygroupadd {
+    margin-left: 10px;
+  }
+}

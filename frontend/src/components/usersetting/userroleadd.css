@@ -1,0 +1,347 @@
+/* Modal Overlay and Container */
+.userrole-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1000;
+  font-family: "Roboto","Montserrat";
+}
+
+.userrole-modal-container {
+  background: #FFFFFF;
+  border-radius: 13px;
+  width: 80%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.userrole-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1px 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.userrole-header-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.userrole-star-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #f3e8ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7c3aed;
+}
+
+.userrole-star-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.userrole-modal-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.userrole-close-button {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.userrole-close-button:hover {
+  color: #6b7280;
+}
+
+.userrole-close-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Modal Body */
+.userrole-modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Section Styles */
+.userrole-section {
+  margin-bottom: 10px;
+}
+
+.userrole-section:last-child {
+  margin-bottom: 0;
+}
+
+.userrole-section-header {
+  background-color: #2E2343;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 13px 13px 0 0;
+}
+
+.userrole-section-header h3 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.userrole-section-content {
+  border: 1px solid #d1d5db;
+  border-top: none;
+  border-radius: 0 0 13px 13px;
+  overflow: hidden;
+}
+
+/* General Settings Specific Styles */
+.userrole-general-settings-content {
+  background-color: #FFFFFF;
+  padding: 16px;
+  border: 1px solid #d1d5db;
+  border-top: none;
+  border-radius: 0 0 13px 13px;
+}
+
+.userrole-form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.userrole-form-row:last-child {
+  margin-bottom: 0;
+}
+
+.userrole-form-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.userrole-form-group.userrole-id-group {
+  flex: 0 0 auto;
+}
+
+.userrole-form-group.userrole-user-role-group {
+  flex: 1;
+}
+
+.userrole-form-group.userrole-description-group {
+  flex: 1;
+}
+
+.userrole-form-group label {
+  font-size: 12px; /* Changed from 11px to 12px to match second file */
+  font-weight: 400; /* Changed from 500 to 400 to match second file */
+  color: #000000; /* Changed from #374151 to #000000 to match second file */
+  white-space: nowrap;
+  margin: 0;
+}
+
+.userrole-form-input {
+  font-family: "Montserrat";/* Added to match second file */
+  padding: 4px 8px; /* Changed from 6px 8px to 4px 8px to match second file */
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 10px; /* Changed from 11px to 12px to match second file */
+  color: #6b7280; /* Added color property to match second file */
+  background: white; /* Added background property to match second file */
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.userrole-form-input.userrole-id-input {
+  width: 60px;
+}
+
+.userrole-form-input.userrole-user-role-input {
+  min-width: 120px; /* Reduced from 150px */
+  max-width: 200px; /* Add max-width to limit expansion */
+  flex: none; /* Remove flex: 1 to prevent full width expansion */
+}
+
+.userrole-form-input.userrole-description-input {
+  width: 250px; /* Reduced from 100% - set specific width */
+  max-width: 300px; /* Optional: set maximum width */
+}
+
+.userrole-form-input:focus {
+  outline: none;
+  border-color: #2563eb; /* Changed from #3b82f6 to #2563eb to match second file */
+  box-shadow: 0 0 0 1px #2563eb; /* Changed box-shadow to match second file */
+}
+
+.userrole-form-input[readonly] {
+  background-color: #f9fafb;
+  cursor: not-allowed;
+}
+
+/* Two Column Layout */
+.userrole-two-column-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 1024px) {
+  .userrole-two-column-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Scrollable List Styles */
+.userrole-scrollable-list {
+  max-height: 256px;
+  overflow-y: auto;
+}
+
+.userrole-list-item {
+  padding: 10px 24px;
+  cursor: pointer;
+  border-bottom: 1px solid #f3f4f6;
+  color: #92929D;
+  font-size: 11px;
+  font-family: "Roboto";
+}
+
+.userrole-list-item:last-child {
+  border-bottom: none;
+}
+
+.userrole-list-item:hover {
+  background-color: #f9fafb;
+}
+
+.userrole-list-item.userrole-selected {
+  border-radius: 5px;
+  background-color: #FCD730;
+  margin: 4px 6px;
+  color: black;
+  font-weight: 600;
+}
+
+.userrole-list-item.userrole-outlined {
+  border: 1px solid #FCD730;
+  margin: 4px 10px;
+  border-radius: 7px;
+}
+
+/* Description Item Styles */
+.userrole-description-item {
+  font-weight: 500;
+  font-family: "Roboto";
+  padding: 10px 12px;
+  color: #92929D;
+  border-bottom: 1px solid #f3f4f6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.userrole-description-item:last-child {
+  border-bottom: none;
+}
+
+.userrole-checkbox-icon {
+  width: 14px;
+  height: 14px;
+  background-color: #fbbf24;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+}
+
+.userrole-checkbox-icon svg {
+  width: 10px;
+  height: 10px;
+}
+
+/* Button Group */
+.userrole-button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 0px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Button Styles */
+.userrole-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.userrole-btn-save {
+  background-color: #2258F8;
+  color: white;
+}
+
+.userrole-btn-okay {
+  background-color: #FCD730;
+  color: #000;
+}
+
+.userrole-btn-cancel {
+  background-color: #3B4053;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .userrole-modal-overlay {
+    padding: 8px;
+  }
+  
+  .userrole-modal-header {
+    padding: 1px;
+  }
+  
+  .userrole-modal-body {
+    padding: 1px;
+  }
+  
+  .userrole-form-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .userrole-button-group {
+    flex-direction: column;
+  }
+  
+  .userrole-btn {
+    width: 100%;
+  }
+}

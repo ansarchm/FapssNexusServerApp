@@ -1,0 +1,651 @@
+/* ------------------- Table Wrapper ------------------- */
+.cp-table-wrapper {
+  padding: 16px;
+  background: #F2F7FA;
+  border-radius: 8px;
+  min-height: 120vh;
+  border: 1px solid #DCE0EB;
+  font-family: sans-serif;
+}
+
+/* ------------------- Section Header ------------------- */
+.cp-section-header {
+  display: flex;
+  align-items: center;
+  background-color: #F2F7FA;
+  padding: 12px 16px;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cp-section-title-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cp-section-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cp-section-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: clamp(18px, 4vw, 25px);
+  line-height: 1.2;
+  color: #1C212D;
+  margin: 0;
+}
+
+/* ------------------- Location Dropdown ------------------- */
+.cp-location-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 30px;
+}
+
+.cp-location-label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1C212D;
+}
+
+.cp-location-select {
+  padding: 6px 30px 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  background-color: white;
+  cursor: pointer;
+  min-width: 250px;
+  color: #1C212D;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('../../components/assets/down-arrow.png');
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 10px;
+}
+
+.cp-location-select:hover {
+  border-color: #999;
+}
+
+.cp-location-select:focus {
+  outline: none;
+  border-color: #2196F3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+}
+
+/* ------------------- Action Row ------------------- */
+.cp-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: #F2F7FA;
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+/* Group search input, filter, and search button together */
+.cp-search-group {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Small gap between search input, filter, and search button */
+}
+
+.cp-search-container2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  min-width: 200px;
+}
+
+.cp-search-input2-icon {
+  position: absolute;
+  left: 8px;
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+}
+
+.cp-search-input2 {
+  width: 400px;
+  border-radius: 2%;
+  padding: 10px 10px 10px 32px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: none; /* ❌ removes border */
+  background-color: #9b9b9a1f;
+}
+
+.cp-search-input2::placeholder {
+  color: #696974;
+}
+
+.cp-filter-container {
+  position: relative;
+}
+
+.cp-filter-btn {
+  background-color: #FCD730;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+.cp-filter-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.cp-filter-dropdown {
+  position: absolute;
+  margin-top: 12%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  min-width: 150px;
+  overflow: hidden;
+}
+
+.cp-filter-option {
+  padding: 12px 16px;
+  color: black;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.cp-filter-option:first-child {
+  background-color: #fff;
+  color: black;
+  font-weight: 400;
+}
+
+.cp-filter-option::after {
+  content: '▶';
+  font-size: 12px;
+  color: #999;
+  transition: color 0.2s ease;
+}
+
+.cp-filter-option:last-child {
+  border-bottom: none;
+}
+
+.cp-filter-option:hover {
+  background-color: #FCD730;
+  border: 2px solid #FCD730;
+  border-radius: 6px;
+  color: white;
+  font-weight: 500;
+  margin: 2px;
+  padding: 10px 14px;
+}
+
+.cp-filter-option:hover::after {
+  color: white !important;
+}
+
+.cp-btn-search {
+  background-color: #2D4CBA;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cp-search-btn-icon {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+
+.cp-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.cp-btn-add {
+  background-color: #2258F8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cp-btn-refresh {
+  background-color: #42C700;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ------------------- Table ------------------- */
+.cp-table-scroll {
+  max-height: 700px;
+  max-width: 1200px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.cp-custom-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: sans-serif;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Create gap between header and body using pseudo-element */
+.cp-custom-table tbody::before {
+  content: '';
+  display: block;
+  height: 16px;
+}
+
+/* ------------------- Header ------------------- */
+.cp-custom-table thead {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.cp-custom-table thead::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -16px;
+  height: 16px;
+  background: #F2F7FA;
+  z-index: 1;
+}
+
+.cp-custom-table thead th {
+  padding: 12px 10px;
+  background: #fff;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: clamp(14px, 2.5vw, 16.79px);
+  line-height: 29.85px;
+  color: #3B4053;
+  border-top: 1px solid #DCE0EB;
+  border-bottom: 1px solid #DCE0EB;
+  border-left: none;
+  border-right: none;
+}
+
+.cp-custom-table thead th:first-child {
+  border-left: 1px solid #DCE0EB;
+  border-radius: 8px 0 0 8px;
+}
+
+.cp-custom-table thead th:last-child {
+  border-right: 1px solid #DCE0EB;
+  border-radius: 0 8px 8px 0;
+}
+
+/* ------------------- Sort Arrows ------------------- */
+.cp-header-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 15px;
+}
+
+.cp-header-text {
+  margin-right: 2px;
+}
+
+.cp-sort-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+}
+
+.cp-arrow.cp-up1 {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 5px solid #92929D;
+  cursor: pointer;
+}
+
+.cp-arrow.cp-down1 {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #92929D;
+  cursor: pointer;
+}
+
+.cp-arrow:hover {
+  opacity: 0.7;
+}
+
+/* ------------------- Body ------------------- */
+.cp-custom-table tbody {
+  border-spacing: 0;
+}
+
+.cp-custom-table tbody tr:nth-child(odd) {
+  background: #FFFFFF;
+}
+
+.cp-custom-table tbody tr:nth-child(even) {
+  background: #FFFAE2;
+}
+
+.cp-custom-table td {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: clamp(12px, 2vw, 15px);
+  text-align: center;
+  line-height: 140%;
+  color: #1C212D;
+  padding: 12px 8px;
+  border-bottom: 1px solid #DCE0EB;
+  border-right: 1px solid #DCE0EB;
+  white-space: nowrap;
+}
+
+.cp-custom-table tbody tr:first-child td:first-child {
+  border-top-left-radius: 8px;
+}
+
+.cp-custom-table tbody tr:first-child td:last-child {
+  border-top-right-radius: 8px;
+}
+
+.cp-custom-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.cp-custom-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+.cp-custom-table tbody tr:first-child td {
+  border-top: 1px solid #DCE0EB;
+}
+
+.cp-custom-table tbody tr td:first-child {
+  border-left: 1px solid #DCE0EB;
+}
+
+.cp-custom-table td:last-child {
+  border-right: 1px solid #DCE0EB;
+}
+
+/* Checkbox style */
+.cp-custom-table input[type="checkbox"] {
+  accent-color: #FCD730;
+  width: 16px;
+  height: 16px;
+}
+
+/* ------------------- Text Box ------------------- */
+.cp-text-box {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(12px, 2vw, 15px);
+  border: 0.83px solid #D5D5D5;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #1C212D;
+  text-align: center;
+  padding: 4px 8px;
+  width: 100%;
+  max-width: 150px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+/* ------------------- Inputs (date + select) ------------------- */
+.cp-custom-table input[type="date"],
+.cp-custom-table select {
+    font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  width: 160px;
+  border: 0.83px solid #D5D5D5;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #1C212D;
+  text-align: center;
+  padding: 4px 24px 4px 8px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%2392929D' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 10px;
+}
+
+/* ------------------- RESPONSIVE BREAKPOINTS ------------------- */
+
+/* Tablet and smaller screens */
+@media (max-width: 1024px) {
+  .cp-table-wrapper {
+    padding: 12px;
+    border-radius: 8px;
+  }
+  
+  .cp-header-actions {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .cp-search-group {
+    gap: 8px;
+  }
+  
+  .cp-search-container2 {
+    min-width: 250px;
+  }
+  
+  .cp-action-buttons {
+    margin-left: auto;
+  }
+  
+  /* Table container adjusts to available space */
+  .cp-table-scroll {
+    max-height: 700px;
+    max-width: calc(100vw - 48px); /* Responsive width based on viewport */
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+}
+
+/* Mobile landscape and portrait */
+@media (max-width: 768px) {
+  .cp-table-wrapper {
+    padding: 8px;
+    margin: 8px;
+    border-radius: 6px;
+  }
+  
+  .cp-section-header {
+    padding: 8px 12px;
+    flex-wrap: wrap;
+  }
+  
+  .cp-location-container {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 8px;
+  }
+  
+  .cp-location-select {
+    flex: 1;
+  }
+  
+  .cp-header-actions {
+    padding: 8px 12px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .cp-search-group {
+    gap: 6px;
+  }
+  
+  .cp-search-container2 {
+    min-width: 200px;
+  }
+  
+  .cp-action-buttons {
+    margin-left: 0;
+    gap: 8px;
+  }
+  
+  /* Responsive table container */
+  .cp-table-scroll {
+    max-height: 700px;
+    max-width: calc(100vw - 32px);
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .cp-table-wrapper {
+    padding: 6px;
+    margin: 4px;
+    border-radius: 4px;
+  }
+  
+  .cp-section-header {
+    padding: 6px 8px;
+  }
+  
+  .cp-section-title-container {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .cp-location-container {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .cp-header-actions {
+    padding: 6px 8px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  
+  .cp-search-group {
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .cp-search-container2 {
+    flex: 1;
+    min-width: auto;
+  }
+  
+  .cp-action-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .cp-filter-dropdown {
+    right: 0;
+    left: auto;
+    min-width: 120px;
+  }
+  
+  /* Mobile responsive table */
+  .cp-table-scroll {
+    max-height: 700px;
+    max-width: calc(100vw - 20px);
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+  .cp-table-wrapper {
+    padding: 4px;
+    margin: 2px;
+  }
+  
+  .cp-action-buttons {
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .cp-table-scroll {
+    max-height: 600px;
+    max-width: calc(100vw - 16px);
+  }
+}
+
+.cp-custom-table input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.cp-custom-table select::-ms-expand {
+  display: none;
+}

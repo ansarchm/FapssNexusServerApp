@@ -1,114 +1,209 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // ✅ Import this
-import "./locationtable.css";
+import React, { useState, useEffect } from 'react';
+import './locationtable.css';
+import AddLocation from "./AddLocation";
+import { useNavigate } from "react-router-dom";
 import searchIcon from "../components/assets/Vector.png";
-import sortIcon from "../components/assets/Vector1.png";
+import locationIcon from "../components/assets/location.png";
+import { locationService } from '../services/api';
 
+const LocationTable = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  // State for API data
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-function LocationTable() {
-  const navigate = useNavigate(); // ✅ Initialize navigation
+  // Fetch locations from API on component mount
+  useEffect(() => {
+    fetchLocations();
+  }, []);
 
-  const data = [
-    { id: "34569", name: "Allbaron Rides", address1: "Amman", address2: "Jordan", phone: "+99 3456 8976" },
-    { id: "34570", name: "Skyline Corp", address1: "Beirut", address2: "Lebanon", phone: "+96 1234 5678" },
-    { id: "34571", name: "Future Ltd", address1: "Dubai", address2: "UAE", phone: "+97 8765 4321" },
-    { id: "34572", name: "Star Wheels", address1: "Doha", address2: "Qatar", phone: "+95 2345 6789" },
-    { id: "34573", name: "Oceanic", address1: "Muscat", address2: "Oman", phone: "+94 1122 3344" },
-    { id: "34574", name: "Metro Corp", address1: "Manama", address2: "Bahrain", phone: "+93 2233 4455" },
-    { id: "34575", name: "Nova Rides", address1: "Riyadh", address2: "Saudi Arabia", phone: "+92 9988 7766" },
-    { id: "34576", name: "Sun Group", address1: "Kuwait City", address2: "Kuwait", phone: "+91 8877 6655" },
-    { id: "34577", name: "Global Ride", address1: "Cairo", address2: "Egypt", phone: "+90 7766 5544" },
-    { id: "34578", name: "Urban Travels", address1: "Istanbul", address2: "Turkey", phone: "+89 6655 4433" },
-  ];
+  const fetchLocations = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      const response = await locationService.getAllLocations();
+      
+      // Map API response to table format
+      const mappedData = response.map(location => ({
+        id: location.id,
+        locationName: location.name || '',
+        address1: location.address || '',
+        address2: location.addresst || '', // Note: API has 'addresst' field
+        phoneNumber: location.phoneno || ''
+      }));
+      
+      setData(mappedData);
+      console.log('✅ Locations loaded:', mappedData.length, 'records');
+    } catch (err) {
+      console.error('❌ Error fetching locations:', err);
+      setError(err.message || 'Failed to fetch locations');
+    } finally {
+      setLoading(false);
+    }
+  };
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const rowsPerPage = 4;
+  // Filter data based on search term
+  const filtered = data.filter(
+    (row) =>
+      row.locationName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      row.address1.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      row.address2.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      row.phoneNumber.includes(searchTerm)
+  );
 
-  const totalPages = Math.ceil(data.length / rowsPerPage);
-  const startIndex = (currentPage - 1) * rowsPerPage;
-  const currentData = data.slice(startIndex, startIndex + rowsPerPage);
+  // Open modal
+  const handleAddLocation = () => {
+    setIsModalOpen(true);
+    document.body.classList.add('modal-open');
+  };
 
-  const handlePageChange = (page) => {
-    if (page >= 1 && page <= totalPages) {
-      setCurrentPage(page);
+  // Close modal and refresh data
+  const handleCloseModal = (shouldRefresh = false) => {
+    setIsModalOpen(false);
+    document.body.classList.remove('modal-open');
+    
+    // Refresh the table if a new location was added
+    if (shouldRefresh) {
+      fetchLocations();
     }
   };
 
   return (
-    <div className="content-container">
-      <div className="table-heading">
-        <img src={searchIcon} alt="Icon" className="heading-icon" />
-        <h2>Location Table</h2>
+    <div className="separated-table-container">
+      {/* Page Title with Icon */}
+      <div className="separated-page-title">
+        <img src={locationIcon} alt="Location" className="separated-title-icon" />
+        <h1 className="separated-title-text">Location Table</h1>
       </div>
 
-      <div className="content-header">
-        <div className="search-box">
-          <img src={searchIcon} alt="Search" className="search-icon" />
-          <input type="text" placeholder="Search" />
+      {/* Top Bar with Search and Buttons */}
+      <div className="separated-top-bar">
+        <div className="separated-search-container">
+          <img src={searchIcon} alt="Search" className="separated-search-icon" />
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="separated-search-input"
+            placeholder="Search "
+          />
         </div>
+        
+        <div className="separated-action-buttons">
+          <button 
+            className="separated-btn separated-btn-add"
+            onClick={handleAddLocation}
+          >
+            Add
+          </button>
+          <button 
+            className="separated-btn separated-btn-refresh"
+            onClick={fetchLocations}
+            disabled={loading}
+          >
+            {loading ? 'Loading...' : 'Refresh'}
+          </button>
+          <button 
+            className="separated-btn separated-btn-close"
+            onClick={() => navigate(-1)}
+          >
+            Close
+          </button>
+        </div>
+      </div>
 
-        <div className="btn-border">
-          <div className="btn-group">
-            <button className="btn add" onClick={() => navigate("/add-location")}>
-              + Add
-            </button>
-            <button className="btn cancel">Cancel</button>
+      {/* Table Header */}
+      <div className="separated-table-header">
+        <div className="separated-header-cell separated-col-id">
+          <span>Id</span>
+          <div className="separated-sort-arrows">
+            <div className="separated-arrow-up"></div>
+            <div className="separated-arrow-down"></div>
+          </div>
+        </div>
+        <div className="separated-header-cell separated-col-location">
+          <span>Location name</span>
+          <div className="separated-sort-arrows">
+            <div className="separated-arrow-up"></div>
+            <div className="separated-arrow-down"></div>
+          </div>
+        </div>
+        <div className="separated-header-cell separated-col-address1">
+          <span>Address 1</span>
+          <div className="separated-sort-arrows">
+            <div className="separated-arrow-up"></div>
+            <div className="separated-arrow-down"></div>
+          </div>
+        </div>
+        <div className="separated-header-cell separated-col-address2">
+          <span>Address 2</span>
+          <div className="separated-sort-arrows">
+            <div className="separated-arrow-up"></div>
+            <div className="separated-arrow-down"></div>
+          </div>
+        </div>
+        <div className="separated-header-cell separated-col-phone">
+          <span>Phone number</span>
+          <div className="separated-sort-arrows">
+            <div className="separated-arrow-up"></div>
+            <div className="separated-arrow-down"></div>
           </div>
         </div>
       </div>
 
-      <div className="table-container">
-        <div className="table-header-row">
-          <div className="table-cell">
-            <span className="id-label">Id</span>
-            <img src={sortIcon} alt="Sort" className="sort-icon" />
+      {/* Table Content */}
+      <div className="separated-table-content">
+        {loading && (
+          <div style={{ padding: '20px', textAlign: 'center', color: '#666' }}>
+            Loading locations...
           </div>
-          <div className="table-cell">
-            Location name
-            <img src={sortIcon} alt="Sort" className="sort-icon" />
-          </div>
-          <div className="table-cell">
-            Address 1
-            <img src={sortIcon} alt="Sort" className="sort-icon" />
-          </div>
-          <div className="table-cell">
-            Address 2
-            <img src={sortIcon} alt="Sort" className="sort-icon" />
-          </div>
-          <div className="table-cell">
-            Phone number
-            <img src={sortIcon} alt="Sort" className="sort-icon" />
-          </div>
-        </div>
-
-        <div className="table-body">
-          {currentData.map((item, index) => (
-            <div className={`table-row ${index % 2 === 1 ? 'highlight' : ''}`} key={item.id}>
-              <div className="table-cell">{item.id}</div>
-              <div className="table-cell">{item.name}</div>
-              <div className="table-cell">{item.address1}</div>
-              <div className="table-cell">{item.address2}</div>
-              <div className="table-cell">{item.phone}</div>
-            </div>
-          ))}
-        </div>
-
-        <div className="pagination">
-          <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>Prev</button>
-          {[...Array(totalPages)].map((_, i) => (
-            <button
-              key={i + 1}
-              className={currentPage === i + 1 ? "active" : ""}
-              onClick={() => handlePageChange(i + 1)}
+        )}
+        
+        {error && (
+          <div style={{ padding: '20px', textAlign: 'center', color: '#d32f2f' }}>
+            ⚠️ Error: {error}
+            <br />
+            <button 
+              onClick={fetchLocations}
+              style={{ marginTop: '10px', padding: '8px 16px', cursor: 'pointer' }}
             >
-              {i + 1}
+              Try Again
             </button>
-          ))}
-          <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>Next</button>
-        </div>
+          </div>
+        )}
+        
+        {!loading && !error && filtered.length === 0 && (
+          <div style={{ padding: '20px', textAlign: 'center', color: '#666' }}>
+            {searchTerm ? 'No locations found matching your search.' : 'No locations available.'}
+          </div>
+        )}
+        
+        {!loading && !error && filtered.map((row, index) => (
+          <div 
+            key={row.id} 
+            className={`separated-table-row ${index % 2 === 1 ? 'separated-row-yellow' : ''}`}
+          >
+            <div className="separated-cell separated-col-id">{row.id}</div>
+            <div className="separated-cell separated-col-location">{row.locationName}</div>
+            <div className="separated-cell separated-col-address1">{row.address1}</div>
+            <div className="separated-cell separated-col-address2">{row.address2}</div>
+            <div className="separated-cell separated-col-phone">{row.phoneNumber}</div>
+          </div>
+        ))}
       </div>
+
+      {/* Modal Overlay */}
+      {isModalOpen && (
+        <div className="modal-overlay">
+          <AddLocation onClose={handleCloseModal} />
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default LocationTable;

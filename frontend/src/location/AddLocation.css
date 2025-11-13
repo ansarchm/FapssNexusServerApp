@@ -1,215 +1,310 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:wght@400&display=swap");
 
-.location-wrapper {
+.location-add-location-wrapper {
   background-color: #f2f7fa;
   padding: 40px;
-  font-family: 'Roboto', sans-serif;
-
+  font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: center;
-
-  /** ✅ Add these **/
   min-height: 100vh;
   box-sizing: border-box;
 }
 
-.location-card {
+.location-add-location-card {
   background-color: #fff;
   padding: 25px;
   width: 100%;
- 
-  border-radius: 1%;
-  margin-right: 4%;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-}
-
-.table-structure {
-  display: flex;
-  border: 1px solid #DADCE6;
-  align-items: stretch;
-  border-radius: 1%;
-}
-
-.column {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 0px;
-  box-sizing: border-box;
-  border-right: 1px solid #DADCE6;
+  gap: 10px;
 }
 
-.column:last-child {
-  border-right: none;
+/* ✅ Header Icon */
+.location-header-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }
 
-.column-content {
-  padding: 20px;
+/* ✅ Header Styles */
+.location-add-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 0;
 }
 
-.left-column h3, .right-column h3 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500; /* Medium */
-  font-size: 25px;
-  line-height: 140%;
-  letter-spacing: 0;
-  font-style: normal;
+.location-add-header-left {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 20px 20px 10px 20px;
-  margin-bottom: 0;
+  gap: 8px;
+}
+
+.location-add-location-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.location-icon-img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.location-add-form-title {
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0;
+  line-height: 140%;
+}
+
+.location-add-close-btn {
+  background: none;
+  border: none;
+  color: #979798;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-add-close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ✅ Divider Line */
+.location-add-divider {
+  border-top: 1px solid #dadce6;
+}
+
+/* ✅ Table Structure */
+.location-add-table-structure {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.location-add-column {
+  flex: 1;
+  border: 1px solid #dadce6;
+  border-radius: 8px;
+  overflow: hidden;
   background: #fff;
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-
-.left-column h3::after, .right-column h3::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 1px;
-  width: 100%;
-  background-color: #ccc;
-  z-index: -1;
+.location-add-left-column {
+  flex: 2;
 }
 
-/* Form rows */
-.row {
+.location-add-right-column {
+  flex: 1;
+}
+
+.location-add-column-header {
+  background-color: #2f1e4f;
+  color: #fff;
+  padding: 12px 15px;
+}
+
+/* ✅ Typography for all headings */
+.location-add-heading,
+.location-add-cell label,
+.location-add-op-row label,
+.location-add-column-header {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+/* ✅ FIXED: Remove overflow and scrollbars from column content */
+.location-add-column-content {
+  padding: 20px;
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
+}
+
+/* ✅ Location Info (Left Column) */
+.location-add-row {
   display: flex;
   gap: 20px;
   margin-bottom: 15px;
 }
 
-.cell {
+.location-add-cell {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.cell label {
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-
-.cell input, .cell select {
-  padding: 8px;
-  border: 1px solid #DADCE6;
+.location-add-cell input,
+.location-add-cell select {
+  padding: 10px;
+  border: 1px solid #dadce6;
   border-radius: 4px;
   font-size: 14px;
+  font-family: "Montserrat", sans-serif;
 }
 
-/* Operation Hours */
-.op-row.header {
+/* ✅ Operation Hours (Right Column) - FIXED LAYOUT */
+.location-add-op-header-row {
   display: flex;
-  justify-content: space-between;
-  font-weight: 600;
-  padding: 10px 0;
   margin-bottom: 10px;
-  border-bottom: none;
+  padding-left: 120px;
 }
 
-.op-row {
-  display: flex;
-  align-items: center;
-   gap: 10px; /* uniform gap */
-
-  margin-bottom: 12px;
-}
-
-.op-row label {
-  width: 70%;  /* ✅ fixed width for consistent alignment */
-
-  font-weight: 500;
-}
-
-/* Updated time input styling */
-.op-row input[type="time"] {
-  width: 120px;
-  padding: 8px 12px;
-  border: 1px solid #DADCE6;
-  border-radius: 4px;
-  margin-left: 4%;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  background-color: #fff;
-  color: #333;
-  cursor: pointer;
-  
-  /* Ensure native controls are visible */
-  -webkit-appearance: none;
-  -moz-appearance: textfield;
-  appearance: none;
-  
-  /* Custom styling to match your design */
-  background-image: none;
-  position: relative;
-}
-
-
-
-
-/* Remove default time picker appearance for Firefox */
-.op-row input[type="time"]::-moz-focus-inner {
-  border: 0;
-}
-
-/* Alternative approach - use number inputs for better control */
-.time-input-container {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  width: 120px;
-  border: 1px solid #DADCE6;
-  border-radius: 4px;
-  padding: 4px 8px;
-  background: #fff;
-}
-
-.time-number {
-  width: 30px;
-  border: none;
-  outline: none;
+.location-add-op-header-item {
+  flex: 1;
   text-align: center;
+}
+
+.location-add-op-header-item span {
+  font-size: 16px;
+}
+
+.location-add-op-row {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 15px;
+}
+
+.location-add-op-row label {
+  width: 120px;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.location-add-time-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* ✅ Custom Time Picker - INCREASED WIDTH */
+.location-add-time-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 130px; /* INCREASED: From 100px to 130px */
+}
+
+.location-add-time-picker {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #dadce6;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-align: center;
+  height: 32px;
+  box-sizing: border-box;
+}
+
+.location-add-arrow-buttons3 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+
+.location-add-arrow-up3,
+.location-add-arrow-down3 {
+  background: none;
+  border: none;
+  font-size: 8px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  height: 10px;
+}
+
+/* ✅ Others Section */
+.location-add-others-section {
+  border: 1px solid #dadce6;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 50%;
+  background: #fff;
+  margin-left: 2%;
+}
+
+.location-add-others-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-left: 35px;
+  gap: 20px;
+}
+
+.location-add-others-row {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.location-add-others-label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0;
+  min-width: 160px;
+  flex-shrink: 0;
+}
+
+.location-add-others-input {
+  width: 78px;
+  height: 45px;
+  padding: 10px;
+  border: 0.89px solid #dadce6;
+  border-radius: 7.11px;
   font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
-  background: transparent;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
 
-.time-separator {
-  font-weight: bold;
-  color: #666;
+.location-add-others-select {
+  width: 157px;
+  height: 45px;
+  padding: 10px;
+  border: 0.89px solid #dadce6;
+  border-radius: 7.11px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
 
-/* Buttons */
-.form-actions {
-  margin-top: 10px;
+/* ✅ FIXED: Action Buttons - Remove bottom margin/space */
+.location-add-form-actions {
   display: flex;
   justify-content: flex-end;
-  gap: 15px;
-}
-.cell input,
-.cell select,
-.time-picker {
-  background-color: #fff; /* clean white background */
-  border: 1px solid #DADCE6;
-  box-shadow: none;
-  color: #1C212D; /* actual text color */
+  margin: 5px 25px 20px 0px !important; /* FIXED: Set bottom margin to 0 */
+  padding-bottom: 0 !important; /* FIXED: Remove any padding */
 }
 
-.cell input::placeholder,
-.cell select::placeholder,
-.time-picker::placeholder {
-  color: #B0B0B8; /* lighter than #92929D */
-  opacity: 1;
-}
-
-
-.save-btn, .cancel-btn {
-  padding: 9px 27px;
+.location-add-save-btn,
+.location-add-cancel-btn {
+  padding: 12px 30px;
   font-size: 15px;
   font-weight: 500;
   border-radius: 6px;
@@ -217,112 +312,247 @@
   cursor: pointer;
 }
 
-.save-btn {
-  background-color: #FCD730;
-  color: #1C212D;
+.location-add-save-btn {
+  background-color: #fcd730;
+  color: #1c212d;
 }
 
-.cancel-btn {
-  background-color: #3B4053;
-  color: #FFFFFF;
+.location-add-cancel-btn {
+  background-color: #3b4053;
+  color: #ffffff;
 }
 
-.icon {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-}
-
-.time-icon {
-  width: 16px;
-  height: 16px;
-  margin-right: 5px;
-}
-
-.cell label,
-.op-row label,
-.op-row.header span {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400; /* Regular */
-  font-size: 20px;
-  line-height: 140%;
-  letter-spacing: 0;
-  font-style: normal;
-}
-
-
-/* Input & Select text styling */
-.cell input, .cell select {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14.22px;
-  line-height: 140%;
-  letter-spacing: 0;
-  color: #92929D;
-}
-
-.op-row.header span:first-child {
-  margin-left: 23%;
-}
-
-.op-row.header span:last-child {
-  margin-right: 10%;
-}
-.time-group {
-  display: flex;
-  align-items: center;
+/* ✅ Modal overrides */
+.modal-overlay .location-add-location-wrapper {
   position: relative;
- 
-   width: 100%; /* fixed width for consistency */
-  margin-left: 0; /* remove uneven spacing */
-}
-.time-picker {
-  width: 100%;
-  padding: 6px 30px 6px 8px;
-  border: 1px solid #DADCE6;
-  border-radius: 4px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-
-  letter-spacing: 0;
-  color: #92929D;
-  outline: none;
-  background-color: #fff;
-  text-align: center;
-
-  /* Optional - remove default styles */
-  -webkit-appearance: none;
-  -moz-appearance: textfield;
-  appearance: none;
-}
-
-
-.arrow-buttons {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  right: 5px;
-  top: 3px;
-  bottom: 3px;
-  justify-content: center;
-}
-
-.arrow {
   background: none;
-  border: none;
-  font-size: 9px;
-  line-height: 10px;
-  cursor: pointer;
   padding: 0;
+  width: 95%;
+  max-width: 1400px;
+  height: 90vh;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  overflow: hidden;
 }
 
-.arrow:hover {
-  color: #007bff;
+.modal-overlay .location-add-location-card {
+  background: white !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  overflow: hidden !important;
+  padding: 20px !important;
+  position: relative !important;
+  z-index: 10001 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  margin-bottom: 0 !important;
+  box-sizing: border-box !important;
 }
-.error {
-  color: red;
-  font-size: 12px;
-  margin-top: 4px;
+
+/* ✅ FIXED: Header - Fixed height */
+.modal-overlay .location-add-form-header {
+  flex-shrink: 0;
+  margin-bottom: 10px;
+}
+
+.modal-overlay .location-add-divider {
+  flex-shrink: 0;
+  margin: 5px 0;
+}
+
+/* ✅ FIXED: Table Structure - Flexible but contained, no scrollbars */
+.modal-overlay .location-add-table-structure {
+  display: flex !important;
+  gap: 15px !important;
+  flex: 1 !important;
+  min-height: 0 !important;
+  padding: 10px 0 !important;
+  overflow: hidden !important;
+}
+
+/* ✅ FIXED: Left Column - No scrollbars */
+.modal-overlay .location-add-left-column {
+  flex: 1.5 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.modal-overlay .location-add-left-column .location-add-column-content {
+  padding: 15px !important;
+  height: calc(100% - 50px) !important;
+  overflow: visible !important; /* FIXED: Remove scroll */
+  max-height: none !important; /* FIXED: Remove height restriction */
+}
+
+.modal-overlay .location-add-row {
+  margin-bottom: 8px !important;
+}
+
+.modal-overlay .location-add-cell input {
+  padding: 8px !important;
+  font-size: 13px !important;
+}
+
+/* ✅ FIXED: Right Column - No scrollbars */
+.modal-overlay .location-add-right-column {
+  flex: 1 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.modal-overlay .location-add-right-column .location-add-column-content {
+  padding: 15px !important;
+  height: calc(100% - 40px) !important; /* INCREASED: From 50px to 40px for more content height */
+  overflow: visible !important; /* FIXED: Remove scroll */
+  max-height: none !important; /* FIXED: Remove height restriction */
+}
+
+.modal-overlay .location-add-op-row {
+  margin-bottom: 8px !important;
+}
+
+.modal-overlay .location-add-op-row label {
+  width: 80px !important;
+  font-size: 20px !important;
+}
+
+/* ✅ MODAL: Time Group - INCREASED WIDTH */
+.modal-overlay .location-add-time-group {
+  width: 110px !important; /* INCREASED: From 80px to 110px */
+}
+
+.modal-overlay .location-add-time-picker {
+  height: 28px !important; /* INCREASED: From 28px to 32px for better visibility */
+  font-size: 12px !important; /* INCREASED: From 11px to 12px */
+  padding: 6px 10px !important; /* INCREASED: Better padding */
+}
+
+/* ✅ Others Section - Fixed positioning */
+.modal-overlay .location-add-others-section {
+  flex-shrink: 0 !important;
+  width: 40% !important;
+  margin: 10px 0 !important;
+  height: auto !important;
+  min-height: 100px !important;
+}
+
+.modal-overlay .location-add-others-content {
+  padding: 15px 20px !important;
+  gap: 15px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+.modal-overlay .location-add-others-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+  width: 100% !important;
+}
+
+.modal-overlay .location-add-others-label {
+  font-size: 16px !important;
+  min-width: 150px !important;
+  font-weight: 400 !important;
+  color: #000 !important;
+}
+
+.modal-overlay .location-add-others-input,
+.modal-overlay .location-add-others-select {
+  height: 36px !important;
+  font-size: 13px !important;
+  padding: 8px 10px !important;
+  box-sizing: border-box !important;
+}
+
+.modal-overlay .location-add-others-input {
+  width: 70px !important;
+}
+
+.modal-overlay .location-add-others-select {
+  width: 120px !important;
+}
+
+/* ✅ FIXED: Action Buttons - Fixed at bottom, no extra space */
+.modal-overlay .location-add-form-actions {
+  flex-shrink: 0 !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  gap: 15px !important;
+  margin: 10px 20px 0px 0 !important; /* FIXED: Bottom margin set to 0 */
+  padding-top: 0 !important;
+  padding-bottom: 0 !important; /* FIXED: Remove bottom padding */
+  border-top: none !important;
+}
+
+.modal-overlay .location-add-save-btn,
+.modal-overlay .location-add-cancel-btn {
+  padding: 8px 20px !important;
+  font-size: 14px !important;
+}
+
+/* ✅ Column Headers - Compact */
+.modal-overlay .location-add-column-header {
+  padding: 10px 15px !important;
+  font-size: 16px !important;
+  flex-shrink: 0;
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .modal-overlay .location-add-location-wrapper {
+    width: 98% !important;
+    height: 95vh !important;
+  }
+  
+  .modal-overlay .location-add-table-structure {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  
+  .modal-overlay .location-add-left-column,
+  .modal-overlay .location-add-right-column {
+    flex: none !important;
+    height: auto !important;
+  }
+  
+  .modal-overlay .location-add-right-column .location-add-column-content {
+    max-height: 250px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-overlay .location-add-location-wrapper {
+    width: 100% !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+  }
+  
+  .modal-overlay .location-add-location-card {
+    border-radius: 0 !important;
+    padding: 15px !important;
+  }
+  
+  .modal-overlay .location-add-others-content {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  
+  .modal-overlay .location-add-others-row {
+    margin-right: 0 !important;
+    margin-bottom: 10px !important;
+  }
 }

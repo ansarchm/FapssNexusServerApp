@@ -1,0 +1,529 @@
+/* Main Modal Styles */
+.user-details-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", sans-serif;
+  }
+  
+  .user-details-modal-container {
+    background: white;
+    border-radius: 13.72px;
+    width: 970px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    border: 0.86px solid #e5e7eb;
+  }
+  
+  /* Header */
+  .user-details-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 24px;
+    border-bottom: 1px solid #e5e7eb;
+    background: white;
+    flex-shrink: 0;
+  }
+  
+  .user-details-header-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .user-details-user-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+  }
+  
+  .user-details-title-text {
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+    margin: 0;
+  }
+  
+  .user-details-close-button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .user-details-close {
+    width: 90%;
+    height: 80%;
+    object-fit: contain;
+  }
+  
+  /* Content Area */
+  .user-details-modal-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: #f8f9fa;
+    overflow: hidden;
+  }
+  
+  .user-details-content-wrapper {
+    padding: 16px;
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .user-details-main-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+  }
+  
+
+/* General Settings Section - Reduce height */
+.user-details-general-section {
+    background: white;
+    border-radius: 13.72px;
+    border: 0.86px solid #e5e7eb;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: 190px; /* Add this - prevents it from growing too tall */
+  }
+  
+  .user-details-general-content {
+    padding: 16px;
+    background: white;
+    flex: 1;
+    min-height: auto; /* Add this */
+    height: auto; /* Add this */
+  }
+  
+  /* Login Settings Section - Reduce height */
+  .user-details-login-section {
+    width: 380px;
+    background: white;
+    border-radius: 13.72px;
+    border: 0.86px solid #e5e7eb;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: 220px; 
+  }
+  
+  .user-details-login-content {
+    padding: 16px 10px ;
+    background: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+  }
+  
+  /* Employee Card Section - Reduce height */
+  .user-details-employee-card-section {
+    width: 540px;
+    background: white;
+    border-radius: 13.72px;
+    border: 0.86px solid #e5e7eb;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: 220px;
+  }
+  
+  .user-details-employee-card-content {
+    padding: 16px;
+    background: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: auto;
+    position: relative;
+    padding-bottom: 60px; /* Add extra padding to accommodate the moved checkbox */
+  }
+  .user-details-employee-card-content .user-details-form-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 0; /* Remove margin-bottom since we're using gap on parent */
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .user-details-employee-card-content .user-details-allow-courtesy-row {
+    margin-top: 0; /* Remove individual margin */
+    align-self: flex-end;
+  }
+  
+  /* Adjust the main sections container to better distribute space */
+  .user-details-main-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+    flex: 1; /* Add this */
+  }
+  
+  /* Reduce gap in form rows for tighter spacing */
+  .user-details-form-row {
+    display: flex;
+    gap: 16px;/* Reduce from 16px to 12px */
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Adjust bottom row to take remaining space efficiently */
+  .user-details-bottom-row {
+    display: flex;
+    gap: 16px;
+    height: auto;
+    flex: 0 0 auto; /* Add this - prevents it from growing */
+  }
+  
+  /* Optional: Reduce padding in section headers for more compact look */
+  .user-details-section-header {
+    background: #2E2343;
+    color: white;
+    padding: 8px 16px;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+  
+  /* Form Styles */
+  .user-details-form-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .user-details-form-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .user-details-form-label {
+    font-weight: 400;
+    font-size: 12px;
+    color: #000000;
+    white-space: nowrap;
+    min-width: fit-content;
+  }
+  
+  .user-details-form-input,
+  .user-details-form-select {
+    height: fit-content;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #d1d5db;
+    font-size: 12px;
+    color: #6b7280;
+    background: white;
+  }
+  
+  .user-details-form-select {
+    background-color: #fff;
+    background-image: url("../../components/assets/drop_down.png");
+    background-repeat: no-repeat;
+    background-position: right 6px center;
+    background-size: 12px;
+    padding-right: 20px;
+    appearance: none;
+    height: fit-content;
+  }
+  
+  /* Specific Input Widths */
+  .user-details-user-id-input {
+    width: 80px;
+  }
+  
+  .user-details-first-name-input {
+    width: 180px;
+  }
+  
+  .user-details-last-name-input {
+    width: 180px;
+  }
+  
+  .user-details-user-role-select {
+    width: 180px;
+  }
+  
+  .user-details-location-select {
+    width: 140px;
+  }
+  
+  .user-details-employee-id-input {
+    width: 120px;
+  }
+  
+  .user-details-date-birth-input {
+    width: 120px;
+  }
+  
+  .user-details-username-input,
+  .user-details-password-input,
+  .user-details-confirm-password-input {
+    width: 200px;
+  }
+  
+  .user-details-card-number-input {
+    width: 150px;
+  }
+  
+  .user-details-access-profile-select {
+    width: 180px;
+  }
+  
+  .user-details-courtesy-type-select {
+    width: 80px;
+  }
+  
+  .user-details-courtesy-count-input {
+    width: 60px;
+  }
+  
+  /* Checkbox Styles */
+  .user-details-checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  
+  .user-details-checkbox {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px 10px;
+  }
+  
+  .user-details-checkbox:checked {
+    background-image: url("../../components/assets/Checklist.png");
+    background-size: 10px 10px;
+    background-color: #FCD730;
+    border: none;
+  }
+  
+  .user-details-checkbox-label {
+    font-size: 12px;
+    color: #000000;
+  }
+  
+  .user-details-change-password-row,
+  .user-details-allow-courtesy-row {
+    margin-top: 12px;
+    align-self: flex-start;
+  }
+  .user-details-change-password-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .user-details-change-password-row .user-details-checkbox-label {
+    font-size: 16px;
+    color: #6b7280; /* Grey color */
+    font-weight: 400;
+  }
+  .user-details-allow-courtesy-row {
+    margin-top: 20px;
+    align-self: flex-start;
+    position: absolute;
+    bottom: -30px; 
+    left: 85%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  .user-details-employee-card-left .user-details-allow-courtesy-row {
+    display: none;
+  }
+  
+  /* Employee Card Specific Styles */
+  .user-details-card-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 0; /* Remove margin-bottom since parent has gap */
+  }
+  /* Employee Card Main Layout */
+.user-details-employee-card-main-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    position: relative;
+  }
+  .user-details-employee-card-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-right: 20px; /* Add padding for spacing from separator */
+    position: relative;
+  }
+  .user-details-employee-card-left::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #e5e7eb;
+  }
+  .user-details-photo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 150px; /* Ensure consistent width */
+  }
+  .user-details-photo-header {
+    font-size: 12px;
+    font-weight: 500;
+    color: #000000;
+  }
+  
+  .user-details-photo-placeholder {
+    width: 80px;
+    height: 60px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #f9fafb;
+  }
+  
+  .user-details-reset-button {
+    padding: 4px 12px;
+    font-size: 11px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+  }
+  
+  .user-details-reset-button:hover {
+    background: #f3f4f6;
+  }
+  
+  /* Last Updated Section */
+  .user-details-last-updated-section {
+    padding: 1px 2px;
+    flex-shrink: 0;
+  }
+  
+  .user-details-last-updated-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 12px;
+  }
+  
+  .user-details-last-updated-label {
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  
+  .user-details-last-updated-value {
+    font-size: 12px;
+    color: #92929d;
+    font-weight: 400;
+  }
+  
+  /* Footer */
+  .user-details-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 12px 24px;
+    border-top: 1px solid #e5e7eb;
+    flex-shrink: 0;
+  }
+  
+  .user-details-footer-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    color: white;
+    min-width: 70px;
+  }
+  
+  .user-details-footer-button.user-details-edit {
+    background: #2563eb;
+  }
+  
+  .user-details-footer-button.user-details-save {
+    background: #fcd730;
+    color: #000;
+  }
+  
+  .user-details-footer-button.user-details-cancel {
+    background: #6b7280;
+  }
+  
+  /* Focus states */
+  .user-details-form-input:focus,
+  .user-details-form-select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 1px #2563eb;
+  }
+  
+  /* Button hover effects */
+  .user-details-footer-button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  .user-details-footer-button{
+    background-color: #2258F8;
+    border-radius: 10px;
+  }
+  .user-details-footer-button.user-details-cancel {
+    background-color: #3B4053;
+    border-radius: 10px;
+  }
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .user-details-modal-container {
+      width: 95%;
+      height: 90%;
+    }
+    
+    .user-details-bottom-row {
+      flex-direction: column;
+    }
+    
+    .user-details-login-section,
+    .user-details-employee-card-section {
+      width: 100%;
+    }
+  }
+  
+  /* Input placeholder styles */
+  .user-details-form-input::placeholder,
+  .user-details-form-select::placeholder {
+    color: #9ca3af;
+    font-style: italic;
+  }

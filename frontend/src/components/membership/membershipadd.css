@@ -1,0 +1,493 @@
+/* Main Modal Styles */
+.membership-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-family: "Montserrat","Roboto",sans-serif;
+}
+
+.membership-modal-container {
+  background: white;
+  border-radius: 13.72px;
+  width: 1086px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  border: 0.86px solid #e5e7eb;
+}
+
+/* Header */
+.membership-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+  flex-shrink: 0;
+}
+
+.membership-header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.membership-folder-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.membership-title-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+  margin: 0;
+}
+
+.membership-close-button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.membership-close {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Content Area */
+.membership-modal-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #f8f9fa;
+  overflow: hidden;
+}
+
+.membership-content-wrapper {
+  padding: 12px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.membership-main-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* First Row - Details and Discount */
+.membership-first-row {
+  display: flex;
+  gap: 12px;
+}
+
+.membership-details-section {
+  flex: 1;
+  background: white;
+  border-radius: 13.72px;
+  border: 0.86px solid #e5e7eb;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.membership-discount-section {
+  width: 280px;
+  background: white;
+  border-radius: 13.72px;
+  border: 0.86px solid #e5e7eb;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.membership-operational-section {
+  width: 100%;
+  background: white;
+  border-radius: 13.72px;
+  border: 0.86px solid #e5e7eb;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.membership-valid-section {
+  flex: 1;
+  background: white;
+  border-radius: 13.72px;
+  border: 0.86px solid #e5e7eb;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Third Row - Earned Based */
+.membership-third-row {
+  display: flex;
+  gap: 12px;
+}
+
+.membership-earned-section {
+  flex: 1;
+  background: white;
+  border-radius: 13.72px;
+  border: 0.86px solid #e5e7eb;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Section Headers */
+.membership-section-header {
+  background: #2e2343;
+  color: white;
+  padding: 8px 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* Section Content - Reduced padding */
+.membership-details-content,
+.membership-discount-content,
+.membership-operational-content,
+.membership-valid-content,
+.membership-earned-content {
+  padding: 12px;
+  background: white;
+  flex: 1;
+}
+
+/* Form Styles */
+.membership-form-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+  align-items: flex-end;
+}
+
+.membership-form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+.membership-form-label {
+  font-weight: 400;
+  font-size: 11px;
+  color: #000000;
+}
+
+.membership-form-input,
+.membership-form-select {
+  font-family: "Montserrat";
+  height: 26px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  font-size: 11px;
+  color: #6b7280;
+  background: white;
+}
+
+.membership-form-select {
+  background-color: #fff;
+  background-image: url("../../components/assets/drop_down.png");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  background-size: 10px;
+  padding-right: 22px;
+  appearance: none;
+}
+
+/* Input Widths - Adjusted for compact layout */
+.membership-id-input {
+  width: 80px;
+}
+
+.membership-name-input {
+  width: 160px;
+}
+
+.membership-discount-input {
+  width: 90px;
+}
+
+.membership-description-full {
+  flex: 1;
+}
+
+.membership-type-full {
+  flex: 1;
+}
+
+.membership-date-input {
+  width: 130px;
+}
+
+.membership-duration-input {
+  width: 70px;
+}
+
+.membership-spending-input {
+  width: 110px;
+}
+
+.membership-program-duration-input {
+  width: 110px;
+}
+
+/* Checkbox Styles */
+.membership-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.membership-checkbox,
+.membership-day-checkbox {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 9px 9px;
+  flex-shrink: 0;
+}
+
+.membership-checkbox:checked,
+.membership-day-checkbox:checked {
+  background-image: url("../../components/assets/Checklist.png");
+  background-size: 9px 9px;
+  background-color: #fcd730;
+  border: none;
+}
+
+.membership-checkbox-label {
+  font-size: 11px;
+  color: #000000;
+  white-space: nowrap;
+}
+
+/* Discount Section Specific */
+.membership-discount-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Time Slots Styles */
+.membership-time-headers {
+  display: grid;
+  grid-template-columns: 90px 1fr 1fr;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.membership-time-slot-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 1fr;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.membership-day-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.membership-time-select {
+  padding: 4px 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 11px;
+  background: white;
+  cursor: pointer;
+  background-image: url("../../components/assets/drop_down.png");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  background-size: 9px;
+  padding-right: 18px;
+  appearance: none;
+}
+
+.membership-time-select:disabled {
+  background: #f9fafb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  background-image: none;
+}
+
+/* Last Updated Section */
+.membership-last-updated-section {
+  padding: 8px 20px;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.membership-last-updated-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+}
+
+.membership-last-updated-label {
+  color: #000;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.membership-last-updated-value {
+  font-size: 11px;
+  color: #92929d;
+  font-weight: 400;
+}
+
+/* Footer */
+.membership-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 10px 20px;
+  border-top: 1px solid #e5e7eb;
+  background: white;
+  flex-shrink: 0;
+}
+
+.membership-footer-button {
+  padding: 7px 14px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  color: white;
+  min-width: 65px;
+  transition: opacity 0.2s;
+}
+
+.membership-footer-button.membership-save {
+  background: #FCD730;
+  color: #000;
+}
+
+.membership-footer-button.membership-edit {
+  background: #2258F8;
+}
+
+.membership-footer-button.membership-cancel {
+  background: #3B4053;
+}
+
+.membership-footer-button:hover {
+  opacity: 0.9;
+}
+
+/* Focus states */
+.membership-form-input:focus,
+.membership-form-select:focus,
+.membership-time-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb;
+}
+
+/* Scrollbar */
+.membership-content-wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+
+.membership-content-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.membership-content-wrapper::-webkit-scrollbar-thumb {
+  background-color: #2e2343;
+  border-radius: 3px;
+}
+
+.membership-content-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #3a2b55;
+}
+
+/* Update the second row to display as a column stack */
+.membership-second-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 48%;
+}
+
+/* Third row should be positioned beside second row */
+.membership-third-row {
+  width: 48%;
+  align-self: flex-start;
+}
+
+/* Create a new wrapper for rows 2 and 3 to sit side by side */
+.membership-rows-container {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .membership-modal-container {
+    width: 95%;
+    max-height: 95vh;
+  }
+  
+  .membership-first-row,
+  .membership-rows-container {
+    flex-direction: column;
+  }
+  
+  .membership-discount-section,
+  .membership-operational-section,
+  .membership-valid-section,
+  .membership-second-row,
+  .membership-third-row {
+    width: 100%;
+  }
+}

@@ -1,0 +1,530 @@
+/* ------------------- Table Wrapper ------------------- */
+.user-list-table-wrapper {
+    padding: 16px;
+    background: #f2f7fa;
+    border-radius: 8px;
+    min-height: 120vh;
+    border: 1px solid #dce0eb;
+    font-family: sans-serif;
+  }
+  
+  /* ------------------- Section Header ------------------- */
+  .user-list-section-header {
+    display: flex;
+    align-items: center;
+    background-color: #f2f7fa;
+    padding: 12px 16px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+    gap: 12px;
+  }
+  
+  /* Table checkboxes (Active, Courtesy Play) */
+  .user-list-active-checkbox {
+    accent-color: #fcd730; /* Yellow background */
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  
+  /* ✅ Rectangular box for Card Number */
+  .user-list-card-box {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #f8f9fa; /* light gray background */
+    border: 1px solid #dcdcdc;   /* subtle border */
+    border-radius: 6px;          /* smooth corners */
+    white-space: nowrap;         /* prevent wrapping */
+    text-align: center;
+    min-width: 100px;            /* consistent width */
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+  }
+  
+  .user-list-section-title-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .user-list-btn-update {
+    background-color: #FFA54B; /* Orange like in image */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .user-list-btn-update:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .user-list-section-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .user-list-section-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.2;
+    color: #1c212d;
+    margin: 0;
+  }
+  
+  .user-list-checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .user-list-checkbox-label22 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #1c212d;
+  }
+  
+  .user-list-checkbox-container input[type="checkbox"] {
+    accent-color: #fcd730;
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* ------------------- Action Row ------------------- */
+  .user-list-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background-color: #f2f7fa;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 16px;
+  }
+  
+  .user-list-search-container2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-list-search-input2-icon {
+    position: absolute;
+    left: 8px;
+    z-index: 1;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .user-list-search-input2 {
+    width: 400px;
+    border-radius: 2%;
+    padding: 10px 10px 10px 32px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: none; /* removes border */
+    background-color: #9b9b9a1f;
+  }
+  
+  .user-list-search-input2::placeholder {
+    color: #696974;
+  }
+  
+  .user-list-filter-container {
+    position: relative;
+  }
+  
+  .user-list-filter-btn {
+    background-color: #fcd730;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+  }
+  
+  .user-list-filter-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .user-list-filter-dropdown {
+    position: absolute;
+    margin-top: 12%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    min-width: 150px;
+    overflow: hidden;
+  }
+  
+  .user-list-filter-option {
+    padding: 12px 16px;
+    color: black;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  .user-list-filter-option:first-child {
+    background-color: #fff;
+    color: black;
+    font-weight: 400;
+  }
+  
+  .user-list-filter-option:first-child::after {
+    content: "▶";
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .user-list-filter-option::after {
+    content: "▶";
+    font-size: 12px;
+    color: #999;
+    transition: color 0.2s ease;
+  }
+  
+  .user-list-filter-option:not(:first-child)::after {
+    content: "▶";
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .user-list-filter-option:last-child {
+    border-bottom: none;
+  }
+  
+  .user-list-filter-option:not(:first-child):hover {
+    background-color: #fcd730;
+  }
+  
+  .user-list-filter-option:hover {
+    background-color: #fcd730;
+    border: 2px solid #fcd730;
+    border-radius: 6px;
+    color: white;
+    font-weight: 500;
+    margin: 2px;
+    padding: 10px 14px;
+  }
+  
+  .user-list-filter-option:hover::after {
+    color: white !important;
+  }
+  
+  .user-list-btn-search {
+    background-color: #2d4cba;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .user-list-search-btn-icon {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+  }
+  
+  .user-list-action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+  }
+  
+  .user-list-btn-add {
+    background-color: #2258f8;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .user-list-btn-refresh {
+    background-color: #42c700;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  /* ------------------- Table ------------------- */
+  .user-list-table-scroll {
+    max-height: 700px;
+    max-width: 1200px;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+  
+  .user-list-custom-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: sans-serif;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  /* Create gap between header and body using pseudo-element */
+  .user-list-custom-table tbody::before {
+    content: "";
+    display: block;
+    height: 16px;
+  }
+  
+  /* ------------------- Header ------------------- */
+  .user-list-custom-table thead {
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  
+  /* Add background to header to prevent overlap */
+  .user-list-custom-table thead::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -16px;
+    height: 16px;
+    background: #f2f7fa;
+    z-index: 1;
+  }
+  
+  .user-list-custom-table thead th {
+    padding: 12px 10px;
+    background: #fff;
+    white-space: nowrap;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 16.79px;
+    line-height: 29.85px;
+    color: #3b4053;
+    border-top: 1px solid #dce0eb;
+    border-bottom: 1px solid #dce0eb;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .user-list-custom-table thead th:first-child {
+    border-left: 1px solid #dce0eb;
+    border-radius: 8px 0 0 8px;
+  }
+  
+  .user-list-custom-table thead th:last-child {
+    border-right: 1px solid #dce0eb;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .user-list-custom-table thead {
+    margin-bottom: 16px;
+  }
+  
+  /* ------------------- Sort Arrows ------------------- */
+  .user-list-header-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding-right: 15px;
+  }
+  
+  .user-list-header-text {
+    margin-right: 2px;
+  }
+  
+  .user-list-sort-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+  }
+  
+  .user-list-arrow.user-list-up1 {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 5px solid #92929d;
+    cursor: pointer;
+  }
+  
+  .user-list-arrow.user-list-down1 {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #92929d;
+    cursor: pointer;
+  }
+  
+  .user-list-arrow:hover {
+    opacity: 0.7;
+  }
+  
+  /* ------------------- Body ------------------- */
+  .user-list-custom-table tbody {
+    border-spacing: 0;
+  }
+  
+  .user-list-custom-table tbody tr:nth-child(odd) {
+    background: #ffffff;
+  }
+  
+  .user-list-custom-table tbody tr:nth-child(even) {
+    background: #fffae2;
+  }
+  
+  .user-list-custom-table td {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    line-height: 140%;
+    color: #1c212d;
+    padding: 12px 8px;
+    border-bottom: 1px solid #dce0eb;
+    border-right: 1px solid #dce0eb;
+    white-space: nowrap;
+  }
+  
+  .user-list-custom-table tbody tr:first-child td:first-child {
+    border-top-left-radius: 8px;
+  }
+  
+  .user-list-custom-table tbody tr:first-child td:last-child {
+    border-top-right-radius: 8px;
+  }
+  
+  .user-list-custom-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+  }
+  
+  .user-list-custom-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 8px;
+  }
+  
+  .user-list-custom-table tbody tr:first-child td {
+    border-top: 1px solid #dce0eb;
+  }
+  
+  .user-list-custom-table tbody tr td:first-child {
+    border-left: 1px solid #dce0eb;
+  }
+  
+  .user-list-custom-table td:last-child {
+    border-right: 1px solid #dce0eb;
+  }
+  
+  /* Checkbox style */
+  .user-list-custom-table input[type="checkbox"] {
+    accent-color: #fcd730;
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* ------------------- Status Circle Indicators ------------------- */
+  .user-list-status-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .user-list-status-circle.active {
+    background-color: #fcd730;
+    border: 2px solid #e6c029;
+  }
+  
+  .user-list-status-circle.inactive {
+    background-color: #f5f5f5;
+    border: 2px solid #ddd;
+  }
+  
+  /* ------------------- Text Box ------------------- */
+  .user-list-text-box {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    border: 0.83px solid #d5d5d5;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #1c212d;
+    text-align: center;
+    padding: 4px 8px;
+    width: 150px;
+    box-sizing: border-box;
+    display: inline-block;
+  }
+  
+  /* ------------------- Inputs (date + select) ------------------- */
+  .user-list-custom-table input[type="date"],
+  .user-list-custom-table select {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    width: 160px;
+    border: 0.83px solid #d5d5d5;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #1c212d;
+    text-align: center;
+    padding: 4px 24px 4px 8px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%2392929D' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 10px;
+  }
+  
+  .user-list-custom-table input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .user-list-custom-table select::-ms-expand {
+    display: none;
+  }

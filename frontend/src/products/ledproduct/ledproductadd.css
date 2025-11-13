@@ -1,0 +1,620 @@
+.led-add-modal-overlay-led {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-family: "Roboto", sans-serif;
+}
+
+.led-add-modal-container-led {
+  background: white;
+  border-radius: 16px;
+  width: 1200px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.led-add-modal-header-led {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 13px;
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+  border-radius: 16px 16px 0 0;
+}
+
+.led-add-header-title-led {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.led-add-folder-icon-led {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  margin-left: 18px;
+}
+
+.led-add-title-text-led {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 21.43px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin: 0;
+}
+
+.led-add-close-button-led {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.led-add-close-icon-led {
+  width: 90%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.led-add-close-button-led:hover {
+  color: #979798;
+}
+
+.led-add-modal-content-led {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  background: transparent;
+}
+
+.led-add-main-content-led {
+  flex: 3;
+  margin-right: 0;
+  width: 100%;
+}
+
+.led-add-content-wrapper-led {
+  padding: 19px;
+  width: 100%;
+}
+
+.led-add-main-sections-led {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Product Section */
+.led-add-product-section-led {
+  width: 97%;
+  height: 27vh;
+  background: white;
+  border-radius: 13.72px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 0.86px solid #d1d5db;
+  opacity: 1;
+}
+
+.led-add-section-header-led {
+  background: #2e2343;
+  color: white;
+  padding: 12px 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17.15px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  margin: 0;
+  border: none;
+}
+
+.led-add-price-header-led {
+  background: #2e2343;
+}
+
+.led-add-entitlements-header-led {
+  background: #2e2343;
+}
+
+.led-add-product-content-led {
+  padding: 20px;
+  background: white;
+}
+
+/* Form Styles */
+.led-add-form-row-led {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 16px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.led-add-form-row-led.led-add-cols-3-led {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.led-add-form-row-led.led-add-cols-2-led {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.led-add-form-group-led {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.led-add-form-label-led {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin-bottom: 0;
+
+  min-width: 40px;
+  flex-shrink: 0;
+}
+
+.led-add-form-input-led,
+.led-add-form-select-led {
+  height: 34px;
+  padding: 4px 8px;
+  border-radius: 6.11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #92929d;
+  background: white;
+  height: 26px;
+  box-sizing: border-box;
+  border: 0.76px solid #d1d5db;
+  opacity: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.led-add-form-input-led:focus,
+.led-add-form-select-led:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 1px #6366f1;
+}
+
+.led-add-form-input-led:read-only {
+  background-color: #f9fafb;
+}
+
+/* Product Section Field Widths */
+.led-add-product-section-led .led-add-form-row-led:nth-child(1) .led-add-form-group-led:nth-child(1) .led-add-form-input-led {
+  width: 160px;
+}
+
+.led-add-product-section-led .led-add-form-row-led:nth-child(1) .led-add-form-group-led:nth-child(2) .led-add-form-input-led {
+  width: 300px !important;
+}
+
+.led-add-product-section-led .led-add-form-row-led:nth-child(1) .led-add-form-group-led:nth-child(3) .led-add-form-select-led {
+  width: 160px;
+}
+
+.led-add-product-section-led .led-add-form-row-led:nth-child(2) .led-add-form-group-led:nth-child(1) .led-add-form-select-led {
+  width: 180px;
+}
+
+.led-add-product-section-led .led-add-form-row-led:nth-child(2) .led-add-form-group-led:nth-child(2) .led-add-form-select-led {
+  width: 180px;
+}
+
+.led-add-product-section-led .led-add-form-row-led:nth-child(2) .led-add-form-group-led:nth-child(3) .led-add-form-input-led {
+  width: 80px;
+}
+
+/* Checkbox Section */
+.led-add-checkbox-section-led {
+  margin-top: 16px;
+}
+
+.led-add-checkbox-grid-led {
+  display: flex;
+  gap: 15px;
+}
+
+.led-add-checkbox-item-led {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  white-space: nowrap;
+  color: #000000;
+}
+
+.led-add-checkbox-label-led {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+}
+
+.led-add-checkbox-led {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+}
+/* When checked */
+.led-add-checkbox-led:checked,
+.led-add-day-checkbox-led:checked {
+  background-color: #fcd730; /* yellow background */
+  border-color: #fcd730;
+    background-image: url("../../components/assets/Checklist.png");
+  background-size: 10px 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* White checkmark */
+.led-add-checkbox-led:checked::after,
+.led-add-day-checkbox-led:checked::after {
+ 
+  position: absolute;
+  top: 0;
+  left: 2px;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Bottom Sections Container */
+.led-add-bottom-sections-led {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+/* Price Section */
+.led-add-price-section-led
+ {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: 90%;
+  width: 400px;
+}
+
+.led-add-entitlements-section-led {
+  background: white;
+  border-radius: 8px;
+  width: 500px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.led-add-price-section-led .led-add-form-input-led,
+.led-add-price-section-led .led-add-form-select-led {
+  height: 26px;
+  border-radius: 6.11px;
+  border: 0.76px solid #d1d5db;
+  font-size: 12px;
+  padding: 4px 14px;
+}
+
+/* Price Section Field Widths */
+.led-add-price-section-led .led-add-form-row-led:nth-child(1) .led-add-form-group-led:nth-child(1) .led-add-form-input-led {
+  width: 100px !important;
+}
+
+.led-add-price-section-led .led-add-form-row-led:nth-child(1) .led-add-form-group-led:nth-child(2) .led-add-form-input-led {
+  width: 100px !important;
+}
+
+.led-add-price-section-led .led-add-section-content-led > .led-add-form-row-led:nth-child(3) .led-add-form-group-led:nth-child(1) .led-add-form-select-led {
+  width: 150px !important;
+}
+
+.led-add-price-section-led .led-add-section-content-led > .led-add-form-row-led:nth-child(3) .led-add-form-group-led:nth-child(2) .led-add-form-input-led {
+  width: 140px !important;
+}
+
+.led-add-price-section-led .led-add-form-input-led[value="10.000000%"] {
+  width: 100px !important;
+  max-width: 100px !important;
+}
+
+.led-add-price-section-led .led-add-form-row-led:nth-child(5) .led-add-form-group-led:nth-child(1) .led-add-form-input-led {
+  width: 70px !important;
+}
+
+.led-add-price-section-led .led-add-form-row-led:nth-child(5) .led-add-form-group-led:nth-child(2) .led-add-form-input-led {
+  width: 125px !important;
+}
+
+/* Tax Inclusive */
+.led-add-price-section-led .led-add-tax-inclusive-row-led {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.led-add-price-section-led .led-add-checkbox-label-tax-led {
+  color: #000;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.led-add-price-section-led .led-add-checkbox-tax-led {
+  width: 16px;
+  height: 16px;
+  accent-color: #fcd730;
+}
+
+/* Separator Line */
+.led-add-separator-line-led {
+  border-top: 1px solid #e5e7eb;
+  margin: 20px -30px;
+  width: calc(100% + 50px);
+}
+
+/* Section Content */
+.led-add-section-content-led {
+  padding: 20px;
+  background: white;
+}
+.led-add-footer-button-led.led-add-edit-led {
+  background: #E76711;
+}
+
+
+/* Entitlements Section */
+
+.led-add-entitlements-section-led {
+  background: white;
+  border-radius: 8px;
+  height: 90%;
+  width: 500px; /* Keep this as is or adjust as needed */
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 0.86px solid #d1d5db; /* Add this border to match the image */
+}
+.led-add-entitlements-content-led {
+display:flex; /* Use flexbox to create two columns */
+  justify-content: space-between; /* Space out the columns */
+  align-items: flex-start; /* Align items to the top */
+  padding: 8px;
+}
+/* Container for the minutes inputs */
+.led-add-minutes-container-led {
+  display: flex;
+  flex-direction: column; /* Stack the minutes inputs vertically */
+  gap: 15px; /* Add space between them */
+}
+
+.led-add-minutes-input-led {
+  width: 60px !important;
+}
+
+.led-add-bracelet-group-led {
+  margin-top: 140px;
+  margin-left: 60px;
+}
+
+.led-add-bracelet-input-led {
+  width: 40px !important;
+}
+
+/* Sidebar */
+.led-add-sidebar-led {
+  width: 200px;
+  flex-shrink: 0;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  height: calc(100% - 40px);
+}
+
+/* Active Days Section */
+.led-add-active-days-section-led {
+  background: white;
+  border-radius: 13.72px;
+  border: 0.86px solid #d1d5db;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 90%;
+    width: 86%;            /* control its width */
+  
+}
+
+.led-add-active-days-header-led {
+  background: #2e2343;
+  color: white;
+  padding: 12px 20px;
+  font-weight: 400;
+  font-size: 17.15px;
+  font-family: "Roboto", sans-serif;
+  line-height: 140%;
+  margin: 0;
+}
+
+.led-add-active-days-content-led {
+  padding: 0px 18px;
+  background: white;
+}
+
+.led-add-day-row-led {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 0;
+}
+
+.led-add-day-name-led {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+}
+
+.led-add-day-checkbox-led {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+}
+  
+
+
+/* Last Updated Section */
+.led-add-last-updated-section-led {
+  padding: 12px 20px;
+  background: white;
+}
+
+.led-add-last-updated-info-led {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.led-add-last-updated-label-led {
+  color: black;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+.led-add-last-updated-value-led {
+  font-size: 12px;
+  margin-right: 20px;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400 !important;
+  color: #92929d;
+}
+
+/* Footer */
+.led-add-modal-footer-led {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 20px;
+  border-top: 1px solid #e5e7eb;
+  background: white;
+  border-radius: 0 0 16px 16px;
+}
+
+.led-add-footer-button-led {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  color: white;
+  min-width: 80px;
+  font-family: "Roboto", sans-serif;
+}
+
+.led-add-footer-button-led.led-add-save-led {
+  background: #fcd730;
+}
+
+.led-add-footer-button-led.led-add-new-led {
+  background: #2258f8;
+}
+
+.led-add-footer-button-led.led-add-duplicate-led {
+  background: #2258f8;
+}
+
+.led-add-footer-button-led.led-add-cancel-led {
+  background: #3b4053;
+}
+
+/* Demo Container */
+.led-add-demo-container-led {
+  padding: 40px;
+  background: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.led-add-open-modal-button-led {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  font-family: "Roboto", sans-serif;
+}
+
+.led-add-open-modal-button-led:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}

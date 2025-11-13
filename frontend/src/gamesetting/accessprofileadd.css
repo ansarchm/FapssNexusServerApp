@@ -1,0 +1,352 @@
+/* Demo Container */
+.access-add-demo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.access-add-demo-button {
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.access-add-demo-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Modal Overlay */
+.access-add-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1050;
+}
+
+/* Modal Container - Exact measurements: 492x450px */
+.access-add-modal-container {
+  width: 492px;
+  max-height: 90vh; 
+  height: 450px;
+  background-color: white;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+}
+
+/* Modal Header */
+.access-add-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.access-add-header-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Game Icon */
+.access-add-game-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #4F46E5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.access-add-game-icon-inner {
+  width: 16px;
+  height: 10px;
+  background-color: white;
+  border-radius: 2px;
+  position: relative;
+}
+
+.access-add-game-dot-left {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 3px;
+  height: 3px;
+  background-color: #4F46E5;
+  border-radius: 50%;
+}
+
+.access-add-game-dot-right {
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  width: 3px;
+  height: 3px;
+  background-color: #4F46E5;
+  border-radius: 50%;
+}
+
+.access-add-modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.access-add-close-button {
+  color: #9ca3af;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.access-add-close-button:hover {
+  color: #4b5563;
+}
+
+.access-add-close-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Table Container */
+.access-add-table-container {
+  flex: 1;
+  padding: 20px 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/* Table Wrapper - width: 452px to match image */
+.access-add-table-wrapper {
+  width: 452px;
+  border-radius: 13.72px;
+  overflow: hidden;
+  border: 1px solid #DADCE6;
+}
+
+/* Games Table */
+.access-add-games-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #DADCE6;
+  border-radius: 13.72px;
+  overflow: hidden;
+}
+
+/* Table Header - height: 43px */
+.access-add-table-header {
+  height: 43px;
+  background-color: #2E2343;
+}
+
+.access-add-table-header th {
+  height: 43px;
+  background-color: #2E2343;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  border-right: 1px solid #DADCE6;
+  padding: 0 16px;
+  border: none;
+}
+
+.access-add-table-header th:last-child {
+  border-right: none;
+}
+
+.access-add-header-cell-select {
+  width: 70px;
+}
+
+.access-add-header-cell-game {
+  width: auto;
+  text-align: left;
+  padding-left: 20px !important;
+}
+
+.access-add-header-cell-count {
+  width: 110px;
+}
+
+/* Table Body */
+.access-add-table-body {
+  background-color: white;
+}
+
+.access-add-body-row {
+  height: 26.875px;
+  transition: background-color 0.2s ease;
+}
+
+.access-add-body-row:hover {
+  background-color: #f9fafb !important;
+}
+
+.access-add-row-yellow {
+  background-color: #FEF9E7;
+}
+
+.access-add-row-white {
+  background-color: white;
+}
+
+.access-add-table-cell {
+  vertical-align: middle;
+  padding: 0 16px;
+  font-size: 14px;
+  color: #111827;
+  border-right: 1px solid #DADCE6;
+  height: 26.875px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 13.72px;
+  line-height: 140%;
+  font-style: normal;
+}
+
+.access-add-table-cell:last-child {
+  border-right: none;
+}
+
+.access-add-cell-select {
+  width: 70px;
+  text-align: center;
+}
+
+.access-add-cell-game {
+  width: auto;
+  text-align: left;
+  padding-left: 20px !important;
+}
+
+.access-add-cell-count {
+  width: 110px;
+  text-align: center;
+}
+
+/* Checkbox Styles */
+.access-add-checkbox-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.access-add-checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.access-add-checkbox-label {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.access-add-checkbox-checked {
+  background-color: #F59E0B;
+  border: 2px solid #F59E0B;
+}
+
+.access-add-checkbox-unchecked {
+  background-color: white;
+  border: 2px solid #d1d5db;
+}
+
+.access-add-checkbox-label:hover {
+  border-color: #F59E0B;
+}
+
+.access-add-checkmark {
+  width: 12px;
+  height: 12px;
+  color: white;
+}
+
+/* Modal Footer */
+.access-add-modal-footer {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px 20px 20px;
+  border-top: 1px solid #e5e7eb;
+  justify-content: flex-end;
+}
+
+.access-add-save-button,
+.access-add-cancel-button {
+  width: 90.70px;
+  height: 34.82px;
+  font-weight: 500;
+  border-radius: 9.16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+}
+
+.access-add-save-button {
+  background-color: #F59E0B;
+  color: #111827;
+}
+
+.access-add-save-button:hover {
+  background-color: #D97706;
+}
+
+.access-add-cancel-button {
+  background-color: #374151;
+  color: white;
+}
+
+.access-add-cancel-button:hover {
+  background-color: #1F2937;
+}
+
+.access-add-game-image {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}

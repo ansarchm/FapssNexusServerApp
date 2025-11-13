@@ -1,0 +1,385 @@
+.code-dev-container {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", sans-serif;
+  padding: 20px;
+}
+
+.code-dev-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.code-dev-header-icon {
+  font-size: 24px;
+  color: #6b7280;
+}
+
+.code-dev-header-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.code-dev-section {
+  margin-bottom: 20px;
+}
+
+.code-dev-section-header {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 18px;
+  margin-bottom: 5px;
+  transition: all 0.2s ease;
+}
+
+.code-dev-section-header:hover {
+  background-color: #f9fafb;
+}
+
+.code-dev-section-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.code-dev-section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.code-dev-button-group {
+  display: flex;
+  gap: 12px;
+}
+
+.code-dev-btn-add {
+  padding: 8px 25px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.code-dev-btn-add:hover {
+  background-color: #2563eb;
+}
+
+.code-dev-btn-save {
+  padding: 8px 25px;
+  background-color: #FCD730;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.code-dev-btn-save:hover {
+  background-color: #facc15;
+}
+
+.code-dev-table-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 400px;
+  }
+}
+
+.code-dev-table-header {
+  display: grid;
+  grid-template-columns: 1.5fr 1.2fr 1.2fr 2fr 80px;
+  background-color: #2E2343;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.code-dev-table-header-cell {
+  padding: 16px 20px;
+}
+
+.code-dev-table-body {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.code-dev-table-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1.2fr 1.2fr 2fr 80px;
+}
+
+.code-dev-table-row.even {
+  background-color: #FFFAE2;
+}
+
+.code-dev-table-row.odd {
+  background-color: white;
+}
+
+.code-dev-table-cell {
+  padding: 6px 12px;
+  color: #1C212D;
+  font-size: 14px;
+  font-weight: 400;
+  border-right: 1px solid #e5e7eb;
+}
+
+.code-dev-table-cell.small-text {
+  font-size: 13px;
+}
+
+.code-dev-table-cell.empty {
+  padding: 6px 12px;
+  border-right: 1px solid #e5e7eb;
+}
+
+.code-dev-table-cell.action {
+  padding: 6px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.code-dev-delete-button {
+  padding: 6px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.code-dev-delete-button:hover {
+  background-color: #f3f4f6;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-2 {
+  gap: 8px;
+}.code-dev-container {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", sans-serif;
+  padding: 20px;
+}
+
+.code-dev-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.code-dev-header-icon {
+  font-size: 24px;
+  color: #6b7280;
+}
+
+.code-dev-header-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.code-dev-section {
+  margin-bottom: 20px;
+}
+
+.code-dev-section-header {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 18px;
+  margin-bottom: 5px;
+  transition: all 0.2s ease;
+}
+
+.code-dev-section-header:hover {
+  background-color: #f9fafb;
+}
+
+.code-dev-section-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.code-dev-section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.code-dev-button-group {
+  display: flex;
+  gap: 12px;
+}
+
+.code-dev-btn-add {
+  padding: 8px 25px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.code-dev-btn-add:hover {
+  background-color: #2563eb;
+}
+
+.code-dev-btn-save {
+  padding: 8px 25px;
+  background-color: #FCD730;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.code-dev-btn-save:hover {
+  background-color: #facc15;
+}
+
+.code-dev-table-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 400px;
+  }
+}
+
+.code-dev-table-header {
+  display: grid;
+  grid-template-columns: 1.5fr 1.2fr 1.2fr 2fr 80px;
+  background-color: #2E2343;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.code-dev-table-header-cell {
+  padding: 16px 20px;
+}
+
+.code-dev-table-body {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.code-dev-table-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1.2fr 1.2fr 2fr 80px;
+}
+
+.code-dev-table-row.even {
+  background-color: #FFFAE2;
+}
+
+.code-dev-table-row.odd {
+  background-color: white;
+}
+
+.code-dev-table-cell {
+  padding: 6px 12px;
+  color: #1C212D;
+  font-size: 14px;
+  font-weight: 400;
+  border-right: 1px solid #e5e7eb;
+}
+
+.code-dev-table-cell.small-text {
+  font-size: 13px;
+}
+
+.code-dev-table-cell.empty {
+  padding: 6px 12px;
+  border-right: 1px solid #e5e7eb;
+}
+
+.code-dev-table-cell.action {
+  padding: 6px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.code-dev-delete-button {
+  padding: 6px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.code-dev-delete-button:hover {
+  background-color: #f3f4f6;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-2 {
+  gap: 8px;
+}
