@@ -69,22 +69,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "fabsss.Controllers.GameSettingsController",
-    "Method": "AddGameSetting",
-    "RelativePath": "api/AddGameSetting",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "fabsss.Controllers.GateController",
     "Method": "AddGate",
     "RelativePath": "api/AddGate",
@@ -126,7 +110,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "fabsss.Models.LedProductRequest",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": true
       }
     ],
@@ -206,7 +190,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "fabsss.Models.TimeProductRequest",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": true
       }
     ],
@@ -293,22 +277,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "fabsss.Controllers.GameSettingsController",
-    "Method": "DeleteGameSetting",
-    "RelativePath": "api/DeleteGameSetting",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "System.Text.Json.JsonElement",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "fabsss.Controllers.LedProductController",
     "Method": "DeleteLedProduct",
     "RelativePath": "api/DeleteLedProduct",
@@ -318,7 +286,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "fabsss.Models.LedProductRequest",
+        "Type": "System.Text.Json.JsonElement",
         "IsRequired": true
       }
     ],
@@ -382,17 +350,91 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "fabsss.Models.TimeProductRequest",
+        "Type": "System.Text.Json.JsonElement",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "fabsss.Controllers.GameSettingsController",
-    "Method": "GetAllGameSettings",
-    "RelativePath": "api/GetAllGameSettings",
+    "ContainingType": "fabsss.Controllers.GameCategoryController",
+    "Method": "AddCategory",
+    "RelativePath": "api/GameCategory/AddCategory",
     "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.GameCategoryController",
+    "Method": "AddSubCategory",
+    "RelativePath": "api/GameCategory/AddSubCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.GameCategoryController",
+    "Method": "DeleteCategory",
+    "RelativePath": "api/GameCategory/DeleteCategory",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.GameCategoryController",
+    "Method": "DeleteSubCategory",
+    "RelativePath": "api/GameCategory/DeleteSubCategory",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.GameCategoryController",
+    "Method": "GetAllCategories",
+    "RelativePath": "api/GameCategory/GetAllCategories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "fabsss.Controllers.GameCategoryController",
+    "Method": "GetAllSubCategories",
+    "RelativePath": "api/GameCategory/GetAllSubCategories",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
@@ -541,22 +583,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "fabsss.Controllers.GameSettingsController",
-    "Method": "GetGameSettingById",
-    "RelativePath": "api/GetGameSettingById",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "System.Text.Json.JsonElement",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "fabsss.Controllers.GateController",
     "Method": "GetGateById",
     "RelativePath": "api/GetGateById",
@@ -630,7 +656,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "fabsss.Models.LedProductRequest",
+        "Type": "System.Text.Json.JsonElement",
         "IsRequired": true
       }
     ],
@@ -861,7 +887,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "fabsss.Models.TimeProductRequest",
+        "Type": "System.Text.Json.JsonElement",
         "IsRequired": true
       }
     ],
@@ -1184,22 +1210,6 @@
       {
         "Name": "product",
         "Type": "fabsss.Models.ComboProductModel",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "fabsss.Controllers.GameSettingsController",
-    "Method": "UpdateGameSetting",
-    "RelativePath": "api/UpdateGameSetting",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": true
       }
     ],
